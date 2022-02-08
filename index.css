@@ -1,0 +1,138 @@
+:root {
+  /* colors */
+  --blue: #00f;
+  --white: #fff;
+  --black: #000;
+  
+  /* dimensions */
+  --num-rows: 20;
+  --num-cols: 20;
+  --cell-side-length: 1.25rem;
+  --grid-height: calc(var(--num-rows) * var(--cell-side-length));
+  --grid-width: calc(var(--num-cols) * var(--cell-side-length));
+}
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+.color-primary {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.color-inverse {
+  color: var(--black);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.container-main {
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.grid {
+  height: var(--grid-height);
+  width: var(--grid-width);
+  display: flex;
+  flex-wrap: wrap;
+  border: var(--cell-side-length) solid var(--blue);
+  border-radius: var(--cell-side-length);
+}
+
+.grid div {
+  height: var(--cell-side-length);
+  width: var(--cell-side-length);
+}
+
+.wall {
+  background-color: var(--blue);
+}
+
+.pellet {
+  background-color: var(--black);
+  box-sizing: border-box;
+}
+
+.pellet-small {
+  border: 0.4em solid var(--white);
+}
+
+.pellet-medium {
+  border: 0.3em solid var(--white);
+}
+
+.pellet-large {
+  border: 0.2em solid var(--white);
+}
+
+.pacman,
+.ghost {
+  border-radius: var(--cell-side-length);
+  border: 0.1em solid var(--white);
+  box-sizing: border-box;
+}
+
+.pacman {
+  background-color: darkorange;
+}
+
+.ghost {
+  background-color: purple;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.progress,
+.status {
+  height: 50%;
+}
+
+.info-progress,
+.info-status {
+  letter-spacing: 2px;
+}
+
+.progress-bar {
+  margin: 1em;
+  padding: 1em;
+  border: 0.2em solid black;
+  border-radius: 1em;
+  background-image: linear-gradient(to right, lime, lime 0%, white 0%, white 100%);
+}
