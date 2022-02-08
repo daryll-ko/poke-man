@@ -10,6 +10,8 @@ But I digress. What have I made?
 
 ## Elevator Pitch
 
+![demo-gif](https://media.giphy.com/media/3VGEAKcFTATCci0H5x/giphy.gif)
+
 Pac-man? is loosely based on [Pac-man](https://en.wikipedia.org/wiki/Pac-Man) (who would've thought?). You play as an orange circle and move around the board collecting black squares. These black squares come in different sizes, and larger squares merit more points. Your goal is to reach a certain amount of points without getting "eaten" (read: touched) by any of the ghosts, which are denoted by purple circles.
 
 ## Technicalities
