@@ -30,7 +30,7 @@ If you want to hear the more interesting stuff, read the next section.
 
   - Move in the direction that makes them end up in the cell with the least [Manhattan distance](https://en.wikipedia.org/wiki/Taxicab_geometry) to where Pacman is.
 
-Both are vastly suboptimal, but again, this is the minimum viable product. I plan on throwing in [Floyd-Warshall](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm) in the future (though time complexity concerns me a bit) to make the ghosts competent for once in their ethereal lives.
+  Both are vastly suboptimal, but again, this is the minimum viable product. I plan on throwing in [Floyd-Warshall](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm) in the future (though time complexity concerns me a bit) to make the ghosts competent for once in their ethereal lives.
 
 - I like the progress bar a lot. CSS and JS can come a *long* way.
 
