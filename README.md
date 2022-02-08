@@ -45,3 +45,9 @@ Mostly for self-reference.
 - Modularize code
 - Give the ghosts a bit of intelligence
 - Start/Reset buttons
+
+## History
+
+| Date Start | Date End | Version |
+| :--------: | :------: | :-----: |
+| 2/7/21 | 2/7/21 | 1 |
