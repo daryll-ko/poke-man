@@ -41,7 +41,7 @@ If you want to hear the more interesting stuff, read the next section.
 Mostly for self-reference.
 
 - Add modals, carousels, and animations
-- Make the layout responsive
+- Make the layout responsive (and fix some current design quirks)
 - Modularize code
 - Give the ghosts a bit of intelligence
 - Start/Reset buttons
