@@ -2,6 +2,8 @@
 
 ## Pitch
 
+![pokeman-demo](/images/pokeman-demo.png)
+
 Poké-Man is [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man), but with Pokémon!
 
 Aside from finally using JavaScript, I wanted to try out a variety of different frontend topics like responsive design and API interaction.
