@@ -74,37 +74,53 @@ h3 {
   background-color: var(--primary-color);
 }
 
-.pellet,
-.pacman,
-.ghost {
+.wall-top-left {
+  border-top-left-radius: calc(var(--cell-side-length) / 2);
+}
+
+.wall-top-right {
+  border-top-right-radius: calc(var(--cell-side-length) / 2);
+}
+
+.wall-bottom-left {
+  border-bottom-left-radius: calc(var(--cell-side-length) / 2);
+}
+
+.wall-bottom-right {
+  border-bottom-right-radius: calc(var(--cell-side-length) / 2);
+}
+
+.berry,
+.pokeman,
+.chaser {
   background-size: cover;
 }
 
-.pellet-small {
+.berry-small {
   background-image: url(images/berries/normal-razz-berry.webp);
   border: 0.5em solid white;
 }
 
-.pellet-medium {
+.berry-medium {
   background-image: url(images/berries/silver-razz-berry.webp);
   border: 0.35em solid white;
 }
 
-.pellet-large {
+.berry-large {
   background-image: url(images/berries/golden-razz-berry.webp);
   border: 0.2em solid white;
 }
 
-.pacman,
-.ghost {
+.pokeman,
+.chaser {
   border: none;
 }
 
-.pacman {
+.pokeman {
   background-image: url(images/pokémon/squirtle.png);
 }
 
-.ghost {
+.chaser {
   background-image: url(images/pokémon/bulbasaur.png);
 }
 
@@ -115,6 +131,10 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.info-heading {
+  letter-spacing: 1px;
 }
 
 .progress,

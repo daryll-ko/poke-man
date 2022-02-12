@@ -1,6 +1,7 @@
 const ROWS = getComputedStyle(document.body).getPropertyValue("--num-rows");
 const COLS = getComputedStyle(document.body).getPropertyValue("--num-cols");
 
+// [east, north, west, south]
 const DELTA_I = [0, -1, 0, 1];
 const DELTA_J = [1, 0, -1, 0];
 
@@ -38,8 +39,24 @@ function isWithinInnerGrid(row, col) {
   return 2 <= row && row < ROWS - 2 && 2 <= col && col < COLS - 2;
 }
 
+function hasProperty(row, col, property) {
+  return gridMatrix[row][col].classList.contains(property);
+}
+
 function isPath(row, col) {
-  return gridMatrix[row][col].classList.contains("path");
+  return hasProperty(row, col, "path");
+}
+
+function isWall(row, col) {
+  return hasProperty(row, col, "wall");
+}
+
+function isPokeman(row, col) {
+  return hasProperty(row, col, "pokeman");
+}
+
+function isChaser(row, col) {
+  return hasProperty(row, col, "chaser");
 }
 
 function isNewTerritory(row, col) {
@@ -67,75 +84,83 @@ function fillInnerGrid(curRow=2, curCol=2) {
   }
 }
 
-let curRow, curCol, ghostSpawnpoints;
+function addProperty(row, col, property) {
+  gridMatrix[row][col].classList.add(property);
+}
+
+function removeProperty(row, col, property) {
+  gridMatrix[row][col].classList.remove(property);
+}
+
+let curRow, curCol, chaserSpawnpoints;
 
 function fillGrid() {
-  // outer path, pacman
-  let possPacmanSpawnpoints = [];
+  // outer path, Poké-Man
+  let possiblePokemanSpawnpoints = [];
   for (let row = 0; row < ROWS; ++row) {
     for (let col = 0; col < COLS; ++col) {
       if (row === 0 || row === ROWS - 1 || col === 0 || col === COLS - 1) {
-        gridMatrix[row][col].classList.add("path");
-        possPacmanSpawnpoints.push([row, col]);
+        addProperty(row, col, "path");
+        possiblePokemanSpawnpoints.push([row, col]);
       }
     }
   }
-  [curRow, curCol] = shuffle(possPacmanSpawnpoints).slice(0, 1)[0];
-  gridMatrix[curRow][curCol].classList.add("pacman");
+  [curRow, curCol] = shuffle(possiblePokemanSpawnpoints).slice(0, 1)[0];
+  addProperty(curRow, curCol, "pokeman");
   // walls
   fillInnerGrid();
   for (let col = 2; col < COLS - 2; ++col) {
     if (isPath(2, col) && !isPath(1, col - 1)) {
-      gridMatrix[1][col].classList.add("path");
+      addProperty(1, col, "path");
     }
     if (isPath(ROWS - 3, col) && !isPath(ROWS - 2, col - 1)) {
-      gridMatrix[ROWS - 2][col].classList.add("path");
+      addProperty(ROWS - 2, col, "path");
     }
   }
   for (let row = 2; row < ROWS - 2; ++row) {
     if (isPath(row, 2) && !isPath(row - 1, 1)) {
-      gridMatrix[row][1].classList.add("path");
+      addProperty(row, 1, "path");
     }
     if (isPath(row, COLS - 3) && !isPath(row - 1, COLS - 2)) {
-      gridMatrix[row][COLS - 2].classList.add("path");
+      addProperty(row, COLS - 2, "path");
     }
   }
   for (let row = 0; row < ROWS; ++row) {
     for (let col = 0; col < COLS; ++col) {
       if (!isPath(row, col)) {
-        gridMatrix[row][col].classList.add("wall");
+        addProperty(row, col, "wall");
       }
     }
   }
-  // ghosts
-  let possGhostSpawnpoints = [];
+  // chasers
+  let possibleChaserSpawnpoints = [];
   for (let row = ROWS / 5 * 2; row < ROWS / 5 * 3; ++row) {
     for (let col = COLS / 5 * 2; col < COLS / 5 * 3; ++col) {
       if (isPath(row, col)) {
-        possGhostSpawnpoints.push([row, col]);
+        possibleChaserSpawnpoints.push([row, col]);
       }
     }
   }
-  ghostSpawnpoints = shuffle(possGhostSpawnpoints).slice(0, Math.min(4, possGhostSpawnpoints.length));
-  for (const [row, col] of ghostSpawnpoints) {
-    gridMatrix[row][col].classList.add("ghost");
+  chaserSpawnpoints = shuffle(possibleChaserSpawnpoints).slice(0, Math.min(4, possibleChaserSpawnpoints.length));
+  for (const [row, col] of chaserSpawnpoints) {
+    addProperty(row, col, "chaser");
   }
-  // pellets
+  // berries
   for (let row = 0; row < ROWS; ++row) {
     for (let col = 0; col < COLS; ++col) {
       if (
         isPath(row, col) &&
-        !gridMatrix[row][col].classList.contains("pacman") &&
-        !gridMatrix[row][col].classList.contains("ghost")
+        !isPokeman(row, col) &&
+        !isChaser(row, col)
       ) {
-        gridMatrix[row][col].classList.add("pellet");
+        addProperty(row, col, "berry");
         const randomNumber = Math.floor(Math.random() * 100);
         if (randomNumber < 5) {
-          gridMatrix[row][col].classList.add("pellet-large");
+          addProperty(row, col, "berry-large");
         } else if (randomNumber < 30) {
-          gridMatrix[row][col].classList.add("pellet-medium");
+          addProperty(row, col, "berry-medium");
         } else {
-          gridMatrix[row][col].classList.add("pellet-small");
+          addProperty(row, col, "berry-small");
         }
       }
     }
@@ -144,19 +169,42 @@ function fillGrid() {
 
 fillGrid();
 
+function smoothenGrid() {
+  for (let row = 1; row < ROWS - 1; ++row) {
+    for (let col = 1; col < COLS - 1; ++col) {
+      if (isWall(row, col)) {
+        if (isPath(row - 1, col) && isPath(row, col - 1)) {
+          addProperty(row, col, "wall-top-left");
+        }
+        if (isPath(row - 1, col) && isPath(row, col + 1)) {
+          addProperty(row, col, "wall-top-right");
+        }
+        if (isPath(row, col - 1) && isPath(row + 1, col)) {
+          addProperty(row, col, "wall-bottom-left");
+        }
+        if (isPath(row, col + 1) && isPath(row + 1, col)) {
+          addProperty(row, col, "wall-bottom-right");
+        }
+      }
+    }
+  }
+}
+
+smoothenGrid();
+
 let score = 0;
-const neededScore = 350;
+const neededScore = 150;
 
 let progressBar = document.getElementById("progress-bar");
 progressBar.innerHTML = `
   <p class="progress-bar-text">${score} of ${neededScore}</p>
 `;
 
-let curDirection = 0, pacmanTimerId;
+let curDirection = 0, pokemanTimerId;
 
-function startMovingPacman() {
-  pacmanTimerId = setInterval(() => {
-    gridMatrix[curRow][curCol].classList.remove("pacman");
+function startMovingPokeman() {
+  pokemanTimerId = setInterval(() => {
+    removeProperty(curRow, curCol, "pokeman");
     const nextRow = curRow + DELTA_I[curDirection];
     const nextCol = curCol + DELTA_J[curDirection];
     if (
@@ -166,15 +214,15 @@ function startMovingPacman() {
       curRow = nextRow;
       curCol = nextCol;
     }
-    gridMatrix[curRow][curCol].classList.add("pacman");
-    checkForPellet();
+    addProperty(curRow, curCol, "pokeman");
+    checkForBerry();
     updateScore();
     checkForWin();
     checkForGameOver();
   }, 200);
 }
 
-startMovingPacman();
+startMovingPokeman();
 
 function changeDirection(event) {
   switch (event.key) {
@@ -199,18 +247,18 @@ function changeDirection(event) {
 
 document.addEventListener("keyup", changeDirection);
 
-function checkForPellet() {
-  if (gridMatrix[curRow][curCol].classList.contains("pellet")) {
-    gridMatrix[curRow][curCol].classList.remove("pellet");
-    if (gridMatrix[curRow][curCol].classList.contains("pellet-small")) {
+function checkForBerry() {
+  if (hasProperty(curRow, curCol, "berry")) {
+    removeProperty(curRow, curCol, "berry");
+    if (hasProperty(curRow, curCol, "berry-small")) {
       score += 1;
-      gridMatrix[curRow][curCol].classList.remove("pellet-small");
-    } else if (gridMatrix[curRow][curCol].classList.contains("pellet-medium")) {
+      removeProperty(curRow, curCol, "berry-small");
+    } else if (hasProperty(curRow, curCol, "berry-medium")) {
       score += 3;
-      gridMatrix[curRow][curCol].classList.remove("pellet-medium");
-    } else if (gridMatrix[curRow][curCol].classList.contains("pellet-large")) {
+      removeProperty(curRow, curCol, "berry-medium");
+    } else if (hasProperty(curRow, curCol, "berry-large")) {
       score += 5;
-      gridMatrix[curRow][curCol].classList.remove("pellet-large");
+      removeProperty(curRow, curCol, "berry-large");
     }
   }
 }
@@ -225,18 +273,18 @@ function updateScore() {
   `;
 }
 
-let statusElement = document.querySelector(".info-status");
+let playerStatus = document.getElementById("player-status");
 
 function checkForWin() {
   if (score === neededScore) {
-    clearInterval(pacmanTimerId);
-    ghosts.forEach(ghost => clearInterval(ghost.timerId));
+    clearInterval(pokemanTimerId);
+    chasers.forEach(chaser => clearInterval(chaser.timerId));
     document.removeEventListener("keyup", changeDirection);
-    statusElement.textContent = "You win!";
+    playerStatus.textContent = "You win!";
   }
 }
 
-class Ghost {
+class Chaser {
   constructor(curRow, curCol, speed) {
     this.curRow = curRow;
     this.curCol = curCol;
@@ -246,31 +294,31 @@ class Ghost {
   }
 }
 
-const ghosts = [];
+const chasers = [];
 
-ghostSpawnpoints.forEach(([row, col]) => ghosts.push(new Ghost(row, col, 200)));
+chaserSpawnpoints.forEach(([row, col]) => chasers.push(new Chaser(row, col, 200)));
 
-function startMovingGhost(ghost) {
-  ghost.timerId = setInterval(() => {
+function startMovingChaser(chaser) {
+  chaser.timerId = setInterval(() => {
     if (![0, 1, 2, 3].every((direction) => {
-      const nextRow = ghost.curRow + DELTA_I[direction];
-      const nextCol = ghost.curCol + DELTA_J[direction];
+      const nextRow = chaser.curRow + DELTA_I[direction];
+      const nextCol = chaser.curCol + DELTA_J[direction];
       return (
         !isWithinGrid(nextRow, nextCol) ||
-        !isPath(nextRow, nextCol) ||
-        gridMatrix[nextRow][nextCol].classList.contains("ghost")
+        isWall(nextRow, nextCol) ||
+        isChaser(nextRow, nextCol)
       );
     })) {
       const strategy = Math.floor(Math.random * 100);
-      if (strategy < ghost.betterStrategyLimit) {
+      if (strategy < chaser.betterStrategyLimit) {
         let finalDirection = -1, distanceToBeat = ROWS * COLS;
         for (let direction = 0; direction < 4; ++direction) {
-          const nextRow = ghost.curRow + DELTA_I[direction];
-          const nextCol = ghost.curCol + DELTA_J[direction];
+          const nextRow = chaser.curRow + DELTA_I[direction];
+          const nextCol = chaser.curCol + DELTA_J[direction];
           if (
             isWithinGrid(nextRow, nextCol) &&
             isPath(nextRow, nextCol) &&
-            !gridMatrix[nextRow][nextCol].classList.contains("ghost")
+            !isChaser(nextRow, nextCol)
           ) {
             const distance = Math.abs(curRow - nextRow) + Math.abs(curCol - nextCol);
             if (distance < distanceToBeat) {
@@ -278,40 +326,40 @@ function startMovingGhost(ghost) {
             }
           }
         }
-        const nextRow = ghost.curRow + DELTA_I[finalDirection];
-        const nextCol = ghost.curCol + DELTA_J[finalDirection];
-        gridMatrix[ghost.curRow][ghost.curCol].classList.remove("ghost");
-        ghost.curRow = nextRow;
-        ghost.curCol = nextCol;
-        gridMatrix[ghost.curRow][ghost.curCol].classList.add("ghost");
+        const nextRow = chaser.curRow + DELTA_I[finalDirection];
+        const nextCol = chaser.curCol + DELTA_J[finalDirection];
+        gridMatrix[chaser.curRow][chaser.curCol].classList.remove("chaser");
+        chaser.curRow = nextRow;
+        chaser.curCol = nextCol;
+        gridMatrix[chaser.curRow][chaser.curCol].classList.add("chaser");
       } else {
         let direction, nextRow, nextCol;
         do {
           direction = Math.floor(Math.random() * 4);
-          nextRow = ghost.curRow + DELTA_I[direction];
-          nextCol = ghost.curCol + DELTA_J[direction];
+          nextRow = chaser.curRow + DELTA_I[direction];
+          nextCol = chaser.curCol + DELTA_J[direction];
         } while (
           !isWithinGrid(nextRow, nextCol) ||
           !isPath(nextRow, nextCol) ||
-          gridMatrix[nextRow][nextCol].classList.contains("ghost")
+          isChaser(nextRow, nextCol)
         );
-        gridMatrix[ghost.curRow][ghost.curCol].classList.remove("ghost");
-        ghost.curRow = nextRow;
-        ghost.curCol = nextCol;
-        gridMatrix[ghost.curRow][ghost.curCol].classList.add("ghost");
+        gridMatrix[chaser.curRow][chaser.curCol].classList.remove("chaser");
+        chaser.curRow = nextRow;
+        chaser.curCol = nextCol;
+        gridMatrix[chaser.curRow][chaser.curCol].classList.add("chaser");
       }
     }
     checkForGameOver();
-  }, ghost.speed);
+  }, chaser.speed);
 }
 
-ghosts.forEach(ghost => startMovingGhost(ghost));
+chasers.forEach(chaser => startMovingChaser(chaser));
 
 function checkForGameOver() {
-  if (gridMatrix[curRow][curCol].classList.contains("ghost")) {
-    clearInterval(pacmanTimerId);
-    ghosts.forEach(ghost => clearInterval(ghost.timerId));
+  if (gridMatrix[curRow][curCol].classList.contains("chaser")) {
+    clearInterval(pokemanTimerId);
+    chasers.forEach(chaser => clearInterval(chaser.timerId));
     document.removeEventListener("keyup", changeDirection);
-    statusElement.textContent = "You lose...";
+    playerStatus.textContent = "You lose...";
   }
 }
