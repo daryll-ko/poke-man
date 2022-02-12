@@ -31,15 +31,17 @@ This game was made using standard HTML, CSS, JavaScript. I plan to refactor the 
 
 ## Plans
 
-- Add modals in between levels
 - Use carousels for field selection
 - Incorporate more maze generation algorithms
-- Make the layout responsive, and fix some current design quirks
-- Give the chasers some intelligence
+- Make the layout responsive
+- Give the chasers a bit of intelligence
+- Add more Pokémon!
 
 ## Reflections
 
-This is my first project! :D I've always wondered when I would come up with one. The whole concept of a coding project has been really nebulous to me, as someone who's never gotten their hands into one (at least, not of this scale).
+This is my first project! :D
+
+I've always wondered when I would come up with one. The whole concept of a coding project has been really nebulous to me, as someone who's never gotten their hands into one (at least, not of this scale).
 
 Like with most things, I wish I'd started earlier. Motivation isn't really my bottleneck when it comes to getting things done: you can check out [my competitive programming repo](https://github.com/daryll-ko/recreational) to see that. I think it was more on finding **inspiration** for a project.
 
