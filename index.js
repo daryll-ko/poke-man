@@ -18,45 +18,100 @@ let progressBar = document.getElementById("progress-bar");
 let curDirection = 0, pokemanTimerId;
 
 let playerStatus = document.getElementById("player-status");
+
+const numChasers = 4;
 let chasers = [];
+let chaserId;
+
+let pokemanSpriteId, chaserSpriteId;
+let pokemanSprite, chaserSprites = [];
 
 class Chaser {
-  constructor(curRow, curCol, speed) {
+  constructor(chaserId, curRow, curCol, speed) {
+    this.chaserId = chaserId;
     this.curRow = curRow;
     this.curCol = curCol;
     this.speed = speed;
-    this.betterStrategyLimit = 10;
     this.timerId = null;
   }
 }
 
-function startNewGame() {
+function generateGame() {
   clearInterval(pokemanTimerId);
-  chasers.forEach((chaser) => clearInterval(chaser.timerId));
   document.removeEventListener("keyup", changeDirection);
+  chasers.forEach((chaser) => clearInterval(chaser.timerId));
   grid.innerHTML = "";
   gridMatrix = [];
   score = 0;
+  pokemanSpriteId = (Math.floor(Math.random() * 802) + 1).toString().padStart(3, '0');
+  pokemanSprite = `url(images/pokemon/Shuffle${pokemanSpriteId}.png)`;
+  chaserSprites = [];
+  for (let i = 0; i < numChasers; ++i) {
+    chaserSpriteId = (Math.floor(Math.random() * 802) + 1).toString().padStart(3, "0");
+    chaserSprites.push(`url(images/pokemon/Shuffle${chaserSpriteId}.png)`);
+  }
   createGrid();
   fillGrid();
+  chasers = [];
+  chaserId = 0;
+  chaserSpawnpoints.forEach(([row, col]) => {
+    chasers.push(new Chaser(chaserId, row, col, 200));
+    ++chaserId;
+  });
+  setPokemanSprite();
+  chasers.forEach(chaser => setChaserSprite(chaser));
   smoothenGrid();
   progressBar.innerHTML = `
     <p class="progress-bar-text">${score} of ${neededScore}</p>
   `;
-  startMovingPokeman();
-  document.addEventListener("keyup", changeDirection);
-  chasers = [];
-  chaserSpawnpoints.forEach(([row, col]) => chasers.push(new Chaser(row, col, 200)));
-  chasers.forEach((chaser) => startMovingChaser(chaser));
+  playerStatus.textContent = "Alive";
+  document.addEventListener("keyup", startGame);
 }
 
-startNewGame();
+function removePokemanSprite() {
+    [...document.getElementsByClassName("pokeman")].forEach((square) => {
+      square.style.backgroundImage = "none";
+    });
+}
+
+function removeChaserSprite(chaser) {
+  const square = gridMatrix[chaser.curRow][chaser.curCol];
+  square.style.backgroundImage = "none";
+}
+
+function fixBerry(row, col) {
+  if (hasProperty(row, col, "berry-small")) {
+    gridMatrix[row][col].style.backgroundImage = "url(images/berries/normal-razz-berry.webp)";
+  } else if (hasProperty(row, col, "berry-medium")) {
+    gridMatrix[row][col].style.backgroundImage = "url(images/berries/silver-razz-berry.webp)";
+  } else if (hasProperty(row, col, "berry-large")) {
+    gridMatrix[row][col].style.backgroundImage = "url(images/berries/golden-razz-berry.webp)";
+  }
+}
+
+function setPokemanSprite() {
+  [...document.getElementsByClassName("pokeman")].forEach(square => {
+    square.style.backgroundImage = pokemanSprite;
+  });
+}
+
+function setChaserSprite(chaser) {
+  const square = gridMatrix[chaser.curRow][chaser.curCol];
+  square.style.backgroundImage = chaserSprites[chaser.chaserId];
+}
+
+function startGame() {
+  startMovingPokeman();
+  document.addEventListener("keyup", changeDirection);
+  chasers.forEach((chaser) => startMovingChaser(chaser));
+  document.removeEventListener("keyup", startGame);
+}
+
+generateGame();
 
 let playAgainBtn = document.getElementById("button-play-again");
 
-playAgainBtn.addEventListener("click", () => {
-  startNewGame();
-});
+playAgainBtn.addEventListener("click", generateGame);
 
 function createGrid() {
   for (let i = 0; i < ROWS * COLS; ++i) {
@@ -118,7 +173,7 @@ function isNewTerritory(row, col) {
 }
 
 function fillInnerGrid(curRow=2, curCol=2) {
-  gridMatrix[curRow][curCol].classList.add("path");
+  addProperty(curRow, curCol, "path");
   for (const direction of shuffle([0, 1, 2, 3])) {
     const nextRow = curRow + DELTA_I[direction];
     const nextCol = curCol + DELTA_J[direction];
@@ -187,7 +242,7 @@ function fillGrid() {
       }
     }
   }
-  chaserSpawnpoints = shuffle(possibleChaserSpawnpoints).slice(0, Math.min(4, possibleChaserSpawnpoints.length));
+  chaserSpawnpoints = shuffle(possibleChaserSpawnpoints).slice(0, Math.min(numChasers, possibleChaserSpawnpoints.length));
   for (const [row, col] of chaserSpawnpoints) {
     addProperty(row, col, "chaser");
   }
@@ -203,7 +258,7 @@ function fillGrid() {
         const randomNumber = Math.floor(Math.random() * 100);
         if (randomNumber < 5) {
           addProperty(row, col, "berry-large");
-        } else if (randomNumber < 30) {
+        } else if (randomNumber < 25) {
           addProperty(row, col, "berry-medium");
         } else {
           addProperty(row, col, "berry-small");
@@ -237,6 +292,8 @@ function smoothenGrid() {
 function startMovingPokeman() {
   pokemanTimerId = setInterval(() => {
     removeProperty(curRow, curCol, "pokeman");
+    removePokemanSprite();
+    fixBerry(curRow, curCol);
     const nextRow = curRow + DELTA_I[curDirection];
     const nextCol = curCol + DELTA_J[curDirection];
     if (
@@ -247,6 +304,7 @@ function startMovingPokeman() {
       curCol = nextCol;
     }
     addProperty(curRow, curCol, "pokeman");
+    setPokemanSprite();
     checkForBerry();
     updateScore();
     checkForWin();
@@ -312,56 +370,33 @@ function checkForWin() {
 
 function startMovingChaser(chaser) {
   chaser.timerId = setInterval(() => {
-    if (![0, 1, 2, 3].every((direction) => {
+    let finalDirection = -1, distanceToBeat = ROWS * COLS;
+    for (let direction = 0; direction < 4; ++direction) {
       const nextRow = chaser.curRow + DELTA_I[direction];
       const nextCol = chaser.curCol + DELTA_J[direction];
-      return (
-        !isWithinGrid(nextRow, nextCol) ||
-        isWall(nextRow, nextCol) ||
-        isChaser(nextRow, nextCol)
-      );
-    })) {
-      const strategy = Math.floor(Math.random * 100);
-      if (strategy < chaser.betterStrategyLimit) {
-        let finalDirection = -1, distanceToBeat = ROWS * COLS;
-        for (let direction = 0; direction < 4; ++direction) {
-          const nextRow = chaser.curRow + DELTA_I[direction];
-          const nextCol = chaser.curCol + DELTA_J[direction];
-          if (
-            isWithinGrid(nextRow, nextCol) &&
-            isPath(nextRow, nextCol) &&
-            !isChaser(nextRow, nextCol)
-          ) {
-            const distance = Math.abs(curRow - nextRow) + Math.abs(curCol - nextCol);
-            if (distance < distanceToBeat) {
-              finalDirection = direction;
-            }
-          }
+      if (
+        isWithinGrid(nextRow, nextCol) &&
+        isPath(nextRow, nextCol) &&
+        !isChaser(nextRow, nextCol)
+      ) {
+        const distance = Math.abs(curRow - nextRow) + Math.abs(curCol - nextCol);
+        if (distance < distanceToBeat) {
+          finalDirection = direction;
         }
-        const nextRow = chaser.curRow + DELTA_I[finalDirection];
-        const nextCol = chaser.curCol + DELTA_J[finalDirection];
-        gridMatrix[chaser.curRow][chaser.curCol].classList.remove("chaser");
-        chaser.curRow = nextRow;
-        chaser.curCol = nextCol;
-        gridMatrix[chaser.curRow][chaser.curCol].classList.add("chaser");
-      } else {
-        let direction, nextRow, nextCol;
-        do {
-          direction = Math.floor(Math.random() * 4);
-          nextRow = chaser.curRow + DELTA_I[direction];
-          nextCol = chaser.curCol + DELTA_J[direction];
-        } while (
-          !isWithinGrid(nextRow, nextCol) ||
-          !isPath(nextRow, nextCol) ||
-          isChaser(nextRow, nextCol)
-        );
-        gridMatrix[chaser.curRow][chaser.curCol].classList.remove("chaser");
-        chaser.curRow = nextRow;
-        chaser.curCol = nextCol;
-        gridMatrix[chaser.curRow][chaser.curCol].classList.add("chaser");
       }
     }
-    checkForGameOver();
+    if (finalDirection !== -1) {
+      const nextRow = chaser.curRow + DELTA_I[finalDirection];
+      const nextCol = chaser.curCol + DELTA_J[finalDirection];
+      removeProperty(chaser.curRow, chaser.curCol, "chaser");
+      removeChaserSprite(chaser);
+      fixBerry(chaser.curRow, chaser.curCol);
+      chaser.curRow = nextRow;
+      chaser.curCol = nextCol;
+      addProperty(chaser.curRow, chaser.curCol, "chaser");
+      setChaserSprite(chaser);
+      checkForGameOver();
+    }
   }, chaser.speed);
 }
 

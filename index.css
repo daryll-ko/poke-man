@@ -113,15 +113,16 @@ h3 {
 
 .pokeman,
 .chaser {
-  border: none;
+  border: 0.1em solid white;
+  border-radius: var(--cell-side-length);
 }
 
 .pokeman {
-  background-image: url(images/pokémon/squirtle.png);
+  background-color: lightgreen;
 }
 
 .chaser {
-  background-image: url(images/pokémon/bulbasaur.png);
+  background-color: lightcoral;
 }
 
 /* Info */
@@ -163,4 +164,10 @@ h3 {
 .button {
   background-color: var(--primary-color);
   cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+.button:hover,
+.button:focus {
+  transform: scale(1.1);
 }
