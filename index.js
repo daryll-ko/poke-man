@@ -148,7 +148,9 @@ let score = 0;
 const neededScore = 350;
 
 let progressBar = document.getElementById("progress-bar");
-progressBar.textContent = `${score}/${neededScore}`;
+progressBar.innerHTML = `
+  <p class="progress-bar-text">${score} of ${neededScore}</p>
+`;
 
 let curDirection = 0, pacmanTimerId;
 
@@ -215,9 +217,11 @@ function checkForPellet() {
 
 function updateScore() {
   score = Math.min(score, neededScore);
-  progressBar.textContent = `${score}/${neededScore}`;
+  progressBar.innerHTML = `
+    <p class="progress-bar-text">${score} of ${neededScore}</p>
+  `;
   progressBar.style.backgroundImage = `
-    linear-gradient(to right, lime, lime ${(score / neededScore) * 100}%, white ${(score / neededScore) * 100}%, white 100%)
+    linear-gradient(to right, var(--primary-color), var(--primary-color) ${(score / neededScore) * 100}%, white ${(score / neededScore) * 100}%, white 100%)
   `;
 }
 
