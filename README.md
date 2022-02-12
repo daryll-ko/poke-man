@@ -1,53 +1,48 @@
-# Pac-man?
+# Poké-Man
 
-I've always wondered when I would finish my first project. I guess the whole concept of a project has just been pretty nebulous to me, as someone who's never really gotten their hands into one.
+## Pitch
 
-What was the bottleneck, I wonder? I definitely wouldn't say "motivation": I can spend all day playing around in Kattis without any desire of stopping whatsoever. Inspiration, perhaps?
+Poké-Man is [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man), but with Pokémon!
 
-Ah well, what matters is where I'm at now. I have the main part of this project down, and I'll be focusing on design next. I've also thought of some project ideas that feel really cool to me, and I'm eager to start working on those. I finally feel like I'm on the side where the grass is greener.
+Aside from finally using JavaScript, I wanted to try out a variety of different frontend topics like responsive design and API interaction.
 
-...But I digress. What have I made?
+(add more things here once development progresses)
 
-## Elevator Pitch
+## Technical Stuff
 
-![demo-gif](https://media.giphy.com/media/3VGEAKcFTATCci0H5x/giphy.gif)
+This game was made using standard HTML, CSS, JavaScript. I plan to refactor the project using TypeScript and React once the project is in its advanced stages, but I'm making myself comfortable with the primitives for now.
 
-Pac-man? is loosely based on [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man) (who would've thought?). You play as an orange circle and move around the board collecting black squares. These black squares come in different sizes, and larger squares merit more points. Your goal is to reach a certain amount of points without getting "eaten" (read: touched) by any of the ghosts, which are denoted by purple circles.
+## Dev Stories
 
-## Technicalities
+- One of the longest time drains (well, it was just a few minutes, but still) was from not realizing that my `index.js` file should have been at the last section inside my `<body>` tags.
 
-I just used the standard trio (HTML + CSS + JS). I held off on using fancier things like TypeScript and React for now because I wanted to get comfortable with the primitives first.
+- The maze was generated using randomized depth-first-search. I do have plans on including other [maze generation algorithms](https://en.wikipedia.org/wiki/Maze_generation_algorithm) in future iterations. I wanted the borders to be accessible, so I generated the inner section first before naively plopping a bunch of bridges between the inner section and the borders.
 
-For the more interesting bits, read the next section.
-
-## Stories
-
-- It took me a bit of time to realize that the `index.js` file should be at the last part inside the `<body>` tags. Oops.
-
-- The maze was generated using randomized depth-first-search. I have plans on including other maze generation algorithms from [this](https://en.wikipedia.org/wiki/Maze_generation_algorithm) cool Wikipedia article in future iterations. I wanted the borders to be accessible, so I generated the inner part of the maze first then just naively plopped a bunch of bridges between this inner part and the borders.
-
-- Each ghost takes on one of two strategies at random:
+- Each chaser takes on one of two strategies at random:
 
   - Move randomly.
-  - Move in the direction that makes them end up in the cell with the least [Manhattan distance](https://en.wikipedia.org/wiki/Taxicab_geometry) to where Pacman is.
+  - Move to the cell with the least [Manhattan distance](https://en.wikipedia.org/wiki/Taxicab_geometry) to where your Poké-Man is.
 
-  Both are vastly suboptimal, I know. I plan on throwing in [Floyd-Warshall](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm) in the future (though time complexity concerns me a bit) to make the ghosts competent for once in their ethereal lives.
+  Both are pretty suboptimal. I plan on throwing in [Floyd-Warshall](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm) in a future iteration to make the chasers competent, but this'll do for now.
 
-- I like the progress bar a lot. CSS and JS really can come a long way.
+- It's a small thing, but I really like the progress bar. A few lines of JavaScript can really do neat things with CSS!
 
 ## Plans
 
-Mostly for self-reference.
+- Add modals in between levels
+- Use carousels for field selection
+- Incorporate more maze generation algorithms
+- Make the layout responsive, and fix some current design quirks
+- Give the chasers some intelligence
 
-- Add modals, carousels, and animations
-- Make the layout responsive (and fix some current design quirks)
-- Modularize code
-- Give the ghosts a bit of intelligence
-- Add start/reset buttons
-- Host the project!
+## Reflections
 
-## History
+This is my first project! :D I've always wondered when I would come up with one. The whole concept of a coding project has been really nebulous to me, as someone who's never gotten their hands into one (at least, not of this scale).
 
-| Release Date | Version |
-| :----------: | :-----: |
-| 2/8/21 | 1 |
+Like with most things, I wish I'd started earlier. Motivation isn't really my bottleneck when it comes to getting things done: you can check out [my competitive programming repo](https://github.com/daryll-ko/recreational) to see that. I think it was more on finding **inspiration** for a project.
+
+I would say that the vast majority of time I've spent on games was spent on [Pokémon](https://en.wikipedia.org/wiki/Pok%C3%A9mon_(video_game_series)) games. I've played through the main series games and they were great (especially *Legends: Arceus*; what a masterpiece!), but the games in which I had the most fun were the **spin-offs** (Ranger, Conquest, GO, etc.).
+
+The first version of this project was a run-of-the-mill Pac-Man game, but remembering the Pokémon games that sprinkled fun across my life journey made me find something worth working towards.
+
+I could ponder on the past for hours on end, but what ultimately matters is where I'm at now, and I'm happy to say that I finally feel like I'm on the side where the grass is greener.
