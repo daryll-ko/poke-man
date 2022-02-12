@@ -37,6 +37,8 @@ class Chaser {
 }
 
 function generateGame() {
+  progressBar.style.backgroundImage =
+    "linear-gradient(to right, var(--primary-color), var(--primary-color) 0%, white 0%, white 100%)";
   clearInterval(pokemanTimerId);
   document.removeEventListener("keyup", changeDirection);
   chasers.forEach((chaser) => clearInterval(chaser.timerId));
