@@ -5,8 +5,58 @@ const COLS = getComputedStyle(document.body).getPropertyValue("--num-cols");
 const DELTA_I = [0, -1, 0, 1];
 const DELTA_J = [1, 0, -1, 0];
 
-let grid = document.querySelector(".grid");
+let grid = document.getElementById("grid");
 let gridMatrix = [];
+
+let curRow, curCol, chaserSpawnpoints;
+
+let score = 0;
+const neededScore = 150;
+
+let progressBar = document.getElementById("progress-bar");
+
+let curDirection = 0, pokemanTimerId;
+
+let playerStatus = document.getElementById("player-status");
+let chasers = [];
+
+class Chaser {
+  constructor(curRow, curCol, speed) {
+    this.curRow = curRow;
+    this.curCol = curCol;
+    this.speed = speed;
+    this.betterStrategyLimit = 10;
+    this.timerId = null;
+  }
+}
+
+function startNewGame() {
+  clearInterval(pokemanTimerId);
+  chasers.forEach((chaser) => clearInterval(chaser.timerId));
+  document.removeEventListener("keyup", changeDirection);
+  grid.innerHTML = "";
+  gridMatrix = [];
+  score = 0;
+  createGrid();
+  fillGrid();
+  smoothenGrid();
+  progressBar.innerHTML = `
+    <p class="progress-bar-text">${score} of ${neededScore}</p>
+  `;
+  startMovingPokeman();
+  document.addEventListener("keyup", changeDirection);
+  chasers = [];
+  chaserSpawnpoints.forEach(([row, col]) => chasers.push(new Chaser(row, col, 200)));
+  chasers.forEach((chaser) => startMovingChaser(chaser));
+}
+
+startNewGame();
+
+let playAgainBtn = document.getElementById("button-play-again");
+
+playAgainBtn.addEventListener("click", () => {
+  startNewGame();
+});
 
 function createGrid() {
   for (let i = 0; i < ROWS * COLS; ++i) {
@@ -18,8 +68,6 @@ function createGrid() {
     gridMatrix[gridMatrix.length - 1].push(square);
   }
 }
-
-createGrid();
 
 function shuffle(array) {
   let curIndex = array.length - 1;
@@ -91,8 +139,6 @@ function addProperty(row, col, property) {
 function removeProperty(row, col, property) {
   gridMatrix[row][col].classList.remove(property);
 }
-
-let curRow, curCol, chaserSpawnpoints;
 
 function fillGrid() {
   // outer path, Poké-Man
@@ -167,8 +213,6 @@ function fillGrid() {
   }
 }
 
-fillGrid();
-
 function smoothenGrid() {
   for (let row = 1; row < ROWS - 1; ++row) {
     for (let col = 1; col < COLS - 1; ++col) {
@@ -190,18 +234,6 @@ function smoothenGrid() {
   }
 }
 
-smoothenGrid();
-
-let score = 0;
-const neededScore = 150;
-
-let progressBar = document.getElementById("progress-bar");
-progressBar.innerHTML = `
-  <p class="progress-bar-text">${score} of ${neededScore}</p>
-`;
-
-let curDirection = 0, pokemanTimerId;
-
 function startMovingPokeman() {
   pokemanTimerId = setInterval(() => {
     removeProperty(curRow, curCol, "pokeman");
@@ -221,8 +253,6 @@ function startMovingPokeman() {
     checkForGameOver();
   }, 200);
 }
-
-startMovingPokeman();
 
 function changeDirection(event) {
   switch (event.key) {
@@ -244,8 +274,6 @@ function changeDirection(event) {
       break;
   }
 }
-
-document.addEventListener("keyup", changeDirection);
 
 function checkForBerry() {
   if (hasProperty(curRow, curCol, "berry")) {
@@ -273,8 +301,6 @@ function updateScore() {
   `;
 }
 
-let playerStatus = document.getElementById("player-status");
-
 function checkForWin() {
   if (score === neededScore) {
     clearInterval(pokemanTimerId);
@@ -283,20 +309,6 @@ function checkForWin() {
     playerStatus.textContent = "You win!";
   }
 }
-
-class Chaser {
-  constructor(curRow, curCol, speed) {
-    this.curRow = curRow;
-    this.curCol = curCol;
-    this.speed = speed;
-    this.betterStrategyLimit = 10;
-    this.timerId = null;
-  }
-}
-
-const chasers = [];
-
-chaserSpawnpoints.forEach(([row, col]) => chasers.push(new Chaser(row, col, 200)));
 
 function startMovingChaser(chaser) {
   chaser.timerId = setInterval(() => {
@@ -352,8 +364,6 @@ function startMovingChaser(chaser) {
     checkForGameOver();
   }, chaser.speed);
 }
-
-chasers.forEach(chaser => startMovingChaser(chaser));
 
 function checkForGameOver() {
   if (gridMatrix[curRow][curCol].classList.contains("chaser")) {
