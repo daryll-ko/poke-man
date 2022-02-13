@@ -8,8 +8,7 @@ num_pokemon = 802
 
 pokemon_list = soup.find_all("tr")[2:]
 
-json_content = """
-[
+json_content = """[
 """
 
 for pokemon in pokemon_list[:2*num_pokemon-1:2]:
@@ -30,9 +29,9 @@ for pokemon in pokemon_list[:2*num_pokemon-1:2]:
         "sprite": "Shuffle{number}.png"
     }}{',' if int(number) < num_pokemon else ''}
     """
+
 json_content += """
-]
-"""
+]"""
 
 with open("pokedex.json", "w") as output_file:
     output_file.write(json_content)
