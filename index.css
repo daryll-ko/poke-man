@@ -1,5 +1,7 @@
 :root {
   --primary-color: rgb(124, 240, 255);
+  --secondary-color: rgb(218, 248, 252);
+  --progress-color: rgb(255, 255, 255);
   --num-rows: 15;
   --num-cols: 15;
   --cell-side-length: 2rem;
@@ -48,7 +50,7 @@ h3 {
 }
 
 .container-main {
-  max-width: 1200px;
+  max-width: 1000px;
   display: flex;
   justify-content: space-around;
 }
@@ -96,18 +98,21 @@ h3 {
   background-size: cover;
 }
 
-.berry-small {
-  background-image: url(images/berries/normal-razz-berry.webp);
+.berry-razz,
+.berry-nanab,
+.berry-pinap {
   border: 0.5em solid white;
 }
 
-.berry-medium {
-  background-image: url(images/berries/silver-razz-berry.webp);
+.berry-razz-silver,
+.berry-pinap-silver,
+.berry-nanab-silver {
   border: 0.35em solid white;
 }
 
-.berry-large {
-  background-image: url(images/berries/golden-razz-berry.webp);
+.berry-razz-golden,
+.berry-pinap-golden,
+.berry-nanab-golden {
   border: 0.2em solid white;
 }
 
@@ -128,46 +133,167 @@ h3 {
 /* Info */
 
 .info {
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.info-heading {
-  letter-spacing: 1px;
+  width: 40%;
+  display: grid;
+  grid-template-areas:
+    "P G"
+    "C G";
+  gap: 0 2em;
 }
 
 .progress,
-.status {
-  height: 50%;
-  margin: 0 auto;
-}
-
+.controls,
+.guide,
 .progress-bar,
-.player-status,
-.button {
-  margin-top: 1em;
-}
-
-.progress-bar,
-.button {
-  padding: 0.5em 1.25em;
-  border: 0.2em solid black;
+.button,
+.guide-pokeman,
+.guide-chaser,
+.berry-row,
+.guide-status,
+.up,
+.left,
+.down,
+.right {
+  border: 0.2em solid var(--primary-color);
   border-radius: 1em;
 }
 
-.progress-bar {
-  background-image: linear-gradient(to right, var(--primary-color), var(--primary-color) 0%, white 0%, white 100%);
+.progress,
+.controls,
+.guide {
+  justify-self: center;
+  align-self: center;
+  padding: 1em;
+  background-color: var(--secondary-color);
+}
+
+.progress {
+  grid-area: P;
+}
+
+.controls {
+  grid-area: C;
+}
+
+.guide {
+  grid-area: G;
+}
+
+.movement-panel {
+  margin-top: 1em;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.25em;
+}
+
+.progress-bar,
+.button,
+.guide-pokeman,
+.guide-chaser,
+.berry-row,
+.guide-status {
+  margin-top: 1em;
+  padding: 0.5em 1.25em;
+  background-color: var(--progress-color);
+}
+
+.up,
+.left,
+.down,
+.right {
+  background-color: var(--progress-color);
+}
+
+.active-direction {
+  background-color: rgb(206, 253, 206);
 }
 
 .button {
-  background-color: var(--primary-color);
+  border-color: purple;
   cursor: pointer;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.25s ease-in-out;
 }
 
 .button:hover,
 .button:focus {
   transform: scale(1.1);
+}
+
+.button-time {
+  display: none;
+}
+
+.berries {
+  display: flex;
+  flex-direction: column;
+}
+
+.berry-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 25px;
+}
+
+.berries-normal {
+  background-color: #fff4e6;
+}
+
+.berries-silver {
+  background-color: rgb(233, 233, 233);
+}
+
+.berries-golden {
+  background-color: lightgoldenrodyellow;
+}
+
+.guide-berry {
+  height: 1.5rem;
+  width: 1.5rem;
+  box-sizing: border-box;
+  margin: 0 0.1em;
+  border: none;
+  background-size: cover;
+}
+
+.berry-razz {
+  background-image: url(images/berries/razz-berry.webp);
+}
+
+.berry-pinap {
+  background-image: url(images/berries/pinap-berry.webp);
+}
+
+.berry-nanab {
+  background-image: url(images/berries/nanab-berry.webp);
+}
+
+.berry-razz-silver {
+  background-image: url(images/berries/silver-razz-berry.webp);
+}
+
+.berry-pinap-silver {
+  background-image: url(images/berries/silver-pinap-berry.webp);
+}
+
+.berry-nanab-silver {
+  background-image: url(images/berries/silver-nanab-berry.webp);
+}
+
+.berry-razz-golden {
+  background-image: url(images/berries/golden-razz-berry.webp);
+}
+
+.berry-pinap-golden {
+  background-image: url(images/berries/golden-pinap-berry.webp);
+}
+
+.berry-nanab-golden {
+  background-image: url(images/berries/golden-nanab-berry.webp);
+}
+
+.berry-score {
+  font-size: 1.5rem;
+  margin-left: 0.4em;
 }

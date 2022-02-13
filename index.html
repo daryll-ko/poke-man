@@ -23,10 +23,43 @@
             <h2 class="info-heading">Progress</h2>
             <div id="progress-bar" class="progress-bar"></div>
           </div>
-          <div class="status">
-            <h2 class="info-heading">Status</h2>
-            <p id="player-status" class="player-status">Alive</p>
-            <div id="button-play-again" class="button">Play Again</div>
+          <div class="controls">
+            <h2 class="info-heading">Controls</h2>
+            <div class="movement-panel">
+              <div class="blank"></div>
+              <div id="up" class="up">↑W</div>
+              <div class="blank"></div>
+              <div id="left" class="left">←A</div>
+              <div id="down" class="down">S↓</div>
+              <div id="right" class="right">D→</div>
+            </div>
+            <div id="button-time" class="button button-time">Pause</div>
+            <div id="button-reset" class="button button-reset">New Game</div>
+          </div>
+          <div class="guide">
+            <h2 class="info-heading">Guide</h2>
+            <div class="pokemon"></div>
+            <div class="berries">
+              <div class="berry-row berries-normal">
+                <div class="guide-berry berry-razz"></div>
+                <div class="guide-berry berry-pinap"></div>
+                <div class="guide-berry berry-nanab"></div>
+                <p class="berry-score">1</p>
+              </div>
+              <div class="berry-row berries-silver">
+                <div class="guide-berry berry-razz-silver"></div>
+                <div class="guide-berry berry-pinap-silver"></div>
+                <div class="guide-berry berry-nanab-silver"></div>
+                <p class="berry-score">3</p>
+              </div>
+              <div class="berry-row berries-golden">
+                <div class="guide-berry berry-razz-golden"></div>
+                <div class="guide-berry berry-pinap-golden"></div>
+                <div class="guide-berry berry-nanab-golden"></div>
+                <p class="berry-score">5</p>
+              </div>
+            </div>
+            <div id="guide-status" class="guide-status">Press any movement key to start!</div>
           </div>
         </div>
       </div>

@@ -10,14 +10,15 @@ let gridMatrix = [];
 
 let curRow, curCol, chaserSpawnpoints;
 
-let score = 0;
-const neededScore = 150;
+let score, maxScore, neededScore;
 
 let progressBar = document.getElementById("progress-bar");
 
-let curDirection = 0, pokemanTimerId;
+let curDirection, pokemanTimerId;
 
-let playerStatus = document.getElementById("player-status");
+let guideStatus = document.getElementById("guide-status");
+
+let timeButton = document.getElementById("button-time");
 
 const numChasers = 4;
 let chasers = [];
@@ -25,6 +26,11 @@ let chaserId;
 
 let pokemanSpriteId, chaserSpriteId;
 let pokemanSprite, chaserSprites = [];
+
+let upPanel = document.getElementById("up");
+let leftPanel = document.getElementById("left");
+let downPanel = document.getElementById("down");
+let rightPanel = document.getElementById("right");
 
 class Chaser {
   constructor(chaserId, curRow, curCol, speed) {
@@ -38,13 +44,20 @@ class Chaser {
 
 function generateGame() {
   progressBar.style.backgroundImage =
-    "linear-gradient(to right, var(--primary-color), var(--primary-color) 0%, white 0%, white 100%)";
+  `linear-gradient(
+      to right,
+      var(--primary-color),
+      var(--primary-color) 0%,
+      var(--progress-color) 0%,
+      var(--progress-color) 100%
+    )`;
   clearInterval(pokemanTimerId);
   document.removeEventListener("keyup", changeDirection);
   chasers.forEach((chaser) => clearInterval(chaser.timerId));
   grid.innerHTML = "";
   gridMatrix = [];
   score = 0;
+  curDirection = -1;
   pokemanSpriteId = (Math.floor(Math.random() * 802) + 1).toString().padStart(3, '0');
   pokemanSprite = `url(images/pokemon/Shuffle${pokemanSpriteId}.png)`;
   chaserSprites = [];
@@ -54,6 +67,7 @@ function generateGame() {
   }
   createGrid();
   fillGrid();
+  neededScore = Math.floor(Math.floor(4 * maxScore / 5) / 10) * 10;
   chasers = [];
   chaserId = 0;
   chaserSpawnpoints.forEach(([row, col]) => {
@@ -66,8 +80,15 @@ function generateGame() {
   progressBar.innerHTML = `
     <p class="progress-bar-text">${score} of ${neededScore}</p>
   `;
-  playerStatus.textContent = "Alive";
-  document.addEventListener("keyup", startGame);
+  guideStatus.textContent = "Press any movement key to start!";
+  document.addEventListener("keyup", tryStartingGame);
+}
+
+function tryStartingGame(event) {
+  if (["d", "w", "a", "s", "ArrowRight", "ArrowUp", "ArrowLeft", "ArrowDown"].includes(event.key)) {
+    changeDirection(event);
+    startGame();
+  }
 }
 
 function removePokemanSprite() {
@@ -82,12 +103,14 @@ function removeChaserSprite(chaser) {
 }
 
 function fixBerry(row, col) {
-  if (hasProperty(row, col, "berry-small")) {
-    gridMatrix[row][col].style.backgroundImage = "url(images/berries/normal-razz-berry.webp)";
-  } else if (hasProperty(row, col, "berry-medium")) {
-    gridMatrix[row][col].style.backgroundImage = "url(images/berries/silver-razz-berry.webp)";
-  } else if (hasProperty(row, col, "berry-large")) {
-    gridMatrix[row][col].style.backgroundImage = "url(images/berries/golden-razz-berry.webp)";
+  for (let berry of [
+    "berry-razz", "berry-razz-silver", "berry-razz-gold",
+    "berry-pinap", "berry-pinap-silver", "berry-pinap-gold",
+    "berry-nanab", "berry-nanab-silver", "berry-nanab-gold"
+  ]) {
+    if (hasProperty(row, col, berry)) {
+      gridMatrix[row][col].style.backgroundImage = `url(images/berries/${berry.split('-').reverse().join('-')}.webp)`;
+    }
   }
 }
 
@@ -102,18 +125,37 @@ function setChaserSprite(chaser) {
   square.style.backgroundImage = chaserSprites[chaser.chaserId];
 }
 
+function toggleTime() {
+  if (timeButton.textContent === "Pause") {
+    clearInterval(pokemanTimerId);
+    chasers.forEach((chaser) => clearInterval(chaser.timerId));
+    document.removeEventListener("keyup", changeDirection);
+    guideStatus.textContent = "Game paused...";
+    timeButton.textContent = "Continue";
+  } else {
+    startMovingPokeman();
+    chasers.forEach((chaser) => startMovingChaser(chaser));
+    document.addEventListener("keyup", changeDirection);
+    guideStatus.textContent = "You're still alive!";
+    timeButton.textContent = "Pause";
+  }
+}
+
 function startGame() {
+  timeButton.style.display = "block";
+  timeButton.addEventListener("click", toggleTime);
   startMovingPokeman();
-  document.addEventListener("keyup", changeDirection);
   chasers.forEach((chaser) => startMovingChaser(chaser));
-  document.removeEventListener("keyup", startGame);
+  document.addEventListener("keyup", changeDirection);
+  guideStatus.textContent = "You're still alive!";
+  document.removeEventListener("keyup", tryStartingGame);
 }
 
 generateGame();
 
-let playAgainBtn = document.getElementById("button-play-again");
+let resetButton = document.getElementById("button-reset");
 
-playAgainBtn.addEventListener("click", generateGame);
+resetButton.addEventListener("click", generateGame);
 
 function createGrid() {
   for (let i = 0; i < ROWS * COLS; ++i) {
@@ -249,6 +291,7 @@ function fillGrid() {
     addProperty(row, col, "chaser");
   }
   // berries
+  maxScore = 0;
   for (let row = 0; row < ROWS; ++row) {
     for (let col = 0; col < COLS; ++col) {
       if (
@@ -257,13 +300,19 @@ function fillGrid() {
         !isChaser(row, col)
       ) {
         addProperty(row, col, "berry");
-        const randomNumber = Math.floor(Math.random() * 100);
+        let randomNumber = Math.floor(Math.random() * 100);
         if (randomNumber < 5) {
-          addProperty(row, col, "berry-large");
+          maxScore += 5;
+          randomNumber = Math.floor(Math.random() * 3);
+          addProperty(row, col, `berry-${["razz", "pinap", "nanab"][randomNumber]}-golden`);
         } else if (randomNumber < 25) {
-          addProperty(row, col, "berry-medium");
+          maxScore += 3;
+          randomNumber = Math.floor(Math.random() * 3);
+          addProperty(row, col, `berry-${["razz", "pinap", "nanab"][randomNumber]}-silver`);
         } else {
-          addProperty(row, col, "berry-small");
+          ++maxScore;
+          randomNumber = Math.floor(Math.random() * 3);
+          addProperty(row, col, `berry-${["razz", "pinap", "nanab"][randomNumber]}`);
         }
       }
     }
@@ -314,7 +363,22 @@ function startMovingPokeman() {
   }, 200);
 }
 
+function updateMovementPanel() {
+  if (curDirection === 0) {
+    rightPanel.classList.toggle("active-direction");
+  } else if (curDirection === 1) {
+    upPanel.classList.toggle("active-direction");
+  } else if (curDirection === 2) {
+    leftPanel.classList.toggle("active-direction");
+  } else {
+    downPanel.classList.toggle("active-direction");
+  }
+}
+
 function changeDirection(event) {
+  if (curDirection !== -1) {
+    updateMovementPanel();
+  }
   switch (event.key) {
     case "d":
     case "ArrowRight":
@@ -333,20 +397,29 @@ function changeDirection(event) {
       curDirection = 3;
       break;
   }
+  updateMovementPanel();
 }
 
 function checkForBerry() {
   if (hasProperty(curRow, curCol, "berry")) {
     removeProperty(curRow, curCol, "berry");
-    if (hasProperty(curRow, curCol, "berry-small")) {
-      score += 1;
-      removeProperty(curRow, curCol, "berry-small");
-    } else if (hasProperty(curRow, curCol, "berry-medium")) {
-      score += 3;
-      removeProperty(curRow, curCol, "berry-medium");
-    } else if (hasProperty(curRow, curCol, "berry-large")) {
-      score += 5;
-      removeProperty(curRow, curCol, "berry-large");
+    for (let property of ["berry-razz", "berry-pinap", "berry-nanab"]) {
+      if (hasProperty(curRow, curCol, property)) {
+        score += 1;
+        removeProperty(curRow, curCol, property);
+      }
+    }
+    for (let property of ["berry-razz-silver", "berry-pinap-silver", "berry-nanab-silver"]) {
+      if (hasProperty(curRow, curCol, property)) {
+        score += 3;
+        removeProperty(curRow, curCol, property);
+      }
+    }
+    for (let property of ["berry-razz-golden", "berry-pinap-golden", "berry-nanab-golden"]) {
+      if (hasProperty(curRow, curCol, property)) {
+        score += 5;
+        removeProperty(curRow, curCol, property);
+      }
     }
   }
 }
@@ -357,16 +430,23 @@ function updateScore() {
     <p class="progress-bar-text">${score} of ${neededScore}</p>
   `;
   progressBar.style.backgroundImage = `
-    linear-gradient(to right, var(--primary-color), var(--primary-color) ${(score / neededScore) * 100}%, white ${(score / neededScore) * 100}%, white 100%)
+    linear-gradient(
+      to right,
+      var(--primary-color),
+      var(--primary-color) ${(score / neededScore) * 100}%,
+      var(--progress-color) ${(score / neededScore) * 100}%,
+      var(--progress-color) 100%
+    )
   `;
 }
 
 function checkForWin() {
   if (score === neededScore) {
+    timeButton.style.display = "none";
     clearInterval(pokemanTimerId);
     chasers.forEach(chaser => clearInterval(chaser.timerId));
     document.removeEventListener("keyup", changeDirection);
-    playerStatus.textContent = "You win!";
+    guideStatus.textContent = "You win!";
   }
 }
 
@@ -404,9 +484,15 @@ function startMovingChaser(chaser) {
 
 function checkForGameOver() {
   if (gridMatrix[curRow][curCol].classList.contains("chaser")) {
+    chasers.forEach(chaser => {
+      if (chaser.curRow === curRow && chaser.curCol === curCol) {
+        setChaserSprite(chaser);
+      }
+    });
+    timeButton.style.display = "none";
     clearInterval(pokemanTimerId);
     chasers.forEach(chaser => clearInterval(chaser.timerId));
     document.removeEventListener("keyup", changeDirection);
-    playerStatus.textContent = "You lose...";
+    guideStatus.textContent = "You lose...";
   }
 }
