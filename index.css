@@ -1,20 +1,37 @@
 :root {
+  /* Colors */
   --primary-color: rgb(124, 240, 255);
   --secondary-color: rgb(218, 248, 252);
-  --progress-color: rgb(255, 255, 255);
+  --internal-color: rgb(255, 255, 255);
+
+  --ally-background-color: lightgreen;
+  --enemy-background-color: lightsalmon;
+
+  --active-color: rgb(206, 253, 206);
+  --call-to-action-color: purple; 
+
+  --enemy-info-color: rgb(255, 227, 215);
+
+  /* Dimensions */
   --num-rows: 15;
   --num-cols: 15;
+
   --cell-side-length: 2rem;
+
   --grid-height: calc(var(--num-rows) * var(--cell-side-length));
   --grid-width: calc(var(--num-cols) * var(--cell-side-length));
 }
 
+/* Typography */
+
 body {
   text-align: center;
   margin: 0;
+  min-height: 100vh;
+  
   font-family: "Nunito", sans-serif;
   font-weight: 700;
-  min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -39,20 +56,32 @@ h3 {
   font-size: 1.5rem;
 }
 
-.color-primary {
+/* Overall layout */
+
+header,
+footer {
   background-color: var(--primary-color);
 }
 
+main {
+  background-color: var(--internal-color);
+}
+
 .container {
-  max-width: 600px;
   margin: 0 auto;
   padding: 1em;
+}
+
+.container-header,
+.container-footer {
+  max-width: 600px;
 }
 
 .container-main {
   max-width: 1000px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 /* Grid */
@@ -60,8 +89,10 @@ h3 {
 .grid {
   height: var(--grid-height);
   width: var(--grid-width);
+
   display: flex;
   flex-wrap: wrap;
+
   border: calc(var(--cell-side-length) / 2) solid var(--primary-color);
   border-radius: calc(var(--cell-side-length) / 2);
 }
@@ -69,8 +100,17 @@ h3 {
 .grid > div {
   height: var(--cell-side-length);
   width: var(--cell-side-length);
+
   box-sizing: border-box;
 }
+
+.berry,
+.pokeman,
+.chaser {
+  background-size: cover;
+}
+
+/* Grid -> Walls */
 
 .wall {
   background-color: var(--primary-color);
@@ -92,169 +132,24 @@ h3 {
   border-bottom-right-radius: calc(var(--cell-side-length) / 2);
 }
 
-.berry,
-.pokeman,
-.chaser {
-  background-size: cover;
-}
+/* Grid -> Berries */
 
 .berry-razz,
 .berry-nanab,
 .berry-pinap {
-  border: 0.5em solid white;
+  border: 0.5em solid var(--internal-color);
 }
 
 .berry-razz-silver,
 .berry-pinap-silver,
 .berry-nanab-silver {
-  border: 0.35em solid white;
+  border: 0.35em solid var(--internal-color);
 }
 
 .berry-razz-golden,
 .berry-pinap-golden,
 .berry-nanab-golden {
-  border: 0.2em solid white;
-}
-
-.pokeman,
-.chaser {
-  border: 0.1em solid white;
-  border-radius: var(--cell-side-length);
-}
-
-.pokeman {
-  background-color: lightgreen;
-}
-
-.chaser {
-  background-color: lightcoral;
-}
-
-/* Info */
-
-.info {
-  width: 40%;
-  display: grid;
-  grid-template-areas:
-    "P G"
-    "C G";
-  gap: 0 2em;
-}
-
-.progress,
-.controls,
-.guide,
-.progress-bar,
-.button,
-.guide-pokeman,
-.guide-chaser,
-.berry-row,
-.guide-status,
-.up,
-.left,
-.down,
-.right {
-  border: 0.2em solid var(--primary-color);
-  border-radius: 1em;
-}
-
-.progress,
-.controls,
-.guide {
-  justify-self: center;
-  align-self: center;
-  padding: 1em;
-  background-color: var(--secondary-color);
-}
-
-.progress {
-  grid-area: P;
-}
-
-.controls {
-  grid-area: C;
-}
-
-.guide {
-  grid-area: G;
-}
-
-.movement-panel {
-  margin-top: 1em;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.25em;
-}
-
-.progress-bar,
-.button,
-.guide-pokeman,
-.guide-chaser,
-.berry-row,
-.guide-status {
-  margin-top: 1em;
-  padding: 0.5em 1.25em;
-  background-color: var(--progress-color);
-}
-
-.up,
-.left,
-.down,
-.right {
-  background-color: var(--progress-color);
-}
-
-.active-direction {
-  background-color: rgb(206, 253, 206);
-}
-
-.button {
-  border-color: purple;
-  cursor: pointer;
-  transition: transform 0.25s ease-in-out;
-}
-
-.button:hover,
-.button:focus {
-  transform: scale(1.1);
-}
-
-.button-time {
-  display: none;
-}
-
-.berries {
-  display: flex;
-  flex-direction: column;
-}
-
-.berry-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 25px;
-}
-
-.berries-normal {
-  background-color: #fff4e6;
-}
-
-.berries-silver {
-  background-color: rgb(233, 233, 233);
-}
-
-.berries-golden {
-  background-color: lightgoldenrodyellow;
-}
-
-.guide-berry {
-  height: 1.5rem;
-  width: 1.5rem;
-  box-sizing: border-box;
-  margin: 0 0.1em;
-  border: none;
-  background-size: cover;
+  border: 0.2em solid var(--internal-color);
 }
 
 .berry-razz {
@@ -291,6 +186,194 @@ h3 {
 
 .berry-nanab-golden {
   background-image: url(images/berries/golden-nanab-berry.webp);
+}
+
+/* Grid -> Players */
+
+.pokeman,
+.chaser {
+  border: 0.1em solid var(--internal-color);
+  border-radius: var(--cell-side-length);
+}
+
+.pokeman {
+  background-color: var(--ally-background-color);
+}
+
+.chaser {
+  background-color: var(--enemy-background-color);
+}
+
+/* Info */
+
+.info {
+  width: 40%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "progress guide"
+    "controls guide"
+    "action guide";
+  gap: 1.5em;
+}
+
+.progress,
+.controls,
+.action,
+.guide {
+  align-self: center;
+  justify-self: center;
+  padding: 1em;
+  background-color: var(--secondary-color);
+}
+
+.border-primary {
+  border: 0.2em solid var(--primary-color);
+  border-radius: 1em;
+}
+
+.space-top {
+  margin-top: 1em;
+}
+
+.color-internal {
+  background-color: var(--internal-color);
+}
+
+.padded {
+  padding: 0.5em 1.25em;
+}
+
+/* Info -> Progress */
+
+.progress {
+  grid-area: progress;
+}
+
+/* Info -> Controls */
+
+.controls {
+  grid-area: controls;
+}
+
+.movement-panel {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5em;
+}
+
+.up,
+.left,
+.down,
+.right {
+  background-color: var(--internal-color);
+}
+
+.active-direction {
+  background-color: var(--active-color);
+}
+
+.button {
+  border: 0.2em solid var(--call-to-action-color);
+  border-radius: 1em;
+  padding: 0.5em 1em;
+
+  cursor: pointer;
+
+  transition: transform 0.25s ease-in-out;
+}
+
+.button:hover,
+.button:focus {
+  transform: scale(1.1);
+}
+
+.button-time {
+  display: none;
+}
+
+/* Info -> Action */
+
+.action {
+  padding: 0.5em;
+  justify-self: stretch;
+}
+
+.action-element {
+  padding: 0.5em;
+}
+
+/* Info -> Guide */
+
+.guide {
+  grid-area: guide;
+}
+
+.berry-row {
+  height: 1.5rem;
+}
+
+.players-pokeman,
+.players-chasers {
+  display: grid;
+  grid-template-columns: 1fr 70%;
+  justify-items: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.players-pokeman {
+  background-color: var(--active-color);
+}
+
+.players-chasers {
+  background-color: var(--enemy-info-color);
+}
+
+.pokeman-sprite,
+.chaser-sprite {
+  height: 2rem;
+  width: 2rem;
+  box-sizing: border-box;
+  background-size: cover;
+  border-radius: 1em;
+}
+
+.pokeman-sprite {
+  background-color: var(--ally-background-color);
+}
+
+.chaser-sprite {
+  background-color: var(--enemy-background-color);
+}
+
+.berry-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.berries-normal {
+  background-color: #fff4e6;
+}
+
+.berries-silver {
+  background-color: rgb(233, 233, 233);
+}
+
+.berries-golden {
+  background-color: lightgoldenrodyellow;
+}
+
+.berry-guide {
+  height: 1.5rem;
+  width: 1.5rem;
+  box-sizing: border-box;
+  margin: 0 0.2em;
+  border: none;
+  background-size: cover;
 }
 
 .berry-score {

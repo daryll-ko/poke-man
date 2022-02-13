@@ -16,21 +16,25 @@ let progressBar = document.getElementById("progress-bar");
 
 let curDirection, pokemanTimerId;
 
-let guideStatus = document.getElementById("guide-status");
+let actionElement = document.getElementById("action-element");
 
 let timeButton = document.getElementById("button-time");
+let resetButton = document.getElementById("button-reset");
 
 const numChasers = 4;
 let chasers = [];
 let chaserId;
 
 let pokemanSpriteId, chaserSpriteId;
-let pokemanSprite, chaserSprites = [];
+let pokemanSprite, chaserSpriteIds = [], chaserSprites = [];
 
 let upPanel = document.getElementById("up");
 let leftPanel = document.getElementById("left");
 let downPanel = document.getElementById("down");
 let rightPanel = document.getElementById("right");
+
+let pokemanDisplay = document.getElementById("players-pokeman");
+let chasersDisplay = document.getElementById("players-chasers");
 
 class Chaser {
   constructor(chaserId, curRow, curCol, speed) {
@@ -43,13 +47,27 @@ class Chaser {
 }
 
 function generateGame() {
+  resetButton.style.display = "block";
+  resetButton.addEventListener("click", generateGame);
+  document.addEventListener("keyup", (event) => {
+    if (event.key === "f") {
+      generateGame();
+    }
+  });
+  timeButton.style.display = "none";
+  timeButton.removeEventListener("click", toggleTime);
+  document.removeEventListener("keyup", (event) => {
+    if (event.key === "e") {
+      toggleTime();
+    }
+  });
   progressBar.style.backgroundImage =
   `linear-gradient(
       to right,
       var(--primary-color),
       var(--primary-color) 0%,
-      var(--progress-color) 0%,
-      var(--progress-color) 100%
+      var(--internal-color) 0%,
+      var(--internal-color) 100%
     )`;
   clearInterval(pokemanTimerId);
   document.removeEventListener("keyup", changeDirection);
@@ -60,11 +78,14 @@ function generateGame() {
   curDirection = -1;
   pokemanSpriteId = (Math.floor(Math.random() * 802) + 1).toString().padStart(3, '0');
   pokemanSprite = `url(images/pokemon/Shuffle${pokemanSpriteId}.png)`;
+  chaserSpriteIds = [];
   chaserSprites = [];
   for (let i = 0; i < numChasers; ++i) {
     chaserSpriteId = (Math.floor(Math.random() * 802) + 1).toString().padStart(3, "0");
+    chaserSpriteIds.push(chaserSpriteId);
     chaserSprites.push(`url(images/pokemon/Shuffle${chaserSpriteId}.png)`);
   }
+  generatePlayerInfo();
   createGrid();
   fillGrid();
   neededScore = Math.floor(Math.floor(4 * maxScore / 5) / 10) * 10;
@@ -80,8 +101,10 @@ function generateGame() {
   progressBar.innerHTML = `
     <p class="progress-bar-text">${score} of ${neededScore}</p>
   `;
-  guideStatus.textContent = "Press any movement key to start!";
+  actionElement.textContent = "Press any movement key to start!";
   document.addEventListener("keyup", tryStartingGame);
+
+  console.log(actionElement.style.height);
 }
 
 function tryStartingGame(event) {
@@ -89,6 +112,31 @@ function tryStartingGame(event) {
     changeDirection(event);
     startGame();
   }
+}
+
+async function generatePlayerInfo() {
+  const response = await fetch("pokedex.json");
+  const data = await response.json();
+  const { name: pokemanName } = data[parseInt(pokemanSpriteId) - 1];
+  pokemanDisplay.innerHTML = `
+    <div class="pokeman-sprite"></div>
+    <p class="pokeman-name">${pokemanName}</p>
+  `;
+  [...document.getElementsByClassName("pokeman-sprite")].forEach(element => {
+    element.style.backgroundImage = pokemanSprite;
+  });
+  let curIndex = 0;
+  chasersDisplay.innerHTML = "";
+  chaserSpriteIds.forEach(id => {
+    const {name: chaserName } = data[parseInt(id) - 1];
+    chasersDisplay.innerHTML += `
+      <div class="chaser-sprite"></div>
+      <p class="chaser-name">${chaserName}</p>
+    `;
+    const element = [...document.getElementsByClassName("chaser-sprite")][curIndex];
+    element.style.backgroundImage = chaserSprites[curIndex];
+    ++curIndex;
+  });
 }
 
 function removePokemanSprite() {
@@ -126,36 +174,44 @@ function setChaserSprite(chaser) {
 }
 
 function toggleTime() {
-  if (timeButton.textContent === "Pause") {
+  if (timeButton.textContent === "Pause | E") {
     clearInterval(pokemanTimerId);
     chasers.forEach((chaser) => clearInterval(chaser.timerId));
     document.removeEventListener("keyup", changeDirection);
-    guideStatus.textContent = "Game paused...";
-    timeButton.textContent = "Continue";
+    actionElement.textContent = "Game paused...";
+    timeButton.textContent = "Continue | E";
   } else {
     startMovingPokeman();
     chasers.forEach((chaser) => startMovingChaser(chaser));
     document.addEventListener("keyup", changeDirection);
-    guideStatus.textContent = "You're still alive!";
-    timeButton.textContent = "Pause";
+    actionElement.textContent = "Still alive!";
+    timeButton.textContent = "Pause | E";
   }
 }
 
 function startGame() {
+  resetButton.style.display = "none";
+  resetButton.removeEventListener("click", generateGame);
+  document.removeEventListener("keyup", (event) => {
+    if (event.key === "f") {
+      generateGame();
+    }
+  });
   timeButton.style.display = "block";
   timeButton.addEventListener("click", toggleTime);
+  document.addEventListener("keyup", event => {
+    if (event.key === "e") {
+      toggleTime();
+    }
+  });
   startMovingPokeman();
   chasers.forEach((chaser) => startMovingChaser(chaser));
   document.addEventListener("keyup", changeDirection);
-  guideStatus.textContent = "You're still alive!";
+  actionElement.textContent = "Still alive!";
   document.removeEventListener("keyup", tryStartingGame);
 }
 
 generateGame();
-
-let resetButton = document.getElementById("button-reset");
-
-resetButton.addEventListener("click", generateGame);
 
 function createGrid() {
   for (let i = 0; i < ROWS * COLS; ++i) {
@@ -363,21 +419,28 @@ function startMovingPokeman() {
   }, 200);
 }
 
+function clearMovementPanel() {
+  rightPanel.classList.remove("active-direction");
+  upPanel.classList.remove("active-direction");
+  leftPanel.classList.remove("active-direction");
+  downPanel.classList.remove("active-direction");
+}
+
 function updateMovementPanel() {
   if (curDirection === 0) {
-    rightPanel.classList.toggle("active-direction");
+    rightPanel.classList.add("active-direction");
   } else if (curDirection === 1) {
-    upPanel.classList.toggle("active-direction");
+    upPanel.classList.add("active-direction");
   } else if (curDirection === 2) {
-    leftPanel.classList.toggle("active-direction");
+    leftPanel.classList.add("active-direction");
   } else {
-    downPanel.classList.toggle("active-direction");
+    downPanel.classList.add("active-direction");
   }
 }
 
 function changeDirection(event) {
   if (curDirection !== -1) {
-    updateMovementPanel();
+    clearMovementPanel();
   }
   switch (event.key) {
     case "d":
@@ -434,19 +497,33 @@ function updateScore() {
       to right,
       var(--primary-color),
       var(--primary-color) ${(score / neededScore) * 100}%,
-      var(--progress-color) ${(score / neededScore) * 100}%,
-      var(--progress-color) 100%
+      var(--internal-color) ${(score / neededScore) * 100}%,
+      var(--internal-color) 100%
     )
   `;
 }
 
 function checkForWin() {
   if (score === neededScore) {
+    clearMovementPanel();
+    resetButton.style.display = "block";
+    resetButton.addEventListener("click", generateGame);
+    document.addEventListener("keyup", (event) => {
+      if (event.key === "f") {
+        generateGame();
+      }
+    });
     timeButton.style.display = "none";
+    timeButton.removeEventListener("click", toggleTime);
+    document.removeEventListener("keyup", (event) => {
+      if (event.key === "e") {
+        toggleTime();
+      }
+    });
     clearInterval(pokemanTimerId);
     chasers.forEach(chaser => clearInterval(chaser.timerId));
     document.removeEventListener("keyup", changeDirection);
-    guideStatus.textContent = "You win!";
+    actionElement.textContent = "You win!";
   }
 }
 
@@ -489,10 +566,24 @@ function checkForGameOver() {
         setChaserSprite(chaser);
       }
     });
+    clearMovementPanel();
+    resetButton.style.display = "block";
+    resetButton.addEventListener("click", generateGame);
+    document.addEventListener("keyup", (event) => {
+      if (event.key === "f") {
+      generateGame();
+      }
+    });
     timeButton.style.display = "none";
+    timeButton.removeEventListener("click", toggleTime);
+    document.removeEventListener("keyup", (event) => {
+      if (event.key === "e") {
+        toggleTime();
+      }
+    });
     clearInterval(pokemanTimerId);
     chasers.forEach(chaser => clearInterval(chaser.timerId));
     document.removeEventListener("keyup", changeDirection);
-    guideStatus.textContent = "You lose...";
+    actionElement.textContent = "You lost...";
   }
 }
