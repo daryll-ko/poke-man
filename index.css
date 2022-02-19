@@ -8,9 +8,13 @@
   --enemy-background-color: lightsalmon;
 
   --active-color: rgb(206, 253, 206);
-  --call-to-action-color: purple; 
+  --call-to-action-color: blue;
 
   --enemy-info-color: rgb(255, 227, 215);
+
+  --berries-normal-info-color: #fff4e6;
+  --berries-silver-info-color: rgb(233, 233, 233);
+  --berries-gold-info-color: lightgoldenrodyellow;
 
   /* Dimensions */
   --num-rows: 15;
@@ -222,8 +226,7 @@ main {
 .controls,
 .action,
 .guide {
-  align-self: center;
-  justify-self: center;
+  justify-self: stretch;
   padding: 1em;
   background-color: var(--secondary-color);
 }
@@ -249,12 +252,14 @@ main {
 
 .progress {
   grid-area: progress;
+  align-self: start;
 }
 
 /* Info -> Controls */
 
 .controls {
   grid-area: controls;
+  align-self: stretch;
 }
 
 .movement-panel {
@@ -298,6 +303,7 @@ main {
 
 .action {
   padding: 0.5em;
+  align-self: end;
   justify-self: stretch;
 }
 
@@ -356,15 +362,15 @@ main {
 }
 
 .berries-normal {
-  background-color: #fff4e6;
+  background-color: var(--berries-normal-info-color);
 }
 
 .berries-silver {
-  background-color: rgb(233, 233, 233);
+  background-color: var(--berries-silver-info-color);
 }
 
 .berries-golden {
-  background-color: lightgoldenrodyellow;
+  background-color: var(--berries-gold-info-color);
 }
 
 .berry-guide {
@@ -379,4 +385,16 @@ main {
 .berry-score {
   font-size: 1.5rem;
   margin-left: 0.4em;
+}
+
+@media (max-width: 1000px) {
+  .container-main {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .info {
+    width: var(--grid-width);
+    margin-top: 1.5em;
+  }
 }

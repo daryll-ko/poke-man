@@ -36,6 +36,9 @@ let rightPanel = document.getElementById("right");
 let pokemanDisplay = document.getElementById("players-pokeman");
 let chasersDisplay = document.getElementById("players-chasers");
 
+let gridGraph = [], graphDistances = [];
+let cellNumbers = new Map();
+
 class Chaser {
   constructor(chaserId, curRow, curCol, speed) {
     this.chaserId = chaserId;
@@ -45,6 +48,51 @@ class Chaser {
     this.timerId = null;
   }
 }
+
+generateGame();
+
+/* Floyd-Warshall stuff starts here */
+
+function floydWarshall() {
+  function adjacent([cell_1_row, cell_1_col], [cell_2_row, cell_2_col]) {
+    return Math.abs(cell_1_row - cell_2_row) + Math.abs(cell_1_col - cell_2_col) === 1;
+  }
+
+  let curCellIndex = 0;
+
+  gridGraph.forEach(([row, col]) => {
+    cellNumbers.set(row * COLS + col, curCellIndex++);
+  });
+
+  const numberOfCells = curCellIndex;
+
+  for (let i = 0; i < numberOfCells; ++i) {
+    graphDistances.push([]);
+    for (let j = 0; j < numberOfCells; ++j) {
+      graphDistances.at(-1).push(123456789);
+    }
+  }
+
+  for (let i = 0; i < numberOfCells; ++i) {
+    for (let j = 0; j < numberOfCells; ++j) {
+      if (i === j) {
+        graphDistances[i][j] = 0;
+      } else if (adjacent(gridGraph[i], gridGraph[j])) {
+        graphDistances[i][j] = 1;
+      }
+    }
+  }
+
+  for (let k = 0; k < numberOfCells; ++k) {
+    for (let i = 0; i < numberOfCells; ++i) {
+      for (let j = 0; j < numberOfCells; ++j) {
+        graphDistances[i][j] = Math.min(graphDistances[i][j], graphDistances[i][k] + graphDistances[k][j]);
+      }
+    }
+  }
+}
+
+/* ^ Floyd-Warshall stuff ends here ^ */
 
 function generateGame() {
   resetButton.style.display = "block";
@@ -86,8 +134,12 @@ function generateGame() {
     chaserSprites.push(`url(images/pokemon/Shuffle${chaserSpriteId}.png)`);
   }
   generatePlayerInfo();
+  gridGraph = [];
   createGrid();
   fillGrid();
+  graphDistances = [];
+  cellNumbers.clear();
+  floydWarshall();
   neededScore = Math.floor(Math.floor(4 * maxScore / 5) / 10) * 10;
   chasers = [];
   chaserId = 0;
@@ -103,8 +155,6 @@ function generateGame() {
   `;
   actionElement.textContent = "Press any movement key to start!";
   document.addEventListener("keyup", tryStartingGame);
-
-  console.log(actionElement.style.height);
 }
 
 function tryStartingGame(event) {
@@ -211,8 +261,6 @@ function startGame() {
   document.removeEventListener("keyup", tryStartingGame);
 }
 
-generateGame();
-
 function createGrid() {
   for (let i = 0; i < ROWS * COLS; ++i) {
     const square = document.createElement("div");
@@ -274,6 +322,7 @@ function isNewTerritory(row, col) {
 
 function fillInnerGrid(curRow=2, curCol=2) {
   addProperty(curRow, curCol, "path");
+  gridGraph.push([curRow, curCol]);
   for (const direction of shuffle([0, 1, 2, 3])) {
     const nextRow = curRow + DELTA_I[direction];
     const nextCol = curCol + DELTA_J[direction];
@@ -302,30 +351,35 @@ function fillGrid() {
     for (let col = 0; col < COLS; ++col) {
       if (row === 0 || row === ROWS - 1 || col === 0 || col === COLS - 1) {
         addProperty(row, col, "path");
+        gridGraph.push([row, col]);
         possiblePokemanSpawnpoints.push([row, col]);
       }
     }
   }
   [curRow, curCol] = shuffle(possiblePokemanSpawnpoints).slice(0, 1)[0];
   addProperty(curRow, curCol, "pokeman");
-  // walls
   fillInnerGrid();
   for (let col = 2; col < COLS - 2; ++col) {
     if (isPath(2, col) && !isPath(1, col - 1)) {
       addProperty(1, col, "path");
+      gridGraph.push([1, col]);
     }
     if (isPath(ROWS - 3, col) && !isPath(ROWS - 2, col - 1)) {
       addProperty(ROWS - 2, col, "path");
+      gridGraph.push([ROWS - 2, col]);
     }
   }
   for (let row = 2; row < ROWS - 2; ++row) {
     if (isPath(row, 2) && !isPath(row - 1, 1)) {
       addProperty(row, 1, "path");
+      gridGraph.push([row, 1]);
     }
     if (isPath(row, COLS - 3) && !isPath(row - 1, COLS - 2)) {
       addProperty(row, COLS - 2, "path");
+      gridGraph.push([row, COLS - 2]);
     }
   }
+  // walls
   for (let row = 0; row < ROWS; ++row) {
     for (let col = 0; col < COLS; ++col) {
       if (!isPath(row, col)) {
@@ -335,14 +389,17 @@ function fillGrid() {
   }
   // chasers
   let possibleChaserSpawnpoints = [];
-  for (let row = ROWS / 5 * 2; row < ROWS / 5 * 3; ++row) {
-    for (let col = COLS / 5 * 2; col < COLS / 5 * 3; ++col) {
+  for (let row = (ROWS / 5) * 2; row < (ROWS / 5) * 3; ++row) {
+    for (let col = (COLS / 5) * 2; col < (COLS / 5) * 3; ++col) {
       if (isPath(row, col)) {
         possibleChaserSpawnpoints.push([row, col]);
       }
     }
   }
-  chaserSpawnpoints = shuffle(possibleChaserSpawnpoints).slice(0, Math.min(numChasers, possibleChaserSpawnpoints.length));
+  chaserSpawnpoints = shuffle(possibleChaserSpawnpoints).slice(
+    0,
+    Math.min(numChasers, possibleChaserSpawnpoints.length)
+  );
   for (const [row, col] of chaserSpawnpoints) {
     addProperty(row, col, "chaser");
   }
@@ -350,25 +407,33 @@ function fillGrid() {
   maxScore = 0;
   for (let row = 0; row < ROWS; ++row) {
     for (let col = 0; col < COLS; ++col) {
-      if (
-        isPath(row, col) &&
-        !isPokeman(row, col) &&
-        !isChaser(row, col)
-      ) {
+      if (isPath(row, col) && !isPokeman(row, col) && !isChaser(row, col)) {
         addProperty(row, col, "berry");
         let randomNumber = Math.floor(Math.random() * 100);
         if (randomNumber < 5) {
           maxScore += 5;
           randomNumber = Math.floor(Math.random() * 3);
-          addProperty(row, col, `berry-${["razz", "pinap", "nanab"][randomNumber]}-golden`);
+          addProperty(
+            row,
+            col,
+            `berry-${["razz", "pinap", "nanab"][randomNumber]}-golden`
+          );
         } else if (randomNumber < 25) {
           maxScore += 3;
           randomNumber = Math.floor(Math.random() * 3);
-          addProperty(row, col, `berry-${["razz", "pinap", "nanab"][randomNumber]}-silver`);
+          addProperty(
+            row,
+            col,
+            `berry-${["razz", "pinap", "nanab"][randomNumber]}-silver`
+          );
         } else {
           ++maxScore;
           randomNumber = Math.floor(Math.random() * 3);
-          addProperty(row, col, `berry-${["razz", "pinap", "nanab"][randomNumber]}`);
+          addProperty(
+            row,
+            col,
+            `berry-${["razz", "pinap", "nanab"][randomNumber]}`
+          );
         }
       }
     }
@@ -506,18 +571,18 @@ function updateScore() {
 function checkForWin() {
   if (score === neededScore) {
     clearMovementPanel();
-    resetButton.style.display = "block";
-    resetButton.addEventListener("click", generateGame);
-    document.addEventListener("keyup", (event) => {
-      if (event.key === "f") {
-        generateGame();
-      }
-    });
     timeButton.style.display = "none";
     timeButton.removeEventListener("click", toggleTime);
     document.removeEventListener("keyup", (event) => {
       if (event.key === "e") {
         toggleTime();
+      }
+    });
+    resetButton.style.display = "block";
+    resetButton.addEventListener("click", generateGame);
+    document.addEventListener("keyup", (event) => {
+      if (event.key === "f") {
+        generateGame();
       }
     });
     clearInterval(pokemanTimerId);
@@ -529,32 +594,43 @@ function checkForWin() {
 
 function startMovingChaser(chaser) {
   chaser.timerId = setInterval(() => {
-    let finalDirection = -1, distanceToBeat = ROWS * COLS;
+    const playerIndex = cellNumbers.get(curRow * COLS + curCol);
+
+    let finalDirection = -1, distanceToBeat = graphDistances[cellNumbers.get(chaser.curRow * COLS + chaser.curCol)][playerIndex];
+
     for (let direction = 0; direction < 4; ++direction) {
-      const nextRow = chaser.curRow + DELTA_I[direction];
-      const nextCol = chaser.curCol + DELTA_J[direction];
+      const possNextRow = chaser.curRow + DELTA_I[direction];
+      const possNextCol = chaser.curCol + DELTA_J[direction];
+      if (
+        isWithinGrid(possNextRow, possNextCol) &&
+        isPath(possNextRow, possNextCol) &&
+        !isChaser(possNextRow, possNextCol)
+      ) {
+        const distance = graphDistances[cellNumbers.get(possNextRow * COLS + possNextCol)][playerIndex];
+        if (distance < distanceToBeat) {
+          finalDirection = direction;
+          distanceToBeat = distance;
+        }
+      }
+    }
+    
+    if (finalDirection !== -1) {
+      const nextRow = chaser.curRow + DELTA_I[finalDirection];
+      const nextCol = chaser.curCol + DELTA_J[finalDirection];
       if (
         isWithinGrid(nextRow, nextCol) &&
         isPath(nextRow, nextCol) &&
         !isChaser(nextRow, nextCol)
       ) {
-        const distance = Math.abs(curRow - nextRow) + Math.abs(curCol - nextCol);
-        if (distance < distanceToBeat) {
-          finalDirection = direction;
-        }
+        removeProperty(chaser.curRow, chaser.curCol, "chaser");
+        removeChaserSprite(chaser);
+        fixBerry(chaser.curRow, chaser.curCol);
+        chaser.curRow = nextRow;
+        chaser.curCol = nextCol;
+        addProperty(chaser.curRow, chaser.curCol, "chaser");
+        setChaserSprite(chaser);
+        checkForGameOver();
       }
-    }
-    if (finalDirection !== -1) {
-      const nextRow = chaser.curRow + DELTA_I[finalDirection];
-      const nextCol = chaser.curCol + DELTA_J[finalDirection];
-      removeProperty(chaser.curRow, chaser.curCol, "chaser");
-      removeChaserSprite(chaser);
-      fixBerry(chaser.curRow, chaser.curCol);
-      chaser.curRow = nextRow;
-      chaser.curCol = nextCol;
-      addProperty(chaser.curRow, chaser.curCol, "chaser");
-      setChaserSprite(chaser);
-      checkForGameOver();
     }
   }, chaser.speed);
 }
@@ -567,18 +643,18 @@ function checkForGameOver() {
       }
     });
     clearMovementPanel();
-    resetButton.style.display = "block";
-    resetButton.addEventListener("click", generateGame);
-    document.addEventListener("keyup", (event) => {
-      if (event.key === "f") {
-      generateGame();
-      }
-    });
     timeButton.style.display = "none";
     timeButton.removeEventListener("click", toggleTime);
     document.removeEventListener("keyup", (event) => {
       if (event.key === "e") {
         toggleTime();
+      }
+    });
+    resetButton.style.display = "block";
+    resetButton.addEventListener("click", generateGame);
+    document.addEventListener("keyup", (event) => {
+      if (event.key === "f") {
+        generateGame();
       }
     });
     clearInterval(pokemanTimerId);
