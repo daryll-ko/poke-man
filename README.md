@@ -1,18 +1,12 @@
 # Poké-Man
 
-## Pitch
-
-![pokeman-demo](/images/pokeman-demo.png)
+![pokeman-demo](/images/poke-man-demo.png)
 
 Poké-Man is [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man), but with Pokémon!
 
-Aside from finally using JavaScript, I wanted to try out a variety of different frontend topics like responsive design and API interaction.
+This is Version 1 of the game, created using plain HTML, CSS, and JavaScript.
 
-(add more things here once development progresses)
-
-## Technical Stuff
-
-This game was made using standard HTML, CSS, JavaScript. I plan to refactor the project using TypeScript and React once the project is in its advanced stages, but I'm making myself comfortable with the primitives for now.
+Version 2 will be built using Sass and TypeScript.
 
 ## Dev Stories
 
@@ -28,14 +22,6 @@ This game was made using standard HTML, CSS, JavaScript. I plan to refactor the 
   Both are pretty suboptimal. I plan on throwing in [Floyd-Warshall](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm) in a future iteration to make the chasers competent, but this'll do for now.
 
 - It's a small thing, but I really like the progress bar. A few lines of JavaScript can really do neat things with CSS!
-
-## Plans
-
-- Use carousels for field selection
-- Incorporate more maze generation algorithms
-- Make the layout responsive
-- Give the chasers a bit of intelligence
-- Add more Pokémon!
 
 ## Reflections
 
