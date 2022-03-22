@@ -25,14 +25,34 @@ As a result, I've scrapped the development of Version 2, and I'll be using React
 
 ## Reflections
 
-This is my first project! :D
+This is my first web development project! 😃
 
-I've always wondered when I would come up with one. The whole concept of a coding project has been really nebulous to me, as someone who's never gotten their hands into one (at least, not of this scale).
+I've always wondered when I would come up with one. The whole concept of a project has been really nebulous to me as someone who's never gotten their hands into one (at least, not of this scale).
 
-Like with most things, I wish I'd started earlier. Motivation isn't really my bottleneck when it comes to getting things done: you can check out [my competitive programming repo](https://github.com/daryll-ko/recreational) to see that. I think it was more on finding **inspiration** for a project.
+I wish I'd started earlier (well, that applies to most things). Motivation isn't really my bottleneck when it comes to getting things done: you can check out [my recreational programming repo](https://github.com/daryll-ko/rec-prog) to see that. I think it was more on finding **inspiration** for a project.
 
-I would say that the vast majority of time I've spent on games was spent on [Pokémon](https://en.wikipedia.org/wiki/Pok%C3%A9mon_(video_game_series)) games. I've played through the main series games and they were great (especially *Legends: Arceus*; what a masterpiece!), but the games in which I had the most fun were the **spin-offs** (Ranger, Conquest, GO, etc.).
+I'd say that the vast majority of time I've spent on games was spent on [Pokémon](https://en.wikipedia.org/wiki/Pok%C3%A9mon_(video_game_series)) games. I've played through the main series games and they were great (especially *Legends: Arceus*; what a masterpiece!), but the games in which I had the most fun were the **spin-offs** (Ranger, Conquest, Mystery Dungeon, Shuffle, etc.).
 
-The first version of this project was a run-of-the-mill Pac-Man game, but remembering the Pokémon games that sprinkled fun across my life journey made me find something worth working towards.
+Ah, well. I could ponder on the past for hours on end, but what ultimately matters is where I'm at now, and I'm happy to say that I finally feel like I'm on the side where the grass is greener. :)
 
-I could ponder on the past for hours on end, but what ultimately matters is where I'm at now, and I'm happy to say that I finally feel like I'm on the side where the grass is greener.
+## Log
+
+1.3 (Feb. 19, 2022)
+
+- Incorporated Floyd-Warshall to make chasers smart (too smart, actually...)
+- Made site somewhat responsive
+- Minor UI improvements
+
+1.2 (Feb. 13, 2022)
+
+- Added more berries
+- Upgraded UI
+
+1.1 (Feb. 12, 2022)
+
+- Added game lifecycle buttons (reset, pause / continue)
+- Incorporated Pokémon!
+
+1.0 (Feb. 8, 2022)
+
+- Finished minimum viable product (no Pokémon yet!)
