@@ -37,22 +37,22 @@ Ah, well. I could ponder on the past for hours on end, but what ultimately matte
 
 ## Log
 
-1.3 (Feb. 19, 2022)
+### 1.3 (Feb. 19, 2022)
 
 - Incorporated Floyd-Warshall to make chasers smart (too smart, actually...)
 - Made site somewhat responsive
 - Minor UI improvements
 
-1.2 (Feb. 13, 2022)
+### 1.2 (Feb. 13, 2022)
 
 - Added more berries
 - Upgraded UI
 
-1.1 (Feb. 12, 2022)
+### 1.1 (Feb. 12, 2022)
 
 - Added game lifecycle buttons (reset, pause / continue)
 - Incorporated Pokémon!
 
-1.0 (Feb. 8, 2022)
+### 1.0 (Feb. 8, 2022)
 
 - Finished minimum viable product (no Pokémon yet!)
