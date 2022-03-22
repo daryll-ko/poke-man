@@ -1,27 +1,27 @@
 # Poké-Man
 
-![pokeman-demo](/images/poke-man-demo.png)
+<div align="center">
+  <img src="./images/poke-man-demo.png" width="80%">
+</div>
+<br>
 
 Poké-Man is [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man), but with Pokémon!
 
-This is Version 1 of the game, created using plain HTML, CSS, and JavaScript.
+This is Version 1 of the game, which I created using plain HTML, CSS, and JavaScript.
 
-Version 2 will be built using Sass and TypeScript.
+I planned on refactoring the code for Version 2 using Sass and TypeScript, but things didn't go as I planned. Managing the various components manually was a pretty inconvenient task, and it made me realize why React and other frameworks exist in the first place.
 
-## Dev Stories
+As a result, I've scrapped the development of Version 2, and I'll be using React to develop Version 3. Hopefully things go smoother this time, but I guess I just have to give it a go. You can find V3's repo [here](https://github.com/daryll-ko/poke-man)!
 
-- One of the longest time drains (well, it was just a few minutes, but still) was from not realizing that my `index.js` file should have been at the last section inside my `<body>` tags.
+## Dev Comments
 
-- The maze was generated using randomized depth-first-search. I do have plans on including other [maze generation algorithms](https://en.wikipedia.org/wiki/Maze_generation_algorithm) in future iterations. I wanted the borders to be accessible, so I generated the inner section first before naively plopping a bunch of bridges between the inner section and the borders.
+- One of the longest time drains was from not realizing that my `index.js` file should have been at the last section inside my `<body>` tags.
 
-- Each chaser takes on one of two strategies at random:
+- The maze was generated using randomized depth-first-search. I do have plans on including other [maze generation algorithms](https://en.wikipedia.org/wiki/Maze_generation_algorithm) in V3. I wanted the borders to be accessible, so I generated the inner section first before naively plopping a bunch of bridges between this inner section and the borders.
 
-  - Move randomly.
-  - Move to the cell with the least [Manhattan distance](https://en.wikipedia.org/wiki/Taxicab_geometry) to where your Poké-Man is.
+- I used [Floyd-Warshall's algorithm](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm) to compute the shortest distance between all pairs of paths in the maze, and I programmed the chasers to use this information for their movements. This makes the game pretty difficult, I must say—I've only beaten it a couple of times.
 
-  Both are pretty suboptimal. I plan on throwing in [Floyd-Warshall](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm) in a future iteration to make the chasers competent, but this'll do for now.
-
-- It's a small thing, but I really like the progress bar. A few lines of JavaScript can really do neat things with CSS!
+- It's a small thing, but I really like the progress bar. A few lines of JavaScript can do really neat things with CSS!
 
 ## Reflections
 
