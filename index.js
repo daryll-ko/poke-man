@@ -1,3 +1,108 @@
+const app = document.getElementById("root");
+
+app.innerHTML = `
+  <header>
+    <div class="container container-header">
+      <h1>Poké-Man</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="container container-main">
+      <div id="grid" class="grid"></div>
+
+      <div class="info">
+        <div class="progress border-primary">
+          <h2 class="info-heading">Progress</h2>
+          <div
+            id="progress-bar"
+            class="progress-bar border-primary space-top color-internal padded"
+          ></div>
+        </div>
+
+        <div class="controls border-primary">
+          <h2 class="info-heading">Controls</h2>
+
+          <div class="movement-panel space-top">
+            <div class="blank"></div>
+            <div id="up" class="up border-primary">↑W</div>
+            <div class="blank"></div>
+            <div id="left" class="left border-primary">←A</div>
+            <div id="down" class="down border-primary">S↓</div>
+            <div id="right" class="right border-primary">D→</div>
+          </div>
+
+          <div
+            id="button-time"
+            class="button button-time space-top color-internal"
+          >
+            Pause | E
+          </div>
+
+          <div id="button-reset" class="button space-top color-internal">
+            New Game | F
+          </div>
+        </div>
+
+        <div class="action border-primary">
+          <div
+            id="action-element"
+            class="action-element border-primary color-internal"
+          >
+            Press any movement key to start!
+          </div>
+        </div>
+
+        <div class="guide border-primary">
+          <h2 class="info-heading">Guide</h2>
+
+          <div
+            id="players-pokeman"
+            class="players-pokeman border-primary space-top color-internal padded"
+          ></div>
+
+          <div
+            id="players-chasers"
+            class="players-chasers border-primary space-top color-internal padded"
+          ></div>
+
+          <div class="berries">
+            <div
+              class="berry-row berries-normal border-primary space-top color-internal padded"
+            >
+              <div class="berry-guide berry-razz"></div>
+              <div class="berry-guide berry-pinap"></div>
+              <div class="berry-guide berry-nanab"></div>
+              <p class="berry-score">1</p>
+            </div>
+            <div
+              class="berry-row berries-silver border-primary space-top color-internal padded"
+            >
+              <div class="berry-guide berry-razz-silver"></div>
+              <div class="berry-guide berry-pinap-silver"></div>
+              <div class="berry-guide berry-nanab-silver"></div>
+              <p class="berry-score">3</p>
+            </div>
+            <div
+              class="berry-row berries-golden border-primary space-top color-internal padded"
+            >
+              <div class="berry-guide berry-razz-golden"></div>
+              <div class="berry-guide berry-pinap-golden"></div>
+              <div class="berry-guide berry-nanab-golden"></div>
+              <p class="berry-score">5</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container container-footer">
+      <p>© Daryll Ko | 2022</p>
+    </div>
+  </footer>
+`;
+
 const ROWS = getComputedStyle(document.body).getPropertyValue("--num-rows");
 const COLS = getComputedStyle(document.body).getPropertyValue("--num-cols");
 
@@ -26,7 +131,9 @@ let chasers = [];
 let chaserId;
 
 let pokemanSpriteId, chaserSpriteId;
-let pokemanSprite, chaserSpriteIds = [], chaserSprites = [];
+let pokemanSprite,
+  chaserSpriteIds = [],
+  chaserSprites = [];
 
 let upPanel = document.getElementById("up");
 let leftPanel = document.getElementById("left");
@@ -36,7 +143,8 @@ let rightPanel = document.getElementById("right");
 let pokemanDisplay = document.getElementById("players-pokeman");
 let chasersDisplay = document.getElementById("players-chasers");
 
-let gridGraph = [], graphDistances = [];
+let gridGraph = [],
+  graphDistances = [];
 let cellNumbers = new Map();
 
 class Chaser {
@@ -55,7 +163,10 @@ generateGame();
 
 function floydWarshall() {
   function adjacent([cell_1_row, cell_1_col], [cell_2_row, cell_2_col]) {
-    return Math.abs(cell_1_row - cell_2_row) + Math.abs(cell_1_col - cell_2_col) === 1;
+    return (
+      Math.abs(cell_1_row - cell_2_row) + Math.abs(cell_1_col - cell_2_col) ===
+      1
+    );
   }
 
   let curCellIndex = 0;
@@ -86,7 +197,10 @@ function floydWarshall() {
   for (let k = 0; k < numberOfCells; ++k) {
     for (let i = 0; i < numberOfCells; ++i) {
       for (let j = 0; j < numberOfCells; ++j) {
-        graphDistances[i][j] = Math.min(graphDistances[i][j], graphDistances[i][k] + graphDistances[k][j]);
+        graphDistances[i][j] = Math.min(
+          graphDistances[i][j],
+          graphDistances[i][k] + graphDistances[k][j]
+        );
       }
     }
   }
@@ -109,8 +223,7 @@ function generateGame() {
       toggleTime();
     }
   });
-  progressBar.style.backgroundImage =
-  `linear-gradient(
+  progressBar.style.backgroundImage = `linear-gradient(
       to right,
       var(--primary-color),
       var(--primary-color) 0%,
@@ -124,12 +237,16 @@ function generateGame() {
   gridMatrix = [];
   score = 0;
   curDirection = -1;
-  pokemanSpriteId = (Math.floor(Math.random() * 802) + 1).toString().padStart(3, '0');
+  pokemanSpriteId = (Math.floor(Math.random() * 802) + 1)
+    .toString()
+    .padStart(3, "0");
   pokemanSprite = `url(images/pokemon/Shuffle${pokemanSpriteId}.png)`;
   chaserSpriteIds = [];
   chaserSprites = [];
   for (let i = 0; i < numChasers; ++i) {
-    chaserSpriteId = (Math.floor(Math.random() * 802) + 1).toString().padStart(3, "0");
+    chaserSpriteId = (Math.floor(Math.random() * 802) + 1)
+      .toString()
+      .padStart(3, "0");
     chaserSpriteIds.push(chaserSpriteId);
     chaserSprites.push(`url(images/pokemon/Shuffle${chaserSpriteId}.png)`);
   }
@@ -140,7 +257,7 @@ function generateGame() {
   graphDistances = [];
   cellNumbers.clear();
   floydWarshall();
-  neededScore = Math.floor(Math.floor(4 * maxScore / 5) / 10) * 10;
+  neededScore = Math.floor(Math.floor((4 * maxScore) / 5) / 10) * 10;
   chasers = [];
   chaserId = 0;
   chaserSpawnpoints.forEach(([row, col]) => {
@@ -148,7 +265,7 @@ function generateGame() {
     ++chaserId;
   });
   setPokemanSprite();
-  chasers.forEach(chaser => setChaserSprite(chaser));
+  chasers.forEach((chaser) => setChaserSprite(chaser));
   smoothenGrid();
   progressBar.innerHTML = `
     <p class="progress-bar-text">${score} of ${neededScore}</p>
@@ -158,7 +275,18 @@ function generateGame() {
 }
 
 function tryStartingGame(event) {
-  if (["d", "w", "a", "s", "ArrowRight", "ArrowUp", "ArrowLeft", "ArrowDown"].includes(event.key)) {
+  if (
+    [
+      "d",
+      "w",
+      "a",
+      "s",
+      "ArrowRight",
+      "ArrowUp",
+      "ArrowLeft",
+      "ArrowDown",
+    ].includes(event.key)
+  ) {
     changeDirection(event);
     startGame();
   }
@@ -172,27 +300,29 @@ async function generatePlayerInfo() {
     <div class="pokeman-sprite"></div>
     <p class="pokeman-name">${pokemanName}</p>
   `;
-  [...document.getElementsByClassName("pokeman-sprite")].forEach(element => {
+  [...document.getElementsByClassName("pokeman-sprite")].forEach((element) => {
     element.style.backgroundImage = pokemanSprite;
   });
   let curIndex = 0;
   chasersDisplay.innerHTML = "";
-  chaserSpriteIds.forEach(id => {
-    const {name: chaserName } = data[parseInt(id) - 1];
+  chaserSpriteIds.forEach((id) => {
+    const { name: chaserName } = data[parseInt(id) - 1];
     chasersDisplay.innerHTML += `
       <div class="chaser-sprite"></div>
       <p class="chaser-name">${chaserName}</p>
     `;
-    const element = [...document.getElementsByClassName("chaser-sprite")][curIndex];
+    const element = [...document.getElementsByClassName("chaser-sprite")][
+      curIndex
+    ];
     element.style.backgroundImage = chaserSprites[curIndex];
     ++curIndex;
   });
 }
 
 function removePokemanSprite() {
-    [...document.getElementsByClassName("pokeman")].forEach((square) => {
-      square.style.backgroundImage = "none";
-    });
+  [...document.getElementsByClassName("pokeman")].forEach((square) => {
+    square.style.backgroundImage = "none";
+  });
 }
 
 function removeChaserSprite(chaser) {
@@ -202,18 +332,27 @@ function removeChaserSprite(chaser) {
 
 function fixBerry(row, col) {
   for (let berry of [
-    "berry-razz", "berry-razz-silver", "berry-razz-gold",
-    "berry-pinap", "berry-pinap-silver", "berry-pinap-gold",
-    "berry-nanab", "berry-nanab-silver", "berry-nanab-gold"
+    "berry-razz",
+    "berry-razz-silver",
+    "berry-razz-gold",
+    "berry-pinap",
+    "berry-pinap-silver",
+    "berry-pinap-gold",
+    "berry-nanab",
+    "berry-nanab-silver",
+    "berry-nanab-gold",
   ]) {
     if (hasProperty(row, col, berry)) {
-      gridMatrix[row][col].style.backgroundImage = `url(images/berries/${berry.split('-').reverse().join('-')}.webp)`;
+      gridMatrix[row][col].style.backgroundImage = `url(images/berries/${berry
+        .split("-")
+        .reverse()
+        .join("-")}.webp)`;
     }
   }
 }
 
 function setPokemanSprite() {
-  [...document.getElementsByClassName("pokeman")].forEach(square => {
+  [...document.getElementsByClassName("pokeman")].forEach((square) => {
     square.style.backgroundImage = pokemanSprite;
   });
 }
@@ -249,7 +388,7 @@ function startGame() {
   });
   timeButton.style.display = "block";
   timeButton.addEventListener("click", toggleTime);
-  document.addEventListener("keyup", event => {
+  document.addEventListener("keyup", (event) => {
     if (event.key === "e") {
       toggleTime();
     }
@@ -276,7 +415,10 @@ function shuffle(array) {
   let curIndex = array.length - 1;
   while (curIndex > 0) {
     const randomIndex = Math.floor(Math.random() * curIndex);
-    [array[curIndex], array[randomIndex]] = [array[randomIndex], array[curIndex]];
+    [array[curIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[curIndex],
+    ];
     --curIndex;
   }
   return array;
@@ -320,7 +462,7 @@ function isNewTerritory(row, col) {
   return score === 3;
 }
 
-function fillInnerGrid(curRow=2, curCol=2) {
+function fillInnerGrid(curRow = 2, curCol = 2) {
   addProperty(curRow, curCol, "path");
   gridGraph.push([curRow, curCol]);
   for (const direction of shuffle([0, 1, 2, 3])) {
@@ -468,10 +610,7 @@ function startMovingPokeman() {
     fixBerry(curRow, curCol);
     const nextRow = curRow + DELTA_I[curDirection];
     const nextCol = curCol + DELTA_J[curDirection];
-    if (
-      isWithinGrid(nextRow, nextCol) &&
-      isPath(nextRow, nextCol)
-    ) {
+    if (isWithinGrid(nextRow, nextCol) && isPath(nextRow, nextCol)) {
       curRow = nextRow;
       curCol = nextCol;
     }
@@ -537,13 +676,21 @@ function checkForBerry() {
         removeProperty(curRow, curCol, property);
       }
     }
-    for (let property of ["berry-razz-silver", "berry-pinap-silver", "berry-nanab-silver"]) {
+    for (let property of [
+      "berry-razz-silver",
+      "berry-pinap-silver",
+      "berry-nanab-silver",
+    ]) {
       if (hasProperty(curRow, curCol, property)) {
         score += 3;
         removeProperty(curRow, curCol, property);
       }
     }
-    for (let property of ["berry-razz-golden", "berry-pinap-golden", "berry-nanab-golden"]) {
+    for (let property of [
+      "berry-razz-golden",
+      "berry-pinap-golden",
+      "berry-nanab-golden",
+    ]) {
       if (hasProperty(curRow, curCol, property)) {
         score += 5;
         removeProperty(curRow, curCol, property);
@@ -586,7 +733,7 @@ function checkForWin() {
       }
     });
     clearInterval(pokemanTimerId);
-    chasers.forEach(chaser => clearInterval(chaser.timerId));
+    chasers.forEach((chaser) => clearInterval(chaser.timerId));
     document.removeEventListener("keyup", changeDirection);
     actionElement.textContent = "You win!";
   }
@@ -596,7 +743,11 @@ function startMovingChaser(chaser) {
   chaser.timerId = setInterval(() => {
     const playerIndex = cellNumbers.get(curRow * COLS + curCol);
 
-    let finalDirection = -1, distanceToBeat = graphDistances[cellNumbers.get(chaser.curRow * COLS + chaser.curCol)][playerIndex];
+    let finalDirection = -1,
+      distanceToBeat =
+        graphDistances[cellNumbers.get(chaser.curRow * COLS + chaser.curCol)][
+          playerIndex
+        ];
 
     for (let direction = 0; direction < 4; ++direction) {
       const possNextRow = chaser.curRow + DELTA_I[direction];
@@ -606,14 +757,17 @@ function startMovingChaser(chaser) {
         isPath(possNextRow, possNextCol) &&
         !isChaser(possNextRow, possNextCol)
       ) {
-        const distance = graphDistances[cellNumbers.get(possNextRow * COLS + possNextCol)][playerIndex];
+        const distance =
+          graphDistances[cellNumbers.get(possNextRow * COLS + possNextCol)][
+            playerIndex
+          ];
         if (distance < distanceToBeat) {
           finalDirection = direction;
           distanceToBeat = distance;
         }
       }
     }
-    
+
     if (finalDirection !== -1) {
       const nextRow = chaser.curRow + DELTA_I[finalDirection];
       const nextCol = chaser.curCol + DELTA_J[finalDirection];
@@ -637,7 +791,7 @@ function startMovingChaser(chaser) {
 
 function checkForGameOver() {
   if (gridMatrix[curRow][curCol].classList.contains("chaser")) {
-    chasers.forEach(chaser => {
+    chasers.forEach((chaser) => {
       if (chaser.curRow === curRow && chaser.curCol === curCol) {
         setChaserSprite(chaser);
       }
@@ -658,7 +812,7 @@ function checkForGameOver() {
       }
     });
     clearInterval(pokemanTimerId);
-    chasers.forEach(chaser => clearInterval(chaser.timerId));
+    chasers.forEach((chaser) => clearInterval(chaser.timerId));
     document.removeEventListener("keyup", changeDirection);
     actionElement.textContent = "You lost...";
   }
