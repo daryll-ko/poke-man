@@ -1,17 +1,16 @@
-# Poké-Man
-
 <div align="center">
-  <img src="./images/poke-man-demo.png" width="80%">
+  <img src="images/logo.png" alt="Logo" width="20%">
+  <h2>Poké-Man</h2>
+  <i>Pac-Man, but with Pokémon!</i>
+  <br>
+  v1 • <a href="https://github.com/daryll-ko/poke-man-v2" target="_blank" rel="noopener noreferrer">v2</a>
 </div>
+
 <br>
 
-Poké-Man is [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man), but with Pokémon!
+This is the first iteration of Poké-Man, my first major coding project. I only used plain HTML, CSS, and JavaScript for this one.
 
-This is Version 1 of the game, which I created using plain HTML, CSS, and JavaScript.
-
-I planned on refactoring the code for Version 2 using Sass and TypeScript, but things didn't go as I planned. Managing the various components manually was a pretty inconvenient task, and it made me realize why React and other frameworks exist in the first place.
-
-As a result, I've scrapped the development of Version 2, and I'll be using React to develop Version 3. Hopefully things go smoother this time, but I guess I just have to give it a go. You can find V3's repo [here](https://github.com/daryll-ko/poke-man)!
+Despite its primitive nature, I keep it up-to-date with its successor (see the v2 link above).
 
 ## Dev Comments
 
@@ -31,7 +30,7 @@ I've always wondered when I would come up with one. The whole concept of a proje
 
 I wish I'd started earlier (well, that applies to most things). Motivation isn't really my bottleneck when it comes to getting things done: you can check out [my recreational programming repo](https://github.com/daryll-ko/rec-prog) to see that. I think it was more on finding **inspiration** for a project.
 
-I'd say that the vast majority of time I've spent on games was spent on [Pokémon](https://en.wikipedia.org/wiki/Pok%C3%A9mon_(video_game_series)) games. I've played through the main series games and they were great (especially *Legends: Arceus*; what a masterpiece!), but the games in which I had the most fun were the **spin-offs** (Ranger, Conquest, Mystery Dungeon, Shuffle, etc.).
+I'd say that the vast majority of time I've spent on games was spent on [Pokémon](<https://en.wikipedia.org/wiki/Pok%C3%A9mon_(video_game_series)>) games. I've played through the main series games and they were great (especially _Legends: Arceus_; what a masterpiece!), but the games in which I had the most fun were the **spin-offs** (Ranger, Conquest, Mystery Dungeon, Shuffle, etc.).
 
 Ah, well. I could ponder on the past for hours on end, but what ultimately matters is where I'm at now, and I'm happy to say that I finally feel like I'm on the side where the grass is greener. :)
 
