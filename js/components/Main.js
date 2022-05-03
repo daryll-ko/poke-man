@@ -1,9 +1,4 @@
-const App = `
-  <header>
-    <div class="container container-header">
-      <h1>Poké-Man</h1>
-    </div>
-  </header>
+const Main = `
   <main>
     <div class="container container-main">
       <div id="grid" class="grid"></div>
@@ -83,11 +78,6 @@ const App = `
       </div>
     </div>
   </main>
-  <footer>
-    <div class="container container-footer">
-      <p>© Daryll Ko | 2022</p>
-    </div>
-  </footer>
 `;
 
-export default App;
+export default Main;
