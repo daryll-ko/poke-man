@@ -1,5 +1,4 @@
 [
-
     {
         "id": "001",
         "name": "Bulbasaur",
@@ -8,7 +7,6 @@
         "speed": 45,
         "sprite": "Shuffle001.png"
     },
-    
     {
         "id": "002",
         "name": "Ivysaur",
@@ -17,7 +15,6 @@
         "speed": 60,
         "sprite": "Shuffle002.png"
     },
-    
     {
         "id": "003",
         "name": "Venusaur",
@@ -26,7 +23,6 @@
         "speed": 80,
         "sprite": "Shuffle003.png"
     },
-    
     {
         "id": "004",
         "name": "Charmander",
@@ -35,7 +31,6 @@
         "speed": 65,
         "sprite": "Shuffle004.png"
     },
-    
     {
         "id": "005",
         "name": "Charmeleon",
@@ -44,7 +39,6 @@
         "speed": 80,
         "sprite": "Shuffle005.png"
     },
-    
     {
         "id": "006",
         "name": "Charizard",
@@ -53,7 +47,6 @@
         "speed": 100,
         "sprite": "Shuffle006.png"
     },
-    
     {
         "id": "007",
         "name": "Squirtle",
@@ -62,7 +55,6 @@
         "speed": 43,
         "sprite": "Shuffle007.png"
     },
-    
     {
         "id": "008",
         "name": "Wartortle",
@@ -71,7 +63,6 @@
         "speed": 58,
         "sprite": "Shuffle008.png"
     },
-    
     {
         "id": "009",
         "name": "Blastoise",
@@ -80,7 +71,6 @@
         "speed": 78,
         "sprite": "Shuffle009.png"
     },
-    
     {
         "id": "010",
         "name": "Caterpie",
@@ -89,7 +79,6 @@
         "speed": 45,
         "sprite": "Shuffle010.png"
     },
-    
     {
         "id": "011",
         "name": "Metapod",
@@ -98,7 +87,6 @@
         "speed": 30,
         "sprite": "Shuffle011.png"
     },
-    
     {
         "id": "012",
         "name": "Butterfree",
@@ -107,7 +95,6 @@
         "speed": 70,
         "sprite": "Shuffle012.png"
     },
-    
     {
         "id": "013",
         "name": "Weedle",
@@ -116,7 +103,6 @@
         "speed": 50,
         "sprite": "Shuffle013.png"
     },
-    
     {
         "id": "014",
         "name": "Kakuna",
@@ -125,7 +111,6 @@
         "speed": 35,
         "sprite": "Shuffle014.png"
     },
-    
     {
         "id": "015",
         "name": "Beedrill",
@@ -134,7 +119,6 @@
         "speed": 75,
         "sprite": "Shuffle015.png"
     },
-    
     {
         "id": "016",
         "name": "Pidgey",
@@ -143,7 +127,6 @@
         "speed": 56,
         "sprite": "Shuffle016.png"
     },
-    
     {
         "id": "017",
         "name": "Pidgeotto",
@@ -152,7 +135,6 @@
         "speed": 71,
         "sprite": "Shuffle017.png"
     },
-    
     {
         "id": "018",
         "name": "Pidgeot",
@@ -161,7 +143,6 @@
         "speed": 101,
         "sprite": "Shuffle018.png"
     },
-    
     {
         "id": "019",
         "name": "Rattata",
@@ -170,7 +151,6 @@
         "speed": 72,
         "sprite": "Shuffle019.png"
     },
-    
     {
         "id": "020",
         "name": "Raticate",
@@ -179,7 +159,6 @@
         "speed": 97,
         "sprite": "Shuffle020.png"
     },
-    
     {
         "id": "021",
         "name": "Spearow",
@@ -188,7 +167,6 @@
         "speed": 70,
         "sprite": "Shuffle021.png"
     },
-    
     {
         "id": "022",
         "name": "Fearow",
@@ -197,7 +175,6 @@
         "speed": 100,
         "sprite": "Shuffle022.png"
     },
-    
     {
         "id": "023",
         "name": "Ekans",
@@ -206,7 +183,6 @@
         "speed": 55,
         "sprite": "Shuffle023.png"
     },
-    
     {
         "id": "024",
         "name": "Arbok",
@@ -215,7 +191,6 @@
         "speed": 80,
         "sprite": "Shuffle024.png"
     },
-    
     {
         "id": "025",
         "name": "Pikachu",
@@ -224,7 +199,6 @@
         "speed": 90,
         "sprite": "Shuffle025.png"
     },
-    
     {
         "id": "026",
         "name": "Raichu",
@@ -233,7 +207,6 @@
         "speed": 110,
         "sprite": "Shuffle026.png"
     },
-    
     {
         "id": "027",
         "name": "Sandshrew",
@@ -242,7 +215,6 @@
         "speed": 40,
         "sprite": "Shuffle027.png"
     },
-    
     {
         "id": "028",
         "name": "Sandslash",
@@ -251,7 +223,6 @@
         "speed": 65,
         "sprite": "Shuffle028.png"
     },
-    
     {
         "id": "029",
         "name": "Nidoran♀",
@@ -260,7 +231,6 @@
         "speed": 41,
         "sprite": "Shuffle029.png"
     },
-    
     {
         "id": "030",
         "name": "Nidorina",
@@ -269,7 +239,6 @@
         "speed": 56,
         "sprite": "Shuffle030.png"
     },
-    
     {
         "id": "031",
         "name": "Nidoqueen",
@@ -278,7 +247,6 @@
         "speed": 76,
         "sprite": "Shuffle031.png"
     },
-    
     {
         "id": "032",
         "name": "Nidoran♂",
@@ -287,7 +255,6 @@
         "speed": 50,
         "sprite": "Shuffle032.png"
     },
-    
     {
         "id": "033",
         "name": "Nidorino",
@@ -296,7 +263,6 @@
         "speed": 65,
         "sprite": "Shuffle033.png"
     },
-    
     {
         "id": "034",
         "name": "Nidoking",
@@ -305,7 +271,6 @@
         "speed": 85,
         "sprite": "Shuffle034.png"
     },
-    
     {
         "id": "035",
         "name": "Clefairy",
@@ -314,7 +279,6 @@
         "speed": 35,
         "sprite": "Shuffle035.png"
     },
-    
     {
         "id": "036",
         "name": "Clefable",
@@ -323,7 +287,6 @@
         "speed": 60,
         "sprite": "Shuffle036.png"
     },
-    
     {
         "id": "037",
         "name": "Vulpix",
@@ -332,7 +295,6 @@
         "speed": 65,
         "sprite": "Shuffle037.png"
     },
-    
     {
         "id": "038",
         "name": "Ninetales",
@@ -341,7 +303,6 @@
         "speed": 100,
         "sprite": "Shuffle038.png"
     },
-    
     {
         "id": "039",
         "name": "Jigglypuff",
@@ -350,7 +311,6 @@
         "speed": 20,
         "sprite": "Shuffle039.png"
     },
-    
     {
         "id": "040",
         "name": "Wigglytuff",
@@ -359,7 +319,6 @@
         "speed": 45,
         "sprite": "Shuffle040.png"
     },
-    
     {
         "id": "041",
         "name": "Zubat",
@@ -368,7 +327,6 @@
         "speed": 55,
         "sprite": "Shuffle041.png"
     },
-    
     {
         "id": "042",
         "name": "Golbat",
@@ -377,7 +335,6 @@
         "speed": 90,
         "sprite": "Shuffle042.png"
     },
-    
     {
         "id": "043",
         "name": "Oddish",
@@ -386,7 +343,6 @@
         "speed": 30,
         "sprite": "Shuffle043.png"
     },
-    
     {
         "id": "044",
         "name": "Gloom",
@@ -395,7 +351,6 @@
         "speed": 40,
         "sprite": "Shuffle044.png"
     },
-    
     {
         "id": "045",
         "name": "Vileplume",
@@ -404,7 +359,6 @@
         "speed": 50,
         "sprite": "Shuffle045.png"
     },
-    
     {
         "id": "046",
         "name": "Paras",
@@ -413,7 +367,6 @@
         "speed": 25,
         "sprite": "Shuffle046.png"
     },
-    
     {
         "id": "047",
         "name": "Parasect",
@@ -422,7 +375,6 @@
         "speed": 30,
         "sprite": "Shuffle047.png"
     },
-    
     {
         "id": "048",
         "name": "Venonat",
@@ -431,7 +383,6 @@
         "speed": 45,
         "sprite": "Shuffle048.png"
     },
-    
     {
         "id": "049",
         "name": "Venomoth",
@@ -440,7 +391,6 @@
         "speed": 90,
         "sprite": "Shuffle049.png"
     },
-    
     {
         "id": "050",
         "name": "Diglett",
@@ -449,7 +399,6 @@
         "speed": 95,
         "sprite": "Shuffle050.png"
     },
-    
     {
         "id": "051",
         "name": "Dugtrio",
@@ -458,7 +407,6 @@
         "speed": 120,
         "sprite": "Shuffle051.png"
     },
-    
     {
         "id": "052",
         "name": "Meowth",
@@ -467,7 +415,6 @@
         "speed": 90,
         "sprite": "Shuffle052.png"
     },
-    
     {
         "id": "053",
         "name": "Persian",
@@ -476,7 +423,6 @@
         "speed": 115,
         "sprite": "Shuffle053.png"
     },
-    
     {
         "id": "054",
         "name": "Psyduck",
@@ -485,7 +431,6 @@
         "speed": 55,
         "sprite": "Shuffle054.png"
     },
-    
     {
         "id": "055",
         "name": "Golduck",
@@ -494,7 +439,6 @@
         "speed": 85,
         "sprite": "Shuffle055.png"
     },
-    
     {
         "id": "056",
         "name": "Mankey",
@@ -503,7 +447,6 @@
         "speed": 70,
         "sprite": "Shuffle056.png"
     },
-    
     {
         "id": "057",
         "name": "Primeape",
@@ -512,7 +455,6 @@
         "speed": 95,
         "sprite": "Shuffle057.png"
     },
-    
     {
         "id": "058",
         "name": "Growlithe",
@@ -521,7 +463,6 @@
         "speed": 60,
         "sprite": "Shuffle058.png"
     },
-    
     {
         "id": "059",
         "name": "Arcanine",
@@ -530,7 +471,6 @@
         "speed": 95,
         "sprite": "Shuffle059.png"
     },
-    
     {
         "id": "060",
         "name": "Poliwag",
@@ -539,7 +479,6 @@
         "speed": 90,
         "sprite": "Shuffle060.png"
     },
-    
     {
         "id": "061",
         "name": "Poliwhirl",
@@ -548,7 +487,6 @@
         "speed": 90,
         "sprite": "Shuffle061.png"
     },
-    
     {
         "id": "062",
         "name": "Poliwrath",
@@ -557,7 +495,6 @@
         "speed": 70,
         "sprite": "Shuffle062.png"
     },
-    
     {
         "id": "063",
         "name": "Abra",
@@ -566,7 +503,6 @@
         "speed": 90,
         "sprite": "Shuffle063.png"
     },
-    
     {
         "id": "064",
         "name": "Kadabra",
@@ -575,7 +511,6 @@
         "speed": 105,
         "sprite": "Shuffle064.png"
     },
-    
     {
         "id": "065",
         "name": "Alakazam",
@@ -584,7 +519,6 @@
         "speed": 120,
         "sprite": "Shuffle065.png"
     },
-    
     {
         "id": "066",
         "name": "Machop",
@@ -593,7 +527,6 @@
         "speed": 35,
         "sprite": "Shuffle066.png"
     },
-    
     {
         "id": "067",
         "name": "Machoke",
@@ -602,7 +535,6 @@
         "speed": 45,
         "sprite": "Shuffle067.png"
     },
-    
     {
         "id": "068",
         "name": "Machamp",
@@ -611,7 +543,6 @@
         "speed": 55,
         "sprite": "Shuffle068.png"
     },
-    
     {
         "id": "069",
         "name": "Bellsprout",
@@ -620,7 +551,6 @@
         "speed": 40,
         "sprite": "Shuffle069.png"
     },
-    
     {
         "id": "070",
         "name": "Weepinbell",
@@ -629,7 +559,6 @@
         "speed": 55,
         "sprite": "Shuffle070.png"
     },
-    
     {
         "id": "071",
         "name": "Victreebel",
@@ -638,7 +567,6 @@
         "speed": 70,
         "sprite": "Shuffle071.png"
     },
-    
     {
         "id": "072",
         "name": "Tentacool",
@@ -647,7 +575,6 @@
         "speed": 70,
         "sprite": "Shuffle072.png"
     },
-    
     {
         "id": "073",
         "name": "Tentacruel",
@@ -656,7 +583,6 @@
         "speed": 100,
         "sprite": "Shuffle073.png"
     },
-    
     {
         "id": "074",
         "name": "Geodude",
@@ -665,7 +591,6 @@
         "speed": 20,
         "sprite": "Shuffle074.png"
     },
-    
     {
         "id": "075",
         "name": "Graveler",
@@ -674,7 +599,6 @@
         "speed": 35,
         "sprite": "Shuffle075.png"
     },
-    
     {
         "id": "076",
         "name": "Golem",
@@ -683,7 +607,6 @@
         "speed": 45,
         "sprite": "Shuffle076.png"
     },
-    
     {
         "id": "077",
         "name": "Ponyta",
@@ -692,7 +615,6 @@
         "speed": 90,
         "sprite": "Shuffle077.png"
     },
-    
     {
         "id": "078",
         "name": "Rapidash",
@@ -701,7 +623,6 @@
         "speed": 105,
         "sprite": "Shuffle078.png"
     },
-    
     {
         "id": "079",
         "name": "Slowpoke",
@@ -710,7 +631,6 @@
         "speed": 15,
         "sprite": "Shuffle079.png"
     },
-    
     {
         "id": "080",
         "name": "Slowbro",
@@ -719,7 +639,6 @@
         "speed": 30,
         "sprite": "Shuffle080.png"
     },
-    
     {
         "id": "081",
         "name": "Magnemite",
@@ -728,7 +647,6 @@
         "speed": 45,
         "sprite": "Shuffle081.png"
     },
-    
     {
         "id": "082",
         "name": "Magneton",
@@ -737,7 +655,6 @@
         "speed": 70,
         "sprite": "Shuffle082.png"
     },
-    
     {
         "id": "083",
         "name": "Farfetch'd",
@@ -746,7 +663,6 @@
         "speed": 60,
         "sprite": "Shuffle083.png"
     },
-    
     {
         "id": "084",
         "name": "Doduo",
@@ -755,7 +671,6 @@
         "speed": 75,
         "sprite": "Shuffle084.png"
     },
-    
     {
         "id": "085",
         "name": "Dodrio",
@@ -764,7 +679,6 @@
         "speed": 110,
         "sprite": "Shuffle085.png"
     },
-    
     {
         "id": "086",
         "name": "Seel",
@@ -773,7 +687,6 @@
         "speed": 45,
         "sprite": "Shuffle086.png"
     },
-    
     {
         "id": "087",
         "name": "Dewgong",
@@ -782,7 +695,6 @@
         "speed": 70,
         "sprite": "Shuffle087.png"
     },
-    
     {
         "id": "088",
         "name": "Grimer",
@@ -791,7 +703,6 @@
         "speed": 25,
         "sprite": "Shuffle088.png"
     },
-    
     {
         "id": "089",
         "name": "Muk",
@@ -800,7 +711,6 @@
         "speed": 50,
         "sprite": "Shuffle089.png"
     },
-    
     {
         "id": "090",
         "name": "Shellder",
@@ -809,7 +719,6 @@
         "speed": 40,
         "sprite": "Shuffle090.png"
     },
-    
     {
         "id": "091",
         "name": "Cloyster",
@@ -818,7 +727,6 @@
         "speed": 70,
         "sprite": "Shuffle091.png"
     },
-    
     {
         "id": "092",
         "name": "Gastly",
@@ -827,7 +735,6 @@
         "speed": 80,
         "sprite": "Shuffle092.png"
     },
-    
     {
         "id": "093",
         "name": "Haunter",
@@ -836,7 +743,6 @@
         "speed": 95,
         "sprite": "Shuffle093.png"
     },
-    
     {
         "id": "094",
         "name": "Gengar",
@@ -845,7 +751,6 @@
         "speed": 110,
         "sprite": "Shuffle094.png"
     },
-    
     {
         "id": "095",
         "name": "Onix",
@@ -854,7 +759,6 @@
         "speed": 70,
         "sprite": "Shuffle095.png"
     },
-    
     {
         "id": "096",
         "name": "Drowzee",
@@ -863,7 +767,6 @@
         "speed": 42,
         "sprite": "Shuffle096.png"
     },
-    
     {
         "id": "097",
         "name": "Hypno",
@@ -872,7 +775,6 @@
         "speed": 67,
         "sprite": "Shuffle097.png"
     },
-    
     {
         "id": "098",
         "name": "Krabby",
@@ -881,7 +783,6 @@
         "speed": 50,
         "sprite": "Shuffle098.png"
     },
-    
     {
         "id": "099",
         "name": "Kingler",
@@ -890,7 +791,6 @@
         "speed": 75,
         "sprite": "Shuffle099.png"
     },
-    
     {
         "id": "100",
         "name": "Voltorb",
@@ -899,7 +799,6 @@
         "speed": 100,
         "sprite": "Shuffle100.png"
     },
-    
     {
         "id": "101",
         "name": "Electrode",
@@ -908,7 +807,6 @@
         "speed": 150,
         "sprite": "Shuffle101.png"
     },
-    
     {
         "id": "102",
         "name": "Exeggcute",
@@ -917,7 +815,6 @@
         "speed": 40,
         "sprite": "Shuffle102.png"
     },
-    
     {
         "id": "103",
         "name": "Exeggutor",
@@ -926,7 +823,6 @@
         "speed": 55,
         "sprite": "Shuffle103.png"
     },
-    
     {
         "id": "104",
         "name": "Cubone",
@@ -935,7 +831,6 @@
         "speed": 35,
         "sprite": "Shuffle104.png"
     },
-    
     {
         "id": "105",
         "name": "Marowak",
@@ -944,7 +839,6 @@
         "speed": 45,
         "sprite": "Shuffle105.png"
     },
-    
     {
         "id": "106",
         "name": "Hitmonlee",
@@ -953,7 +847,6 @@
         "speed": 87,
         "sprite": "Shuffle106.png"
     },
-    
     {
         "id": "107",
         "name": "Hitmonchan",
@@ -962,7 +855,6 @@
         "speed": 76,
         "sprite": "Shuffle107.png"
     },
-    
     {
         "id": "108",
         "name": "Lickitung",
@@ -971,7 +863,6 @@
         "speed": 30,
         "sprite": "Shuffle108.png"
     },
-    
     {
         "id": "109",
         "name": "Koffing",
@@ -980,7 +871,6 @@
         "speed": 35,
         "sprite": "Shuffle109.png"
     },
-    
     {
         "id": "110",
         "name": "Weezing",
@@ -989,7 +879,6 @@
         "speed": 60,
         "sprite": "Shuffle110.png"
     },
-    
     {
         "id": "111",
         "name": "Rhyhorn",
@@ -998,7 +887,6 @@
         "speed": 25,
         "sprite": "Shuffle111.png"
     },
-    
     {
         "id": "112",
         "name": "Rhydon",
@@ -1007,7 +895,6 @@
         "speed": 40,
         "sprite": "Shuffle112.png"
     },
-    
     {
         "id": "113",
         "name": "Chansey",
@@ -1016,7 +903,6 @@
         "speed": 50,
         "sprite": "Shuffle113.png"
     },
-    
     {
         "id": "114",
         "name": "Tangela",
@@ -1025,7 +911,6 @@
         "speed": 60,
         "sprite": "Shuffle114.png"
     },
-    
     {
         "id": "115",
         "name": "Kangaskhan",
@@ -1034,7 +919,6 @@
         "speed": 90,
         "sprite": "Shuffle115.png"
     },
-    
     {
         "id": "116",
         "name": "Horsea",
@@ -1043,7 +927,6 @@
         "speed": 60,
         "sprite": "Shuffle116.png"
     },
-    
     {
         "id": "117",
         "name": "Seadra",
@@ -1052,7 +935,6 @@
         "speed": 85,
         "sprite": "Shuffle117.png"
     },
-    
     {
         "id": "118",
         "name": "Goldeen",
@@ -1061,7 +943,6 @@
         "speed": 63,
         "sprite": "Shuffle118.png"
     },
-    
     {
         "id": "119",
         "name": "Seaking",
@@ -1070,7 +951,6 @@
         "speed": 68,
         "sprite": "Shuffle119.png"
     },
-    
     {
         "id": "120",
         "name": "Staryu",
@@ -1079,7 +959,6 @@
         "speed": 85,
         "sprite": "Shuffle120.png"
     },
-    
     {
         "id": "121",
         "name": "Starmie",
@@ -1088,7 +967,6 @@
         "speed": 115,
         "sprite": "Shuffle121.png"
     },
-    
     {
         "id": "122",
         "name": "Mr. Mime",
@@ -1097,7 +975,6 @@
         "speed": 90,
         "sprite": "Shuffle122.png"
     },
-    
     {
         "id": "123",
         "name": "Scyther",
@@ -1106,7 +983,6 @@
         "speed": 105,
         "sprite": "Shuffle123.png"
     },
-    
     {
         "id": "124",
         "name": "Jynx",
@@ -1115,7 +991,6 @@
         "speed": 95,
         "sprite": "Shuffle124.png"
     },
-    
     {
         "id": "125",
         "name": "Electabuzz",
@@ -1124,7 +999,6 @@
         "speed": 105,
         "sprite": "Shuffle125.png"
     },
-    
     {
         "id": "126",
         "name": "Magmar",
@@ -1133,7 +1007,6 @@
         "speed": 93,
         "sprite": "Shuffle126.png"
     },
-    
     {
         "id": "127",
         "name": "Pinsir",
@@ -1142,7 +1015,6 @@
         "speed": 85,
         "sprite": "Shuffle127.png"
     },
-    
     {
         "id": "128",
         "name": "Tauros",
@@ -1151,7 +1023,6 @@
         "speed": 110,
         "sprite": "Shuffle128.png"
     },
-    
     {
         "id": "129",
         "name": "Magikarp",
@@ -1160,7 +1031,6 @@
         "speed": 80,
         "sprite": "Shuffle129.png"
     },
-    
     {
         "id": "130",
         "name": "Gyarados",
@@ -1169,7 +1039,6 @@
         "speed": 81,
         "sprite": "Shuffle130.png"
     },
-    
     {
         "id": "131",
         "name": "Lapras",
@@ -1178,7 +1047,6 @@
         "speed": 60,
         "sprite": "Shuffle131.png"
     },
-    
     {
         "id": "132",
         "name": "Ditto",
@@ -1187,7 +1055,6 @@
         "speed": 48,
         "sprite": "Shuffle132.png"
     },
-    
     {
         "id": "133",
         "name": "Eevee",
@@ -1196,7 +1063,6 @@
         "speed": 55,
         "sprite": "Shuffle133.png"
     },
-    
     {
         "id": "134",
         "name": "Vaporeon",
@@ -1205,7 +1071,6 @@
         "speed": 65,
         "sprite": "Shuffle134.png"
     },
-    
     {
         "id": "135",
         "name": "Jolteon",
@@ -1214,7 +1079,6 @@
         "speed": 130,
         "sprite": "Shuffle135.png"
     },
-    
     {
         "id": "136",
         "name": "Flareon",
@@ -1223,7 +1087,6 @@
         "speed": 65,
         "sprite": "Shuffle136.png"
     },
-    
     {
         "id": "137",
         "name": "Porygon",
@@ -1232,7 +1095,6 @@
         "speed": 40,
         "sprite": "Shuffle137.png"
     },
-    
     {
         "id": "138",
         "name": "Omanyte",
@@ -1241,7 +1103,6 @@
         "speed": 35,
         "sprite": "Shuffle138.png"
     },
-    
     {
         "id": "139",
         "name": "Omastar",
@@ -1250,7 +1111,6 @@
         "speed": 55,
         "sprite": "Shuffle139.png"
     },
-    
     {
         "id": "140",
         "name": "Kabuto",
@@ -1259,7 +1119,6 @@
         "speed": 55,
         "sprite": "Shuffle140.png"
     },
-    
     {
         "id": "141",
         "name": "Kabutops",
@@ -1268,7 +1127,6 @@
         "speed": 80,
         "sprite": "Shuffle141.png"
     },
-    
     {
         "id": "142",
         "name": "Aerodactyl",
@@ -1277,7 +1135,6 @@
         "speed": 130,
         "sprite": "Shuffle142.png"
     },
-    
     {
         "id": "143",
         "name": "Snorlax",
@@ -1286,7 +1143,6 @@
         "speed": 30,
         "sprite": "Shuffle143.png"
     },
-    
     {
         "id": "144",
         "name": "Articuno",
@@ -1295,7 +1151,6 @@
         "speed": 85,
         "sprite": "Shuffle144.png"
     },
-    
     {
         "id": "145",
         "name": "Zapdos",
@@ -1304,7 +1159,6 @@
         "speed": 100,
         "sprite": "Shuffle145.png"
     },
-    
     {
         "id": "146",
         "name": "Moltres",
@@ -1313,7 +1167,6 @@
         "speed": 90,
         "sprite": "Shuffle146.png"
     },
-    
     {
         "id": "147",
         "name": "Dratini",
@@ -1322,7 +1175,6 @@
         "speed": 50,
         "sprite": "Shuffle147.png"
     },
-    
     {
         "id": "148",
         "name": "Dragonair",
@@ -1331,7 +1183,6 @@
         "speed": 70,
         "sprite": "Shuffle148.png"
     },
-    
     {
         "id": "149",
         "name": "Dragonite",
@@ -1340,7 +1191,6 @@
         "speed": 80,
         "sprite": "Shuffle149.png"
     },
-    
     {
         "id": "150",
         "name": "Mewtwo",
@@ -1349,7 +1199,6 @@
         "speed": 130,
         "sprite": "Shuffle150.png"
     },
-    
     {
         "id": "151",
         "name": "Mew",
@@ -1358,7 +1207,6 @@
         "speed": 100,
         "sprite": "Shuffle151.png"
     },
-    
     {
         "id": "152",
         "name": "Chikorita",
@@ -1367,7 +1215,6 @@
         "speed": 45,
         "sprite": "Shuffle152.png"
     },
-    
     {
         "id": "153",
         "name": "Bayleef",
@@ -1376,7 +1223,6 @@
         "speed": 60,
         "sprite": "Shuffle153.png"
     },
-    
     {
         "id": "154",
         "name": "Meganium",
@@ -1385,7 +1231,6 @@
         "speed": 80,
         "sprite": "Shuffle154.png"
     },
-    
     {
         "id": "155",
         "name": "Cyndaquil",
@@ -1394,7 +1239,6 @@
         "speed": 65,
         "sprite": "Shuffle155.png"
     },
-    
     {
         "id": "156",
         "name": "Quilava",
@@ -1403,7 +1247,6 @@
         "speed": 80,
         "sprite": "Shuffle156.png"
     },
-    
     {
         "id": "157",
         "name": "Typhlosion",
@@ -1412,7 +1255,6 @@
         "speed": 100,
         "sprite": "Shuffle157.png"
     },
-    
     {
         "id": "158",
         "name": "Totodile",
@@ -1421,7 +1263,6 @@
         "speed": 43,
         "sprite": "Shuffle158.png"
     },
-    
     {
         "id": "159",
         "name": "Croconaw",
@@ -1430,7 +1271,6 @@
         "speed": 58,
         "sprite": "Shuffle159.png"
     },
-    
     {
         "id": "160",
         "name": "Feraligatr",
@@ -1439,7 +1279,6 @@
         "speed": 78,
         "sprite": "Shuffle160.png"
     },
-    
     {
         "id": "161",
         "name": "Sentret",
@@ -1448,7 +1287,6 @@
         "speed": 20,
         "sprite": "Shuffle161.png"
     },
-    
     {
         "id": "162",
         "name": "Furret",
@@ -1457,7 +1295,6 @@
         "speed": 90,
         "sprite": "Shuffle162.png"
     },
-    
     {
         "id": "163",
         "name": "Hoothoot",
@@ -1466,7 +1303,6 @@
         "speed": 50,
         "sprite": "Shuffle163.png"
     },
-    
     {
         "id": "164",
         "name": "Noctowl",
@@ -1475,7 +1311,6 @@
         "speed": 70,
         "sprite": "Shuffle164.png"
     },
-    
     {
         "id": "165",
         "name": "Ledyba",
@@ -1484,7 +1319,6 @@
         "speed": 55,
         "sprite": "Shuffle165.png"
     },
-    
     {
         "id": "166",
         "name": "Ledian",
@@ -1493,7 +1327,6 @@
         "speed": 85,
         "sprite": "Shuffle166.png"
     },
-    
     {
         "id": "167",
         "name": "Spinarak",
@@ -1502,7 +1335,6 @@
         "speed": 30,
         "sprite": "Shuffle167.png"
     },
-    
     {
         "id": "168",
         "name": "Ariados",
@@ -1511,7 +1343,6 @@
         "speed": 40,
         "sprite": "Shuffle168.png"
     },
-    
     {
         "id": "169",
         "name": "Crobat",
@@ -1520,7 +1351,6 @@
         "speed": 130,
         "sprite": "Shuffle169.png"
     },
-    
     {
         "id": "170",
         "name": "Chinchou",
@@ -1529,7 +1359,6 @@
         "speed": 67,
         "sprite": "Shuffle170.png"
     },
-    
     {
         "id": "171",
         "name": "Lanturn",
@@ -1538,7 +1367,6 @@
         "speed": 67,
         "sprite": "Shuffle171.png"
     },
-    
     {
         "id": "172",
         "name": "Pichu",
@@ -1547,7 +1375,6 @@
         "speed": 60,
         "sprite": "Shuffle172.png"
     },
-    
     {
         "id": "173",
         "name": "Cleffa",
@@ -1556,7 +1383,6 @@
         "speed": 15,
         "sprite": "Shuffle173.png"
     },
-    
     {
         "id": "174",
         "name": "Igglybuff",
@@ -1565,7 +1391,6 @@
         "speed": 15,
         "sprite": "Shuffle174.png"
     },
-    
     {
         "id": "175",
         "name": "Togepi",
@@ -1574,7 +1399,6 @@
         "speed": 20,
         "sprite": "Shuffle175.png"
     },
-    
     {
         "id": "176",
         "name": "Togetic",
@@ -1583,7 +1407,6 @@
         "speed": 40,
         "sprite": "Shuffle176.png"
     },
-    
     {
         "id": "177",
         "name": "Natu",
@@ -1592,7 +1415,6 @@
         "speed": 70,
         "sprite": "Shuffle177.png"
     },
-    
     {
         "id": "178",
         "name": "Xatu",
@@ -1601,7 +1423,6 @@
         "speed": 95,
         "sprite": "Shuffle178.png"
     },
-    
     {
         "id": "179",
         "name": "Mareep",
@@ -1610,7 +1431,6 @@
         "speed": 35,
         "sprite": "Shuffle179.png"
     },
-    
     {
         "id": "180",
         "name": "Flaaffy",
@@ -1619,7 +1439,6 @@
         "speed": 45,
         "sprite": "Shuffle180.png"
     },
-    
     {
         "id": "181",
         "name": "Ampharos",
@@ -1628,7 +1447,6 @@
         "speed": 55,
         "sprite": "Shuffle181.png"
     },
-    
     {
         "id": "182",
         "name": "Bellossom",
@@ -1637,7 +1455,6 @@
         "speed": 50,
         "sprite": "Shuffle182.png"
     },
-    
     {
         "id": "183",
         "name": "Marill",
@@ -1646,7 +1463,6 @@
         "speed": 40,
         "sprite": "Shuffle183.png"
     },
-    
     {
         "id": "184",
         "name": "Azumarill",
@@ -1655,7 +1471,6 @@
         "speed": 50,
         "sprite": "Shuffle184.png"
     },
-    
     {
         "id": "185",
         "name": "Sudowoodo",
@@ -1664,7 +1479,6 @@
         "speed": 30,
         "sprite": "Shuffle185.png"
     },
-    
     {
         "id": "186",
         "name": "Politoed",
@@ -1673,7 +1487,6 @@
         "speed": 70,
         "sprite": "Shuffle186.png"
     },
-    
     {
         "id": "187",
         "name": "Hoppip",
@@ -1682,7 +1495,6 @@
         "speed": 50,
         "sprite": "Shuffle187.png"
     },
-    
     {
         "id": "188",
         "name": "Skiploom",
@@ -1691,7 +1503,6 @@
         "speed": 80,
         "sprite": "Shuffle188.png"
     },
-    
     {
         "id": "189",
         "name": "Jumpluff",
@@ -1700,7 +1511,6 @@
         "speed": 110,
         "sprite": "Shuffle189.png"
     },
-    
     {
         "id": "190",
         "name": "Aipom",
@@ -1709,7 +1519,6 @@
         "speed": 85,
         "sprite": "Shuffle190.png"
     },
-    
     {
         "id": "191",
         "name": "Sunkern",
@@ -1718,7 +1527,6 @@
         "speed": 30,
         "sprite": "Shuffle191.png"
     },
-    
     {
         "id": "192",
         "name": "Sunflora",
@@ -1727,7 +1535,6 @@
         "speed": 30,
         "sprite": "Shuffle192.png"
     },
-    
     {
         "id": "193",
         "name": "Yanma",
@@ -1736,7 +1543,6 @@
         "speed": 95,
         "sprite": "Shuffle193.png"
     },
-    
     {
         "id": "194",
         "name": "Wooper",
@@ -1745,7 +1551,6 @@
         "speed": 15,
         "sprite": "Shuffle194.png"
     },
-    
     {
         "id": "195",
         "name": "Quagsire",
@@ -1754,7 +1559,6 @@
         "speed": 35,
         "sprite": "Shuffle195.png"
     },
-    
     {
         "id": "196",
         "name": "Espeon",
@@ -1763,7 +1567,6 @@
         "speed": 110,
         "sprite": "Shuffle196.png"
     },
-    
     {
         "id": "197",
         "name": "Umbreon",
@@ -1772,7 +1575,6 @@
         "speed": 65,
         "sprite": "Shuffle197.png"
     },
-    
     {
         "id": "198",
         "name": "Murkrow",
@@ -1781,7 +1583,6 @@
         "speed": 91,
         "sprite": "Shuffle198.png"
     },
-    
     {
         "id": "199",
         "name": "Slowking",
@@ -1790,7 +1591,6 @@
         "speed": 30,
         "sprite": "Shuffle199.png"
     },
-    
     {
         "id": "200",
         "name": "Misdreavus",
@@ -1799,7 +1599,6 @@
         "speed": 85,
         "sprite": "Shuffle200.png"
     },
-    
     {
         "id": "201",
         "name": "Unown",
@@ -1808,7 +1607,6 @@
         "speed": 48,
         "sprite": "Shuffle201.png"
     },
-    
     {
         "id": "202",
         "name": "Wobbuffet",
@@ -1817,7 +1615,6 @@
         "speed": 33,
         "sprite": "Shuffle202.png"
     },
-    
     {
         "id": "203",
         "name": "Girafarig",
@@ -1826,7 +1623,6 @@
         "speed": 85,
         "sprite": "Shuffle203.png"
     },
-    
     {
         "id": "204",
         "name": "Pineco",
@@ -1835,7 +1631,6 @@
         "speed": 15,
         "sprite": "Shuffle204.png"
     },
-    
     {
         "id": "205",
         "name": "Forretress",
@@ -1844,7 +1639,6 @@
         "speed": 40,
         "sprite": "Shuffle205.png"
     },
-    
     {
         "id": "206",
         "name": "Dunsparce",
@@ -1853,7 +1647,6 @@
         "speed": 45,
         "sprite": "Shuffle206.png"
     },
-    
     {
         "id": "207",
         "name": "Gligar",
@@ -1862,7 +1655,6 @@
         "speed": 85,
         "sprite": "Shuffle207.png"
     },
-    
     {
         "id": "208",
         "name": "Steelix",
@@ -1871,7 +1663,6 @@
         "speed": 30,
         "sprite": "Shuffle208.png"
     },
-    
     {
         "id": "209",
         "name": "Snubbull",
@@ -1880,7 +1671,6 @@
         "speed": 30,
         "sprite": "Shuffle209.png"
     },
-    
     {
         "id": "210",
         "name": "Granbull",
@@ -1889,7 +1679,6 @@
         "speed": 45,
         "sprite": "Shuffle210.png"
     },
-    
     {
         "id": "211",
         "name": "Qwilfish",
@@ -1898,7 +1687,6 @@
         "speed": 85,
         "sprite": "Shuffle211.png"
     },
-    
     {
         "id": "212",
         "name": "Scizor",
@@ -1907,7 +1695,6 @@
         "speed": 65,
         "sprite": "Shuffle212.png"
     },
-    
     {
         "id": "213",
         "name": "Shuckle",
@@ -1916,7 +1703,6 @@
         "speed": 5,
         "sprite": "Shuffle213.png"
     },
-    
     {
         "id": "214",
         "name": "Heracross",
@@ -1925,7 +1711,6 @@
         "speed": 85,
         "sprite": "Shuffle214.png"
     },
-    
     {
         "id": "215",
         "name": "Sneasel",
@@ -1934,7 +1719,6 @@
         "speed": 115,
         "sprite": "Shuffle215.png"
     },
-    
     {
         "id": "216",
         "name": "Teddiursa",
@@ -1943,7 +1727,6 @@
         "speed": 40,
         "sprite": "Shuffle216.png"
     },
-    
     {
         "id": "217",
         "name": "Ursaring",
@@ -1952,7 +1735,6 @@
         "speed": 55,
         "sprite": "Shuffle217.png"
     },
-    
     {
         "id": "218",
         "name": "Slugma",
@@ -1961,7 +1743,6 @@
         "speed": 20,
         "sprite": "Shuffle218.png"
     },
-    
     {
         "id": "219",
         "name": "Magcargo",
@@ -1970,7 +1751,6 @@
         "speed": 30,
         "sprite": "Shuffle219.png"
     },
-    
     {
         "id": "220",
         "name": "Swinub",
@@ -1979,7 +1759,6 @@
         "speed": 50,
         "sprite": "Shuffle220.png"
     },
-    
     {
         "id": "221",
         "name": "Piloswine",
@@ -1988,7 +1767,6 @@
         "speed": 50,
         "sprite": "Shuffle221.png"
     },
-    
     {
         "id": "222",
         "name": "Corsola",
@@ -1997,7 +1775,6 @@
         "speed": 35,
         "sprite": "Shuffle222.png"
     },
-    
     {
         "id": "223",
         "name": "Remoraid",
@@ -2006,7 +1783,6 @@
         "speed": 65,
         "sprite": "Shuffle223.png"
     },
-    
     {
         "id": "224",
         "name": "Octillery",
@@ -2015,7 +1791,6 @@
         "speed": 45,
         "sprite": "Shuffle224.png"
     },
-    
     {
         "id": "225",
         "name": "Delibird",
@@ -2024,7 +1799,6 @@
         "speed": 75,
         "sprite": "Shuffle225.png"
     },
-    
     {
         "id": "226",
         "name": "Mantine",
@@ -2033,7 +1807,6 @@
         "speed": 70,
         "sprite": "Shuffle226.png"
     },
-    
     {
         "id": "227",
         "name": "Skarmory",
@@ -2042,7 +1815,6 @@
         "speed": 70,
         "sprite": "Shuffle227.png"
     },
-    
     {
         "id": "228",
         "name": "Houndour",
@@ -2051,7 +1823,6 @@
         "speed": 65,
         "sprite": "Shuffle228.png"
     },
-    
     {
         "id": "229",
         "name": "Houndoom",
@@ -2060,7 +1831,6 @@
         "speed": 95,
         "sprite": "Shuffle229.png"
     },
-    
     {
         "id": "230",
         "name": "Kingdra",
@@ -2069,7 +1839,6 @@
         "speed": 85,
         "sprite": "Shuffle230.png"
     },
-    
     {
         "id": "231",
         "name": "Phanpy",
@@ -2078,7 +1847,6 @@
         "speed": 40,
         "sprite": "Shuffle231.png"
     },
-    
     {
         "id": "232",
         "name": "Donphan",
@@ -2087,7 +1855,6 @@
         "speed": 50,
         "sprite": "Shuffle232.png"
     },
-    
     {
         "id": "233",
         "name": "Porygon2",
@@ -2096,7 +1863,6 @@
         "speed": 60,
         "sprite": "Shuffle233.png"
     },
-    
     {
         "id": "234",
         "name": "Stantler",
@@ -2105,7 +1871,6 @@
         "speed": 85,
         "sprite": "Shuffle234.png"
     },
-    
     {
         "id": "235",
         "name": "Smeargle",
@@ -2114,7 +1879,6 @@
         "speed": 75,
         "sprite": "Shuffle235.png"
     },
-    
     {
         "id": "236",
         "name": "Tyrogue",
@@ -2123,7 +1887,6 @@
         "speed": 35,
         "sprite": "Shuffle236.png"
     },
-    
     {
         "id": "237",
         "name": "Hitmontop",
@@ -2132,7 +1895,6 @@
         "speed": 70,
         "sprite": "Shuffle237.png"
     },
-    
     {
         "id": "238",
         "name": "Smoochum",
@@ -2141,7 +1903,6 @@
         "speed": 65,
         "sprite": "Shuffle238.png"
     },
-    
     {
         "id": "239",
         "name": "Elekid",
@@ -2150,7 +1911,6 @@
         "speed": 95,
         "sprite": "Shuffle239.png"
     },
-    
     {
         "id": "240",
         "name": "Magby",
@@ -2159,7 +1919,6 @@
         "speed": 83,
         "sprite": "Shuffle240.png"
     },
-    
     {
         "id": "241",
         "name": "Miltank",
@@ -2168,7 +1927,6 @@
         "speed": 100,
         "sprite": "Shuffle241.png"
     },
-    
     {
         "id": "242",
         "name": "Blissey",
@@ -2177,7 +1935,6 @@
         "speed": 55,
         "sprite": "Shuffle242.png"
     },
-    
     {
         "id": "243",
         "name": "Raikou",
@@ -2186,7 +1943,6 @@
         "speed": 115,
         "sprite": "Shuffle243.png"
     },
-    
     {
         "id": "244",
         "name": "Entei",
@@ -2195,7 +1951,6 @@
         "speed": 100,
         "sprite": "Shuffle244.png"
     },
-    
     {
         "id": "245",
         "name": "Suicune",
@@ -2204,7 +1959,6 @@
         "speed": 85,
         "sprite": "Shuffle245.png"
     },
-    
     {
         "id": "246",
         "name": "Larvitar",
@@ -2213,7 +1967,6 @@
         "speed": 41,
         "sprite": "Shuffle246.png"
     },
-    
     {
         "id": "247",
         "name": "Pupitar",
@@ -2222,7 +1975,6 @@
         "speed": 51,
         "sprite": "Shuffle247.png"
     },
-    
     {
         "id": "248",
         "name": "Tyranitar",
@@ -2231,7 +1983,6 @@
         "speed": 61,
         "sprite": "Shuffle248.png"
     },
-    
     {
         "id": "249",
         "name": "Lugia",
@@ -2240,7 +1991,6 @@
         "speed": 110,
         "sprite": "Shuffle249.png"
     },
-    
     {
         "id": "250",
         "name": "Ho-Oh",
@@ -2249,7 +1999,6 @@
         "speed": 90,
         "sprite": "Shuffle250.png"
     },
-    
     {
         "id": "251",
         "name": "Celebi",
@@ -2258,7 +2007,6 @@
         "speed": 100,
         "sprite": "Shuffle251.png"
     },
-    
     {
         "id": "252",
         "name": "Treecko",
@@ -2267,7 +2015,6 @@
         "speed": 70,
         "sprite": "Shuffle252.png"
     },
-    
     {
         "id": "253",
         "name": "Grovyle",
@@ -2276,7 +2023,6 @@
         "speed": 95,
         "sprite": "Shuffle253.png"
     },
-    
     {
         "id": "254",
         "name": "Sceptile",
@@ -2285,7 +2031,6 @@
         "speed": 120,
         "sprite": "Shuffle254.png"
     },
-    
     {
         "id": "255",
         "name": "Torchic",
@@ -2294,7 +2039,6 @@
         "speed": 45,
         "sprite": "Shuffle255.png"
     },
-    
     {
         "id": "256",
         "name": "Combusken",
@@ -2303,7 +2047,6 @@
         "speed": 55,
         "sprite": "Shuffle256.png"
     },
-    
     {
         "id": "257",
         "name": "Blaziken",
@@ -2312,7 +2055,6 @@
         "speed": 80,
         "sprite": "Shuffle257.png"
     },
-    
     {
         "id": "258",
         "name": "Mudkip",
@@ -2321,7 +2063,6 @@
         "speed": 40,
         "sprite": "Shuffle258.png"
     },
-    
     {
         "id": "259",
         "name": "Marshtomp",
@@ -2330,7 +2071,6 @@
         "speed": 50,
         "sprite": "Shuffle259.png"
     },
-    
     {
         "id": "260",
         "name": "Swampert",
@@ -2339,7 +2079,6 @@
         "speed": 60,
         "sprite": "Shuffle260.png"
     },
-    
     {
         "id": "261",
         "name": "Poochyena",
@@ -2348,7 +2087,6 @@
         "speed": 35,
         "sprite": "Shuffle261.png"
     },
-    
     {
         "id": "262",
         "name": "Mightyena",
@@ -2357,7 +2095,6 @@
         "speed": 70,
         "sprite": "Shuffle262.png"
     },
-    
     {
         "id": "263",
         "name": "Zigzagoon",
@@ -2366,7 +2103,6 @@
         "speed": 60,
         "sprite": "Shuffle263.png"
     },
-    
     {
         "id": "264",
         "name": "Linoone",
@@ -2375,7 +2111,6 @@
         "speed": 100,
         "sprite": "Shuffle264.png"
     },
-    
     {
         "id": "265",
         "name": "Wurmple",
@@ -2384,7 +2119,6 @@
         "speed": 20,
         "sprite": "Shuffle265.png"
     },
-    
     {
         "id": "266",
         "name": "Silcoon",
@@ -2393,7 +2127,6 @@
         "speed": 15,
         "sprite": "Shuffle266.png"
     },
-    
     {
         "id": "267",
         "name": "Beautifly",
@@ -2402,7 +2135,6 @@
         "speed": 65,
         "sprite": "Shuffle267.png"
     },
-    
     {
         "id": "268",
         "name": "Cascoon",
@@ -2411,7 +2143,6 @@
         "speed": 15,
         "sprite": "Shuffle268.png"
     },
-    
     {
         "id": "269",
         "name": "Dustox",
@@ -2420,7 +2151,6 @@
         "speed": 65,
         "sprite": "Shuffle269.png"
     },
-    
     {
         "id": "270",
         "name": "Lotad",
@@ -2429,7 +2159,6 @@
         "speed": 30,
         "sprite": "Shuffle270.png"
     },
-    
     {
         "id": "271",
         "name": "Lombre",
@@ -2438,7 +2167,6 @@
         "speed": 50,
         "sprite": "Shuffle271.png"
     },
-    
     {
         "id": "272",
         "name": "Ludicolo",
@@ -2447,7 +2175,6 @@
         "speed": 70,
         "sprite": "Shuffle272.png"
     },
-    
     {
         "id": "273",
         "name": "Seedot",
@@ -2456,7 +2183,6 @@
         "speed": 30,
         "sprite": "Shuffle273.png"
     },
-    
     {
         "id": "274",
         "name": "Nuzleaf",
@@ -2465,7 +2191,6 @@
         "speed": 60,
         "sprite": "Shuffle274.png"
     },
-    
     {
         "id": "275",
         "name": "Shiftry",
@@ -2474,7 +2199,6 @@
         "speed": 80,
         "sprite": "Shuffle275.png"
     },
-    
     {
         "id": "276",
         "name": "Taillow",
@@ -2483,7 +2207,6 @@
         "speed": 85,
         "sprite": "Shuffle276.png"
     },
-    
     {
         "id": "277",
         "name": "Swellow",
@@ -2492,7 +2215,6 @@
         "speed": 125,
         "sprite": "Shuffle277.png"
     },
-    
     {
         "id": "278",
         "name": "Wingull",
@@ -2501,7 +2223,6 @@
         "speed": 85,
         "sprite": "Shuffle278.png"
     },
-    
     {
         "id": "279",
         "name": "Pelipper",
@@ -2510,7 +2231,6 @@
         "speed": 65,
         "sprite": "Shuffle279.png"
     },
-    
     {
         "id": "280",
         "name": "Ralts",
@@ -2519,7 +2239,6 @@
         "speed": 40,
         "sprite": "Shuffle280.png"
     },
-    
     {
         "id": "281",
         "name": "Kirlia",
@@ -2528,7 +2247,6 @@
         "speed": 50,
         "sprite": "Shuffle281.png"
     },
-    
     {
         "id": "282",
         "name": "Gardevoir",
@@ -2537,7 +2255,6 @@
         "speed": 80,
         "sprite": "Shuffle282.png"
     },
-    
     {
         "id": "283",
         "name": "Surskit",
@@ -2546,7 +2263,6 @@
         "speed": 65,
         "sprite": "Shuffle283.png"
     },
-    
     {
         "id": "284",
         "name": "Masquerain",
@@ -2555,7 +2271,6 @@
         "speed": 80,
         "sprite": "Shuffle284.png"
     },
-    
     {
         "id": "285",
         "name": "Shroomish",
@@ -2564,7 +2279,6 @@
         "speed": 35,
         "sprite": "Shuffle285.png"
     },
-    
     {
         "id": "286",
         "name": "Breloom",
@@ -2573,7 +2287,6 @@
         "speed": 70,
         "sprite": "Shuffle286.png"
     },
-    
     {
         "id": "287",
         "name": "Slakoth",
@@ -2582,7 +2295,6 @@
         "speed": 30,
         "sprite": "Shuffle287.png"
     },
-    
     {
         "id": "288",
         "name": "Vigoroth",
@@ -2591,7 +2303,6 @@
         "speed": 90,
         "sprite": "Shuffle288.png"
     },
-    
     {
         "id": "289",
         "name": "Slaking",
@@ -2600,7 +2311,6 @@
         "speed": 100,
         "sprite": "Shuffle289.png"
     },
-    
     {
         "id": "290",
         "name": "Nincada",
@@ -2609,7 +2319,6 @@
         "speed": 40,
         "sprite": "Shuffle290.png"
     },
-    
     {
         "id": "291",
         "name": "Ninjask",
@@ -2618,7 +2327,6 @@
         "speed": 160,
         "sprite": "Shuffle291.png"
     },
-    
     {
         "id": "292",
         "name": "Shedinja",
@@ -2627,7 +2335,6 @@
         "speed": 40,
         "sprite": "Shuffle292.png"
     },
-    
     {
         "id": "293",
         "name": "Whismur",
@@ -2636,7 +2343,6 @@
         "speed": 28,
         "sprite": "Shuffle293.png"
     },
-    
     {
         "id": "294",
         "name": "Loudred",
@@ -2645,7 +2351,6 @@
         "speed": 48,
         "sprite": "Shuffle294.png"
     },
-    
     {
         "id": "295",
         "name": "Exploud",
@@ -2654,7 +2359,6 @@
         "speed": 68,
         "sprite": "Shuffle295.png"
     },
-    
     {
         "id": "296",
         "name": "Makuhita",
@@ -2663,7 +2367,6 @@
         "speed": 25,
         "sprite": "Shuffle296.png"
     },
-    
     {
         "id": "297",
         "name": "Hariyama",
@@ -2672,7 +2375,6 @@
         "speed": 50,
         "sprite": "Shuffle297.png"
     },
-    
     {
         "id": "298",
         "name": "Azurill",
@@ -2681,7 +2383,6 @@
         "speed": 20,
         "sprite": "Shuffle298.png"
     },
-    
     {
         "id": "299",
         "name": "Nosepass",
@@ -2690,7 +2391,6 @@
         "speed": 30,
         "sprite": "Shuffle299.png"
     },
-    
     {
         "id": "300",
         "name": "Skitty",
@@ -2699,7 +2399,6 @@
         "speed": 50,
         "sprite": "Shuffle300.png"
     },
-    
     {
         "id": "301",
         "name": "Delcatty",
@@ -2708,7 +2407,6 @@
         "speed": 90,
         "sprite": "Shuffle301.png"
     },
-    
     {
         "id": "302",
         "name": "Sableye",
@@ -2717,7 +2415,6 @@
         "speed": 50,
         "sprite": "Shuffle302.png"
     },
-    
     {
         "id": "303",
         "name": "Mawile",
@@ -2726,7 +2423,6 @@
         "speed": 50,
         "sprite": "Shuffle303.png"
     },
-    
     {
         "id": "304",
         "name": "Aron",
@@ -2735,7 +2431,6 @@
         "speed": 30,
         "sprite": "Shuffle304.png"
     },
-    
     {
         "id": "305",
         "name": "Lairon",
@@ -2744,7 +2439,6 @@
         "speed": 40,
         "sprite": "Shuffle305.png"
     },
-    
     {
         "id": "306",
         "name": "Aggron",
@@ -2753,7 +2447,6 @@
         "speed": 50,
         "sprite": "Shuffle306.png"
     },
-    
     {
         "id": "307",
         "name": "Meditite",
@@ -2762,7 +2455,6 @@
         "speed": 60,
         "sprite": "Shuffle307.png"
     },
-    
     {
         "id": "308",
         "name": "Medicham",
@@ -2771,7 +2463,6 @@
         "speed": 80,
         "sprite": "Shuffle308.png"
     },
-    
     {
         "id": "309",
         "name": "Electrike",
@@ -2780,7 +2471,6 @@
         "speed": 65,
         "sprite": "Shuffle309.png"
     },
-    
     {
         "id": "310",
         "name": "Manectric",
@@ -2789,7 +2479,6 @@
         "speed": 105,
         "sprite": "Shuffle310.png"
     },
-    
     {
         "id": "311",
         "name": "Plusle",
@@ -2798,7 +2487,6 @@
         "speed": 95,
         "sprite": "Shuffle311.png"
     },
-    
     {
         "id": "312",
         "name": "Minun",
@@ -2807,7 +2495,6 @@
         "speed": 95,
         "sprite": "Shuffle312.png"
     },
-    
     {
         "id": "313",
         "name": "Volbeat",
@@ -2816,7 +2503,6 @@
         "speed": 85,
         "sprite": "Shuffle313.png"
     },
-    
     {
         "id": "314",
         "name": "Illumise",
@@ -2825,7 +2511,6 @@
         "speed": 85,
         "sprite": "Shuffle314.png"
     },
-    
     {
         "id": "315",
         "name": "Roselia",
@@ -2834,7 +2519,6 @@
         "speed": 65,
         "sprite": "Shuffle315.png"
     },
-    
     {
         "id": "316",
         "name": "Gulpin",
@@ -2843,7 +2527,6 @@
         "speed": 40,
         "sprite": "Shuffle316.png"
     },
-    
     {
         "id": "317",
         "name": "Swalot",
@@ -2852,7 +2535,6 @@
         "speed": 55,
         "sprite": "Shuffle317.png"
     },
-    
     {
         "id": "318",
         "name": "Carvanha",
@@ -2861,7 +2543,6 @@
         "speed": 65,
         "sprite": "Shuffle318.png"
     },
-    
     {
         "id": "319",
         "name": "Sharpedo",
@@ -2870,7 +2551,6 @@
         "speed": 95,
         "sprite": "Shuffle319.png"
     },
-    
     {
         "id": "320",
         "name": "Wailmer",
@@ -2879,7 +2559,6 @@
         "speed": 60,
         "sprite": "Shuffle320.png"
     },
-    
     {
         "id": "321",
         "name": "Wailord",
@@ -2888,7 +2567,6 @@
         "speed": 60,
         "sprite": "Shuffle321.png"
     },
-    
     {
         "id": "322",
         "name": "Numel",
@@ -2897,7 +2575,6 @@
         "speed": 35,
         "sprite": "Shuffle322.png"
     },
-    
     {
         "id": "323",
         "name": "Camerupt",
@@ -2906,7 +2583,6 @@
         "speed": 40,
         "sprite": "Shuffle323.png"
     },
-    
     {
         "id": "324",
         "name": "Torkoal",
@@ -2915,7 +2591,6 @@
         "speed": 20,
         "sprite": "Shuffle324.png"
     },
-    
     {
         "id": "325",
         "name": "Spoink",
@@ -2924,7 +2599,6 @@
         "speed": 60,
         "sprite": "Shuffle325.png"
     },
-    
     {
         "id": "326",
         "name": "Grumpig",
@@ -2933,7 +2607,6 @@
         "speed": 80,
         "sprite": "Shuffle326.png"
     },
-    
     {
         "id": "327",
         "name": "Spinda",
@@ -2942,7 +2615,6 @@
         "speed": 60,
         "sprite": "Shuffle327.png"
     },
-    
     {
         "id": "328",
         "name": "Trapinch",
@@ -2951,7 +2623,6 @@
         "speed": 10,
         "sprite": "Shuffle328.png"
     },
-    
     {
         "id": "329",
         "name": "Vibrava",
@@ -2960,7 +2631,6 @@
         "speed": 70,
         "sprite": "Shuffle329.png"
     },
-    
     {
         "id": "330",
         "name": "Flygon",
@@ -2969,7 +2639,6 @@
         "speed": 100,
         "sprite": "Shuffle330.png"
     },
-    
     {
         "id": "331",
         "name": "Cacnea",
@@ -2978,7 +2647,6 @@
         "speed": 35,
         "sprite": "Shuffle331.png"
     },
-    
     {
         "id": "332",
         "name": "Cacturne",
@@ -2987,7 +2655,6 @@
         "speed": 55,
         "sprite": "Shuffle332.png"
     },
-    
     {
         "id": "333",
         "name": "Swablu",
@@ -2996,7 +2663,6 @@
         "speed": 50,
         "sprite": "Shuffle333.png"
     },
-    
     {
         "id": "334",
         "name": "Altaria",
@@ -3005,7 +2671,6 @@
         "speed": 80,
         "sprite": "Shuffle334.png"
     },
-    
     {
         "id": "335",
         "name": "Zangoose",
@@ -3014,7 +2679,6 @@
         "speed": 90,
         "sprite": "Shuffle335.png"
     },
-    
     {
         "id": "336",
         "name": "Seviper",
@@ -3023,7 +2687,6 @@
         "speed": 65,
         "sprite": "Shuffle336.png"
     },
-    
     {
         "id": "337",
         "name": "Lunatone",
@@ -3032,7 +2695,6 @@
         "speed": 70,
         "sprite": "Shuffle337.png"
     },
-    
     {
         "id": "338",
         "name": "Solrock",
@@ -3041,7 +2703,6 @@
         "speed": 70,
         "sprite": "Shuffle338.png"
     },
-    
     {
         "id": "339",
         "name": "Barboach",
@@ -3050,7 +2711,6 @@
         "speed": 60,
         "sprite": "Shuffle339.png"
     },
-    
     {
         "id": "340",
         "name": "Whiscash",
@@ -3059,7 +2719,6 @@
         "speed": 60,
         "sprite": "Shuffle340.png"
     },
-    
     {
         "id": "341",
         "name": "Corphish",
@@ -3068,7 +2727,6 @@
         "speed": 35,
         "sprite": "Shuffle341.png"
     },
-    
     {
         "id": "342",
         "name": "Crawdaunt",
@@ -3077,7 +2735,6 @@
         "speed": 55,
         "sprite": "Shuffle342.png"
     },
-    
     {
         "id": "343",
         "name": "Baltoy",
@@ -3086,7 +2743,6 @@
         "speed": 55,
         "sprite": "Shuffle343.png"
     },
-    
     {
         "id": "344",
         "name": "Claydol",
@@ -3095,7 +2751,6 @@
         "speed": 75,
         "sprite": "Shuffle344.png"
     },
-    
     {
         "id": "345",
         "name": "Lileep",
@@ -3104,7 +2759,6 @@
         "speed": 23,
         "sprite": "Shuffle345.png"
     },
-    
     {
         "id": "346",
         "name": "Cradily",
@@ -3113,7 +2767,6 @@
         "speed": 43,
         "sprite": "Shuffle346.png"
     },
-    
     {
         "id": "347",
         "name": "Anorith",
@@ -3122,7 +2775,6 @@
         "speed": 75,
         "sprite": "Shuffle347.png"
     },
-    
     {
         "id": "348",
         "name": "Armaldo",
@@ -3131,7 +2783,6 @@
         "speed": 45,
         "sprite": "Shuffle348.png"
     },
-    
     {
         "id": "349",
         "name": "Feebas",
@@ -3140,7 +2791,6 @@
         "speed": 80,
         "sprite": "Shuffle349.png"
     },
-    
     {
         "id": "350",
         "name": "Milotic",
@@ -3149,7 +2799,6 @@
         "speed": 81,
         "sprite": "Shuffle350.png"
     },
-    
     {
         "id": "351",
         "name": "Castform",
@@ -3158,7 +2807,6 @@
         "speed": 70,
         "sprite": "Shuffle351.png"
     },
-    
     {
         "id": "352",
         "name": "Kecleon",
@@ -3167,7 +2815,6 @@
         "speed": 40,
         "sprite": "Shuffle352.png"
     },
-    
     {
         "id": "353",
         "name": "Shuppet",
@@ -3176,7 +2823,6 @@
         "speed": 45,
         "sprite": "Shuffle353.png"
     },
-    
     {
         "id": "354",
         "name": "Banette",
@@ -3185,7 +2831,6 @@
         "speed": 65,
         "sprite": "Shuffle354.png"
     },
-    
     {
         "id": "355",
         "name": "Duskull",
@@ -3194,7 +2839,6 @@
         "speed": 25,
         "sprite": "Shuffle355.png"
     },
-    
     {
         "id": "356",
         "name": "Dusclops",
@@ -3203,7 +2847,6 @@
         "speed": 25,
         "sprite": "Shuffle356.png"
     },
-    
     {
         "id": "357",
         "name": "Tropius",
@@ -3212,7 +2855,6 @@
         "speed": 51,
         "sprite": "Shuffle357.png"
     },
-    
     {
         "id": "358",
         "name": "Chimecho",
@@ -3221,7 +2863,6 @@
         "speed": 65,
         "sprite": "Shuffle358.png"
     },
-    
     {
         "id": "359",
         "name": "Absol",
@@ -3230,7 +2871,6 @@
         "speed": 75,
         "sprite": "Shuffle359.png"
     },
-    
     {
         "id": "360",
         "name": "Wynaut",
@@ -3239,7 +2879,6 @@
         "speed": 23,
         "sprite": "Shuffle360.png"
     },
-    
     {
         "id": "361",
         "name": "Snorunt",
@@ -3248,7 +2887,6 @@
         "speed": 50,
         "sprite": "Shuffle361.png"
     },
-    
     {
         "id": "362",
         "name": "Glalie",
@@ -3257,7 +2895,6 @@
         "speed": 80,
         "sprite": "Shuffle362.png"
     },
-    
     {
         "id": "363",
         "name": "Spheal",
@@ -3266,7 +2903,6 @@
         "speed": 25,
         "sprite": "Shuffle363.png"
     },
-    
     {
         "id": "364",
         "name": "Sealeo",
@@ -3275,7 +2911,6 @@
         "speed": 45,
         "sprite": "Shuffle364.png"
     },
-    
     {
         "id": "365",
         "name": "Walrein",
@@ -3284,7 +2919,6 @@
         "speed": 65,
         "sprite": "Shuffle365.png"
     },
-    
     {
         "id": "366",
         "name": "Clamperl",
@@ -3293,7 +2927,6 @@
         "speed": 32,
         "sprite": "Shuffle366.png"
     },
-    
     {
         "id": "367",
         "name": "Huntail",
@@ -3302,7 +2935,6 @@
         "speed": 52,
         "sprite": "Shuffle367.png"
     },
-    
     {
         "id": "368",
         "name": "Gorebyss",
@@ -3311,7 +2943,6 @@
         "speed": 52,
         "sprite": "Shuffle368.png"
     },
-    
     {
         "id": "369",
         "name": "Relicanth",
@@ -3320,7 +2951,6 @@
         "speed": 55,
         "sprite": "Shuffle369.png"
     },
-    
     {
         "id": "370",
         "name": "Luvdisc",
@@ -3329,7 +2959,6 @@
         "speed": 97,
         "sprite": "Shuffle370.png"
     },
-    
     {
         "id": "371",
         "name": "Bagon",
@@ -3338,7 +2967,6 @@
         "speed": 50,
         "sprite": "Shuffle371.png"
     },
-    
     {
         "id": "372",
         "name": "Shelgon",
@@ -3347,7 +2975,6 @@
         "speed": 50,
         "sprite": "Shuffle372.png"
     },
-    
     {
         "id": "373",
         "name": "Salamence",
@@ -3356,7 +2983,6 @@
         "speed": 100,
         "sprite": "Shuffle373.png"
     },
-    
     {
         "id": "374",
         "name": "Beldum",
@@ -3365,7 +2991,6 @@
         "speed": 30,
         "sprite": "Shuffle374.png"
     },
-    
     {
         "id": "375",
         "name": "Metang",
@@ -3374,7 +2999,6 @@
         "speed": 50,
         "sprite": "Shuffle375.png"
     },
-    
     {
         "id": "376",
         "name": "Metagross",
@@ -3383,7 +3007,6 @@
         "speed": 70,
         "sprite": "Shuffle376.png"
     },
-    
     {
         "id": "377",
         "name": "Regirock",
@@ -3392,7 +3015,6 @@
         "speed": 50,
         "sprite": "Shuffle377.png"
     },
-    
     {
         "id": "378",
         "name": "Regice",
@@ -3401,7 +3023,6 @@
         "speed": 50,
         "sprite": "Shuffle378.png"
     },
-    
     {
         "id": "379",
         "name": "Registeel",
@@ -3410,7 +3031,6 @@
         "speed": 50,
         "sprite": "Shuffle379.png"
     },
-    
     {
         "id": "380",
         "name": "Latias",
@@ -3419,7 +3039,6 @@
         "speed": 110,
         "sprite": "Shuffle380.png"
     },
-    
     {
         "id": "381",
         "name": "Latios",
@@ -3428,7 +3047,6 @@
         "speed": 110,
         "sprite": "Shuffle381.png"
     },
-    
     {
         "id": "382",
         "name": "Kyogre",
@@ -3437,7 +3055,6 @@
         "speed": 90,
         "sprite": "Shuffle382.png"
     },
-    
     {
         "id": "383",
         "name": "Groudon",
@@ -3446,7 +3063,6 @@
         "speed": 90,
         "sprite": "Shuffle383.png"
     },
-    
     {
         "id": "384",
         "name": "Rayquaza",
@@ -3455,7 +3071,6 @@
         "speed": 95,
         "sprite": "Shuffle384.png"
     },
-    
     {
         "id": "385",
         "name": "Jirachi",
@@ -3464,7 +3079,6 @@
         "speed": 100,
         "sprite": "Shuffle385.png"
     },
-    
     {
         "id": "386",
         "name": "Deoxys",
@@ -3473,7 +3087,6 @@
         "speed": 150,
         "sprite": "Shuffle386.png"
     },
-    
     {
         "id": "387",
         "name": "Turtwig",
@@ -3482,7 +3095,6 @@
         "speed": 31,
         "sprite": "Shuffle387.png"
     },
-    
     {
         "id": "388",
         "name": "Grotle",
@@ -3491,7 +3103,6 @@
         "speed": 36,
         "sprite": "Shuffle388.png"
     },
-    
     {
         "id": "389",
         "name": "Torterra",
@@ -3500,7 +3111,6 @@
         "speed": 56,
         "sprite": "Shuffle389.png"
     },
-    
     {
         "id": "390",
         "name": "Chimchar",
@@ -3509,7 +3119,6 @@
         "speed": 61,
         "sprite": "Shuffle390.png"
     },
-    
     {
         "id": "391",
         "name": "Monferno",
@@ -3518,7 +3127,6 @@
         "speed": 81,
         "sprite": "Shuffle391.png"
     },
-    
     {
         "id": "392",
         "name": "Infernape",
@@ -3527,7 +3135,6 @@
         "speed": 108,
         "sprite": "Shuffle392.png"
     },
-    
     {
         "id": "393",
         "name": "Piplup",
@@ -3536,7 +3143,6 @@
         "speed": 40,
         "sprite": "Shuffle393.png"
     },
-    
     {
         "id": "394",
         "name": "Prinplup",
@@ -3545,7 +3151,6 @@
         "speed": 50,
         "sprite": "Shuffle394.png"
     },
-    
     {
         "id": "395",
         "name": "Empoleon",
@@ -3554,7 +3159,6 @@
         "speed": 60,
         "sprite": "Shuffle395.png"
     },
-    
     {
         "id": "396",
         "name": "Starly",
@@ -3563,7 +3167,6 @@
         "speed": 60,
         "sprite": "Shuffle396.png"
     },
-    
     {
         "id": "397",
         "name": "Staravia",
@@ -3572,7 +3175,6 @@
         "speed": 80,
         "sprite": "Shuffle397.png"
     },
-    
     {
         "id": "398",
         "name": "Staraptor",
@@ -3581,7 +3183,6 @@
         "speed": 100,
         "sprite": "Shuffle398.png"
     },
-    
     {
         "id": "399",
         "name": "Bidoof",
@@ -3590,7 +3191,6 @@
         "speed": 31,
         "sprite": "Shuffle399.png"
     },
-    
     {
         "id": "400",
         "name": "Bibarel",
@@ -3599,7 +3199,6 @@
         "speed": 71,
         "sprite": "Shuffle400.png"
     },
-    
     {
         "id": "401",
         "name": "Kricketot",
@@ -3608,7 +3207,6 @@
         "speed": 25,
         "sprite": "Shuffle401.png"
     },
-    
     {
         "id": "402",
         "name": "Kricketune",
@@ -3617,7 +3215,6 @@
         "speed": 65,
         "sprite": "Shuffle402.png"
     },
-    
     {
         "id": "403",
         "name": "Shinx",
@@ -3626,7 +3223,6 @@
         "speed": 45,
         "sprite": "Shuffle403.png"
     },
-    
     {
         "id": "404",
         "name": "Luxio",
@@ -3635,7 +3231,6 @@
         "speed": 60,
         "sprite": "Shuffle404.png"
     },
-    
     {
         "id": "405",
         "name": "Luxray",
@@ -3644,7 +3239,6 @@
         "speed": 70,
         "sprite": "Shuffle405.png"
     },
-    
     {
         "id": "406",
         "name": "Budew",
@@ -3653,7 +3247,6 @@
         "speed": 55,
         "sprite": "Shuffle406.png"
     },
-    
     {
         "id": "407",
         "name": "Roserade",
@@ -3662,7 +3255,6 @@
         "speed": 90,
         "sprite": "Shuffle407.png"
     },
-    
     {
         "id": "408",
         "name": "Cranidos",
@@ -3671,7 +3263,6 @@
         "speed": 58,
         "sprite": "Shuffle408.png"
     },
-    
     {
         "id": "409",
         "name": "Rampardos",
@@ -3680,7 +3271,6 @@
         "speed": 58,
         "sprite": "Shuffle409.png"
     },
-    
     {
         "id": "410",
         "name": "Shieldon",
@@ -3689,7 +3279,6 @@
         "speed": 30,
         "sprite": "Shuffle410.png"
     },
-    
     {
         "id": "411",
         "name": "Bastiodon",
@@ -3698,7 +3287,6 @@
         "speed": 30,
         "sprite": "Shuffle411.png"
     },
-    
     {
         "id": "412",
         "name": "Burmy",
@@ -3707,7 +3295,6 @@
         "speed": 36,
         "sprite": "Shuffle412.png"
     },
-    
     {
         "id": "413",
         "name": "Wormadam",
@@ -3716,7 +3303,6 @@
         "speed": 36,
         "sprite": "Shuffle413.png"
     },
-    
     {
         "id": "414",
         "name": "Mothim",
@@ -3725,7 +3311,6 @@
         "speed": 66,
         "sprite": "Shuffle414.png"
     },
-    
     {
         "id": "415",
         "name": "Combee",
@@ -3734,7 +3319,6 @@
         "speed": 70,
         "sprite": "Shuffle415.png"
     },
-    
     {
         "id": "416",
         "name": "Vespiquen",
@@ -3743,7 +3327,6 @@
         "speed": 40,
         "sprite": "Shuffle416.png"
     },
-    
     {
         "id": "417",
         "name": "Pachirisu",
@@ -3752,7 +3335,6 @@
         "speed": 95,
         "sprite": "Shuffle417.png"
     },
-    
     {
         "id": "418",
         "name": "Buizel",
@@ -3761,7 +3343,6 @@
         "speed": 85,
         "sprite": "Shuffle418.png"
     },
-    
     {
         "id": "419",
         "name": "Floatzel",
@@ -3770,7 +3351,6 @@
         "speed": 115,
         "sprite": "Shuffle419.png"
     },
-    
     {
         "id": "420",
         "name": "Cherubi",
@@ -3779,7 +3359,6 @@
         "speed": 35,
         "sprite": "Shuffle420.png"
     },
-    
     {
         "id": "421",
         "name": "Cherrim",
@@ -3788,7 +3367,6 @@
         "speed": 85,
         "sprite": "Shuffle421.png"
     },
-    
     {
         "id": "422",
         "name": "Shellos",
@@ -3797,7 +3375,6 @@
         "speed": 34,
         "sprite": "Shuffle422.png"
     },
-    
     {
         "id": "423",
         "name": "Gastrodon",
@@ -3806,7 +3383,6 @@
         "speed": 39,
         "sprite": "Shuffle423.png"
     },
-    
     {
         "id": "424",
         "name": "Ambipom",
@@ -3815,7 +3391,6 @@
         "speed": 115,
         "sprite": "Shuffle424.png"
     },
-    
     {
         "id": "425",
         "name": "Drifloon",
@@ -3824,7 +3399,6 @@
         "speed": 70,
         "sprite": "Shuffle425.png"
     },
-    
     {
         "id": "426",
         "name": "Drifblim",
@@ -3833,7 +3407,6 @@
         "speed": 80,
         "sprite": "Shuffle426.png"
     },
-    
     {
         "id": "427",
         "name": "Buneary",
@@ -3842,7 +3415,6 @@
         "speed": 85,
         "sprite": "Shuffle427.png"
     },
-    
     {
         "id": "428",
         "name": "Lopunny",
@@ -3851,7 +3423,6 @@
         "speed": 105,
         "sprite": "Shuffle428.png"
     },
-    
     {
         "id": "429",
         "name": "Mismagius",
@@ -3860,7 +3431,6 @@
         "speed": 105,
         "sprite": "Shuffle429.png"
     },
-    
     {
         "id": "430",
         "name": "Honchkrow",
@@ -3869,7 +3439,6 @@
         "speed": 71,
         "sprite": "Shuffle430.png"
     },
-    
     {
         "id": "431",
         "name": "Glameow",
@@ -3878,7 +3447,6 @@
         "speed": 85,
         "sprite": "Shuffle431.png"
     },
-    
     {
         "id": "432",
         "name": "Purugly",
@@ -3887,7 +3455,6 @@
         "speed": 112,
         "sprite": "Shuffle432.png"
     },
-    
     {
         "id": "433",
         "name": "Chingling",
@@ -3896,7 +3463,6 @@
         "speed": 45,
         "sprite": "Shuffle433.png"
     },
-    
     {
         "id": "434",
         "name": "Stunky",
@@ -3905,7 +3471,6 @@
         "speed": 74,
         "sprite": "Shuffle434.png"
     },
-    
     {
         "id": "435",
         "name": "Skuntank",
@@ -3914,7 +3479,6 @@
         "speed": 84,
         "sprite": "Shuffle435.png"
     },
-    
     {
         "id": "436",
         "name": "Bronzor",
@@ -3923,7 +3487,6 @@
         "speed": 23,
         "sprite": "Shuffle436.png"
     },
-    
     {
         "id": "437",
         "name": "Bronzong",
@@ -3932,7 +3495,6 @@
         "speed": 33,
         "sprite": "Shuffle437.png"
     },
-    
     {
         "id": "438",
         "name": "Bonsly",
@@ -3941,7 +3503,6 @@
         "speed": 10,
         "sprite": "Shuffle438.png"
     },
-    
     {
         "id": "439",
         "name": "Mime Jr.",
@@ -3950,7 +3511,6 @@
         "speed": 60,
         "sprite": "Shuffle439.png"
     },
-    
     {
         "id": "440",
         "name": "Happiny",
@@ -3959,7 +3519,6 @@
         "speed": 30,
         "sprite": "Shuffle440.png"
     },
-    
     {
         "id": "441",
         "name": "Chatot",
@@ -3968,7 +3527,6 @@
         "speed": 91,
         "sprite": "Shuffle441.png"
     },
-    
     {
         "id": "442",
         "name": "Spiritomb",
@@ -3977,7 +3535,6 @@
         "speed": 35,
         "sprite": "Shuffle442.png"
     },
-    
     {
         "id": "443",
         "name": "Gible",
@@ -3986,7 +3543,6 @@
         "speed": 42,
         "sprite": "Shuffle443.png"
     },
-    
     {
         "id": "444",
         "name": "Gabite",
@@ -3995,7 +3551,6 @@
         "speed": 82,
         "sprite": "Shuffle444.png"
     },
-    
     {
         "id": "445",
         "name": "Garchomp",
@@ -4004,7 +3559,6 @@
         "speed": 102,
         "sprite": "Shuffle445.png"
     },
-    
     {
         "id": "446",
         "name": "Munchlax",
@@ -4013,7 +3567,6 @@
         "speed": 5,
         "sprite": "Shuffle446.png"
     },
-    
     {
         "id": "447",
         "name": "Riolu",
@@ -4022,7 +3575,6 @@
         "speed": 60,
         "sprite": "Shuffle447.png"
     },
-    
     {
         "id": "448",
         "name": "Lucario",
@@ -4031,7 +3583,6 @@
         "speed": 90,
         "sprite": "Shuffle448.png"
     },
-    
     {
         "id": "449",
         "name": "Hippopotas",
@@ -4040,7 +3591,6 @@
         "speed": 32,
         "sprite": "Shuffle449.png"
     },
-    
     {
         "id": "450",
         "name": "Hippowdon",
@@ -4049,7 +3599,6 @@
         "speed": 47,
         "sprite": "Shuffle450.png"
     },
-    
     {
         "id": "451",
         "name": "Skorupi",
@@ -4058,7 +3607,6 @@
         "speed": 65,
         "sprite": "Shuffle451.png"
     },
-    
     {
         "id": "452",
         "name": "Drapion",
@@ -4067,7 +3615,6 @@
         "speed": 95,
         "sprite": "Shuffle452.png"
     },
-    
     {
         "id": "453",
         "name": "Croagunk",
@@ -4076,7 +3623,6 @@
         "speed": 50,
         "sprite": "Shuffle453.png"
     },
-    
     {
         "id": "454",
         "name": "Toxicroak",
@@ -4085,7 +3631,6 @@
         "speed": 85,
         "sprite": "Shuffle454.png"
     },
-    
     {
         "id": "455",
         "name": "Carnivine",
@@ -4094,7 +3639,6 @@
         "speed": 46,
         "sprite": "Shuffle455.png"
     },
-    
     {
         "id": "456",
         "name": "Finneon",
@@ -4103,7 +3647,6 @@
         "speed": 66,
         "sprite": "Shuffle456.png"
     },
-    
     {
         "id": "457",
         "name": "Lumineon",
@@ -4112,7 +3655,6 @@
         "speed": 91,
         "sprite": "Shuffle457.png"
     },
-    
     {
         "id": "458",
         "name": "Mantyke",
@@ -4121,7 +3663,6 @@
         "speed": 50,
         "sprite": "Shuffle458.png"
     },
-    
     {
         "id": "459",
         "name": "Snover",
@@ -4130,7 +3671,6 @@
         "speed": 40,
         "sprite": "Shuffle459.png"
     },
-    
     {
         "id": "460",
         "name": "Abomasnow",
@@ -4139,7 +3679,6 @@
         "speed": 60,
         "sprite": "Shuffle460.png"
     },
-    
     {
         "id": "461",
         "name": "Weavile",
@@ -4148,7 +3687,6 @@
         "speed": 125,
         "sprite": "Shuffle461.png"
     },
-    
     {
         "id": "462",
         "name": "Magnezone",
@@ -4157,7 +3695,6 @@
         "speed": 60,
         "sprite": "Shuffle462.png"
     },
-    
     {
         "id": "463",
         "name": "Lickilicky",
@@ -4166,7 +3703,6 @@
         "speed": 50,
         "sprite": "Shuffle463.png"
     },
-    
     {
         "id": "464",
         "name": "Rhyperior",
@@ -4175,7 +3711,6 @@
         "speed": 40,
         "sprite": "Shuffle464.png"
     },
-    
     {
         "id": "465",
         "name": "Tangrowth",
@@ -4184,7 +3719,6 @@
         "speed": 50,
         "sprite": "Shuffle465.png"
     },
-    
     {
         "id": "466",
         "name": "Electivire",
@@ -4193,7 +3727,6 @@
         "speed": 95,
         "sprite": "Shuffle466.png"
     },
-    
     {
         "id": "467",
         "name": "Magmortar",
@@ -4202,7 +3735,6 @@
         "speed": 83,
         "sprite": "Shuffle467.png"
     },
-    
     {
         "id": "468",
         "name": "Togekiss",
@@ -4211,7 +3743,6 @@
         "speed": 80,
         "sprite": "Shuffle468.png"
     },
-    
     {
         "id": "469",
         "name": "Yanmega",
@@ -4220,7 +3751,6 @@
         "speed": 95,
         "sprite": "Shuffle469.png"
     },
-    
     {
         "id": "470",
         "name": "Leafeon",
@@ -4229,7 +3759,6 @@
         "speed": 95,
         "sprite": "Shuffle470.png"
     },
-    
     {
         "id": "471",
         "name": "Glaceon",
@@ -4238,7 +3767,6 @@
         "speed": 65,
         "sprite": "Shuffle471.png"
     },
-    
     {
         "id": "472",
         "name": "Gliscor",
@@ -4247,7 +3775,6 @@
         "speed": 95,
         "sprite": "Shuffle472.png"
     },
-    
     {
         "id": "473",
         "name": "Mamoswine",
@@ -4256,7 +3783,6 @@
         "speed": 80,
         "sprite": "Shuffle473.png"
     },
-    
     {
         "id": "474",
         "name": "Porygon-Z",
@@ -4265,7 +3791,6 @@
         "speed": 90,
         "sprite": "Shuffle474.png"
     },
-    
     {
         "id": "475",
         "name": "Gallade",
@@ -4274,7 +3799,6 @@
         "speed": 80,
         "sprite": "Shuffle475.png"
     },
-    
     {
         "id": "476",
         "name": "Probopass",
@@ -4283,7 +3807,6 @@
         "speed": 40,
         "sprite": "Shuffle476.png"
     },
-    
     {
         "id": "477",
         "name": "Dusknoir",
@@ -4292,7 +3815,6 @@
         "speed": 45,
         "sprite": "Shuffle477.png"
     },
-    
     {
         "id": "478",
         "name": "Froslass",
@@ -4301,7 +3823,6 @@
         "speed": 110,
         "sprite": "Shuffle478.png"
     },
-    
     {
         "id": "479",
         "name": "Rotom",
@@ -4310,7 +3831,6 @@
         "speed": 91,
         "sprite": "Shuffle479.png"
     },
-    
     {
         "id": "480",
         "name": "Uxie",
@@ -4319,7 +3839,6 @@
         "speed": 95,
         "sprite": "Shuffle480.png"
     },
-    
     {
         "id": "481",
         "name": "Mesprit",
@@ -4328,7 +3847,6 @@
         "speed": 80,
         "sprite": "Shuffle481.png"
     },
-    
     {
         "id": "482",
         "name": "Azelf",
@@ -4337,7 +3855,6 @@
         "speed": 115,
         "sprite": "Shuffle482.png"
     },
-    
     {
         "id": "483",
         "name": "Dialga",
@@ -4346,7 +3863,6 @@
         "speed": 90,
         "sprite": "Shuffle483.png"
     },
-    
     {
         "id": "484",
         "name": "Palkia",
@@ -4355,7 +3871,6 @@
         "speed": 100,
         "sprite": "Shuffle484.png"
     },
-    
     {
         "id": "485",
         "name": "Heatran",
@@ -4364,7 +3879,6 @@
         "speed": 77,
         "sprite": "Shuffle485.png"
     },
-    
     {
         "id": "486",
         "name": "Regigigas",
@@ -4373,7 +3887,6 @@
         "speed": 100,
         "sprite": "Shuffle486.png"
     },
-    
     {
         "id": "487",
         "name": "Giratina",
@@ -4382,7 +3895,6 @@
         "speed": 90,
         "sprite": "Shuffle487.png"
     },
-    
     {
         "id": "488",
         "name": "Cresselia",
@@ -4391,7 +3903,6 @@
         "speed": 85,
         "sprite": "Shuffle488.png"
     },
-    
     {
         "id": "489",
         "name": "Phione",
@@ -4400,7 +3911,6 @@
         "speed": 80,
         "sprite": "Shuffle489.png"
     },
-    
     {
         "id": "490",
         "name": "Manaphy",
@@ -4409,7 +3919,6 @@
         "speed": 100,
         "sprite": "Shuffle490.png"
     },
-    
     {
         "id": "491",
         "name": "Darkrai",
@@ -4418,7 +3927,6 @@
         "speed": 125,
         "sprite": "Shuffle491.png"
     },
-    
     {
         "id": "492",
         "name": "Shaymin",
@@ -4427,7 +3935,6 @@
         "speed": 100,
         "sprite": "Shuffle492.png"
     },
-    
     {
         "id": "493",
         "name": "Arceus",
@@ -4436,7 +3943,6 @@
         "speed": 120,
         "sprite": "Shuffle493.png"
     },
-    
     {
         "id": "494",
         "name": "Victini",
@@ -4445,7 +3951,6 @@
         "speed": 100,
         "sprite": "Shuffle494.png"
     },
-    
     {
         "id": "495",
         "name": "Snivy",
@@ -4454,7 +3959,6 @@
         "speed": 63,
         "sprite": "Shuffle495.png"
     },
-    
     {
         "id": "496",
         "name": "Servine",
@@ -4463,7 +3967,6 @@
         "speed": 83,
         "sprite": "Shuffle496.png"
     },
-    
     {
         "id": "497",
         "name": "Serperior",
@@ -4472,7 +3975,6 @@
         "speed": 113,
         "sprite": "Shuffle497.png"
     },
-    
     {
         "id": "498",
         "name": "Tepig",
@@ -4481,7 +3983,6 @@
         "speed": 45,
         "sprite": "Shuffle498.png"
     },
-    
     {
         "id": "499",
         "name": "Pignite",
@@ -4490,7 +3991,6 @@
         "speed": 55,
         "sprite": "Shuffle499.png"
     },
-    
     {
         "id": "500",
         "name": "Emboar",
@@ -4499,7 +3999,6 @@
         "speed": 65,
         "sprite": "Shuffle500.png"
     },
-    
     {
         "id": "501",
         "name": "Oshawott",
@@ -4508,7 +4007,6 @@
         "speed": 45,
         "sprite": "Shuffle501.png"
     },
-    
     {
         "id": "502",
         "name": "Dewott",
@@ -4517,7 +4015,6 @@
         "speed": 60,
         "sprite": "Shuffle502.png"
     },
-    
     {
         "id": "503",
         "name": "Samurott",
@@ -4526,7 +4023,6 @@
         "speed": 70,
         "sprite": "Shuffle503.png"
     },
-    
     {
         "id": "504",
         "name": "Patrat",
@@ -4535,7 +4031,6 @@
         "speed": 42,
         "sprite": "Shuffle504.png"
     },
-    
     {
         "id": "505",
         "name": "Watchog",
@@ -4544,7 +4039,6 @@
         "speed": 77,
         "sprite": "Shuffle505.png"
     },
-    
     {
         "id": "506",
         "name": "Lillipup",
@@ -4553,7 +4047,6 @@
         "speed": 55,
         "sprite": "Shuffle506.png"
     },
-    
     {
         "id": "507",
         "name": "Herdier",
@@ -4562,7 +4055,6 @@
         "speed": 60,
         "sprite": "Shuffle507.png"
     },
-    
     {
         "id": "508",
         "name": "Stoutland",
@@ -4571,7 +4063,6 @@
         "speed": 80,
         "sprite": "Shuffle508.png"
     },
-    
     {
         "id": "509",
         "name": "Purrloin",
@@ -4580,7 +4071,6 @@
         "speed": 66,
         "sprite": "Shuffle509.png"
     },
-    
     {
         "id": "510",
         "name": "Liepard",
@@ -4589,7 +4079,6 @@
         "speed": 106,
         "sprite": "Shuffle510.png"
     },
-    
     {
         "id": "511",
         "name": "Pansage",
@@ -4598,7 +4087,6 @@
         "speed": 64,
         "sprite": "Shuffle511.png"
     },
-    
     {
         "id": "512",
         "name": "Simisage",
@@ -4607,7 +4095,6 @@
         "speed": 101,
         "sprite": "Shuffle512.png"
     },
-    
     {
         "id": "513",
         "name": "Pansear",
@@ -4616,7 +4103,6 @@
         "speed": 64,
         "sprite": "Shuffle513.png"
     },
-    
     {
         "id": "514",
         "name": "Simisear",
@@ -4625,7 +4111,6 @@
         "speed": 101,
         "sprite": "Shuffle514.png"
     },
-    
     {
         "id": "515",
         "name": "Panpour",
@@ -4634,7 +4119,6 @@
         "speed": 64,
         "sprite": "Shuffle515.png"
     },
-    
     {
         "id": "516",
         "name": "Simipour",
@@ -4643,7 +4127,6 @@
         "speed": 101,
         "sprite": "Shuffle516.png"
     },
-    
     {
         "id": "517",
         "name": "Munna",
@@ -4652,7 +4135,6 @@
         "speed": 24,
         "sprite": "Shuffle517.png"
     },
-    
     {
         "id": "518",
         "name": "Musharna",
@@ -4661,7 +4143,6 @@
         "speed": 29,
         "sprite": "Shuffle518.png"
     },
-    
     {
         "id": "519",
         "name": "Pidove",
@@ -4670,7 +4151,6 @@
         "speed": 43,
         "sprite": "Shuffle519.png"
     },
-    
     {
         "id": "520",
         "name": "Tranquill",
@@ -4679,7 +4159,6 @@
         "speed": 65,
         "sprite": "Shuffle520.png"
     },
-    
     {
         "id": "521",
         "name": "Unfezant",
@@ -4688,7 +4167,6 @@
         "speed": 93,
         "sprite": "Shuffle521.png"
     },
-    
     {
         "id": "522",
         "name": "Blitzle",
@@ -4697,7 +4175,6 @@
         "speed": 76,
         "sprite": "Shuffle522.png"
     },
-    
     {
         "id": "523",
         "name": "Zebstrika",
@@ -4706,7 +4183,6 @@
         "speed": 116,
         "sprite": "Shuffle523.png"
     },
-    
     {
         "id": "524",
         "name": "Roggenrola",
@@ -4715,7 +4191,6 @@
         "speed": 15,
         "sprite": "Shuffle524.png"
     },
-    
     {
         "id": "525",
         "name": "Boldore",
@@ -4724,7 +4199,6 @@
         "speed": 20,
         "sprite": "Shuffle525.png"
     },
-    
     {
         "id": "526",
         "name": "Gigalith",
@@ -4733,7 +4207,6 @@
         "speed": 25,
         "sprite": "Shuffle526.png"
     },
-    
     {
         "id": "527",
         "name": "Woobat",
@@ -4742,7 +4215,6 @@
         "speed": 72,
         "sprite": "Shuffle527.png"
     },
-    
     {
         "id": "528",
         "name": "Swoobat",
@@ -4751,7 +4223,6 @@
         "speed": 114,
         "sprite": "Shuffle528.png"
     },
-    
     {
         "id": "529",
         "name": "Drilbur",
@@ -4760,7 +4231,6 @@
         "speed": 68,
         "sprite": "Shuffle529.png"
     },
-    
     {
         "id": "530",
         "name": "Excadrill",
@@ -4769,7 +4239,6 @@
         "speed": 88,
         "sprite": "Shuffle530.png"
     },
-    
     {
         "id": "531",
         "name": "Audino",
@@ -4778,7 +4247,6 @@
         "speed": 50,
         "sprite": "Shuffle531.png"
     },
-    
     {
         "id": "532",
         "name": "Timburr",
@@ -4787,7 +4255,6 @@
         "speed": 35,
         "sprite": "Shuffle532.png"
     },
-    
     {
         "id": "533",
         "name": "Gurdurr",
@@ -4796,7 +4263,6 @@
         "speed": 40,
         "sprite": "Shuffle533.png"
     },
-    
     {
         "id": "534",
         "name": "Conkeldurr",
@@ -4805,7 +4271,6 @@
         "speed": 45,
         "sprite": "Shuffle534.png"
     },
-    
     {
         "id": "535",
         "name": "Tympole",
@@ -4814,7 +4279,6 @@
         "speed": 64,
         "sprite": "Shuffle535.png"
     },
-    
     {
         "id": "536",
         "name": "Palpitoad",
@@ -4823,7 +4287,6 @@
         "speed": 69,
         "sprite": "Shuffle536.png"
     },
-    
     {
         "id": "537",
         "name": "Seismitoad",
@@ -4832,7 +4295,6 @@
         "speed": 74,
         "sprite": "Shuffle537.png"
     },
-    
     {
         "id": "538",
         "name": "Throh",
@@ -4841,7 +4303,6 @@
         "speed": 45,
         "sprite": "Shuffle538.png"
     },
-    
     {
         "id": "539",
         "name": "Sawk",
@@ -4850,7 +4311,6 @@
         "speed": 85,
         "sprite": "Shuffle539.png"
     },
-    
     {
         "id": "540",
         "name": "Sewaddle",
@@ -4859,7 +4319,6 @@
         "speed": 42,
         "sprite": "Shuffle540.png"
     },
-    
     {
         "id": "541",
         "name": "Swadloon",
@@ -4868,7 +4327,6 @@
         "speed": 42,
         "sprite": "Shuffle541.png"
     },
-    
     {
         "id": "542",
         "name": "Leavanny",
@@ -4877,7 +4335,6 @@
         "speed": 92,
         "sprite": "Shuffle542.png"
     },
-    
     {
         "id": "543",
         "name": "Venipede",
@@ -4886,7 +4343,6 @@
         "speed": 57,
         "sprite": "Shuffle543.png"
     },
-    
     {
         "id": "544",
         "name": "Whirlipede",
@@ -4895,7 +4351,6 @@
         "speed": 47,
         "sprite": "Shuffle544.png"
     },
-    
     {
         "id": "545",
         "name": "Scolipede",
@@ -4904,7 +4359,6 @@
         "speed": 112,
         "sprite": "Shuffle545.png"
     },
-    
     {
         "id": "546",
         "name": "Cottonee",
@@ -4913,7 +4367,6 @@
         "speed": 66,
         "sprite": "Shuffle546.png"
     },
-    
     {
         "id": "547",
         "name": "Whimsicott",
@@ -4922,7 +4375,6 @@
         "speed": 116,
         "sprite": "Shuffle547.png"
     },
-    
     {
         "id": "548",
         "name": "Petilil",
@@ -4931,7 +4383,6 @@
         "speed": 30,
         "sprite": "Shuffle548.png"
     },
-    
     {
         "id": "549",
         "name": "Lilligant",
@@ -4940,7 +4391,6 @@
         "speed": 90,
         "sprite": "Shuffle549.png"
     },
-    
     {
         "id": "550",
         "name": "Basculin",
@@ -4949,7 +4399,6 @@
         "speed": 98,
         "sprite": "Shuffle550.png"
     },
-    
     {
         "id": "551",
         "name": "Sandile",
@@ -4958,7 +4407,6 @@
         "speed": 65,
         "sprite": "Shuffle551.png"
     },
-    
     {
         "id": "552",
         "name": "Krokorok",
@@ -4967,7 +4415,6 @@
         "speed": 74,
         "sprite": "Shuffle552.png"
     },
-    
     {
         "id": "553",
         "name": "Krookodile",
@@ -4976,7 +4423,6 @@
         "speed": 92,
         "sprite": "Shuffle553.png"
     },
-    
     {
         "id": "554",
         "name": "Darumaka",
@@ -4985,7 +4431,6 @@
         "speed": 50,
         "sprite": "Shuffle554.png"
     },
-    
     {
         "id": "555",
         "name": "Darmanitan",
@@ -4994,7 +4439,6 @@
         "speed": 95,
         "sprite": "Shuffle555.png"
     },
-    
     {
         "id": "556",
         "name": "Maractus",
@@ -5003,7 +4447,6 @@
         "speed": 60,
         "sprite": "Shuffle556.png"
     },
-    
     {
         "id": "557",
         "name": "Dwebble",
@@ -5012,7 +4455,6 @@
         "speed": 55,
         "sprite": "Shuffle557.png"
     },
-    
     {
         "id": "558",
         "name": "Crustle",
@@ -5021,7 +4463,6 @@
         "speed": 45,
         "sprite": "Shuffle558.png"
     },
-    
     {
         "id": "559",
         "name": "Scraggy",
@@ -5030,7 +4471,6 @@
         "speed": 48,
         "sprite": "Shuffle559.png"
     },
-    
     {
         "id": "560",
         "name": "Scrafty",
@@ -5039,7 +4479,6 @@
         "speed": 58,
         "sprite": "Shuffle560.png"
     },
-    
     {
         "id": "561",
         "name": "Sigilyph",
@@ -5048,7 +4487,6 @@
         "speed": 97,
         "sprite": "Shuffle561.png"
     },
-    
     {
         "id": "562",
         "name": "Yamask",
@@ -5057,7 +4495,6 @@
         "speed": 30,
         "sprite": "Shuffle562.png"
     },
-    
     {
         "id": "563",
         "name": "Cofagrigus",
@@ -5066,7 +4503,6 @@
         "speed": 30,
         "sprite": "Shuffle563.png"
     },
-    
     {
         "id": "564",
         "name": "Tirtouga",
@@ -5075,7 +4511,6 @@
         "speed": 22,
         "sprite": "Shuffle564.png"
     },
-    
     {
         "id": "565",
         "name": "Carracosta",
@@ -5084,7 +4519,6 @@
         "speed": 32,
         "sprite": "Shuffle565.png"
     },
-    
     {
         "id": "566",
         "name": "Archen",
@@ -5093,7 +4527,6 @@
         "speed": 70,
         "sprite": "Shuffle566.png"
     },
-    
     {
         "id": "567",
         "name": "Archeops",
@@ -5102,7 +4535,6 @@
         "speed": 110,
         "sprite": "Shuffle567.png"
     },
-    
     {
         "id": "568",
         "name": "Trubbish",
@@ -5111,7 +4543,6 @@
         "speed": 65,
         "sprite": "Shuffle568.png"
     },
-    
     {
         "id": "569",
         "name": "Garbodor",
@@ -5120,7 +4551,6 @@
         "speed": 75,
         "sprite": "Shuffle569.png"
     },
-    
     {
         "id": "570",
         "name": "Zorua",
@@ -5129,7 +4559,6 @@
         "speed": 65,
         "sprite": "Shuffle570.png"
     },
-    
     {
         "id": "571",
         "name": "Zoroark",
@@ -5138,7 +4567,6 @@
         "speed": 105,
         "sprite": "Shuffle571.png"
     },
-    
     {
         "id": "572",
         "name": "Minccino",
@@ -5147,7 +4575,6 @@
         "speed": 75,
         "sprite": "Shuffle572.png"
     },
-    
     {
         "id": "573",
         "name": "Cinccino",
@@ -5156,7 +4583,6 @@
         "speed": 115,
         "sprite": "Shuffle573.png"
     },
-    
     {
         "id": "574",
         "name": "Gothita",
@@ -5165,7 +4591,6 @@
         "speed": 45,
         "sprite": "Shuffle574.png"
     },
-    
     {
         "id": "575",
         "name": "Gothorita",
@@ -5174,7 +4599,6 @@
         "speed": 55,
         "sprite": "Shuffle575.png"
     },
-    
     {
         "id": "576",
         "name": "Gothitelle",
@@ -5183,7 +4607,6 @@
         "speed": 65,
         "sprite": "Shuffle576.png"
     },
-    
     {
         "id": "577",
         "name": "Solosis",
@@ -5192,7 +4615,6 @@
         "speed": 20,
         "sprite": "Shuffle577.png"
     },
-    
     {
         "id": "578",
         "name": "Duosion",
@@ -5201,7 +4623,6 @@
         "speed": 30,
         "sprite": "Shuffle578.png"
     },
-    
     {
         "id": "579",
         "name": "Reuniclus",
@@ -5210,7 +4631,6 @@
         "speed": 30,
         "sprite": "Shuffle579.png"
     },
-    
     {
         "id": "580",
         "name": "Ducklett",
@@ -5219,7 +4639,6 @@
         "speed": 55,
         "sprite": "Shuffle580.png"
     },
-    
     {
         "id": "581",
         "name": "Swanna",
@@ -5228,7 +4647,6 @@
         "speed": 98,
         "sprite": "Shuffle581.png"
     },
-    
     {
         "id": "582",
         "name": "Vanillite",
@@ -5237,7 +4655,6 @@
         "speed": 44,
         "sprite": "Shuffle582.png"
     },
-    
     {
         "id": "583",
         "name": "Vanillish",
@@ -5246,7 +4663,6 @@
         "speed": 59,
         "sprite": "Shuffle583.png"
     },
-    
     {
         "id": "584",
         "name": "Vanilluxe",
@@ -5255,7 +4671,6 @@
         "speed": 79,
         "sprite": "Shuffle584.png"
     },
-    
     {
         "id": "585",
         "name": "Deerling",
@@ -5264,7 +4679,6 @@
         "speed": 75,
         "sprite": "Shuffle585.png"
     },
-    
     {
         "id": "586",
         "name": "Sawsbuck",
@@ -5273,7 +4687,6 @@
         "speed": 95,
         "sprite": "Shuffle586.png"
     },
-    
     {
         "id": "587",
         "name": "Emolga",
@@ -5282,7 +4695,6 @@
         "speed": 103,
         "sprite": "Shuffle587.png"
     },
-    
     {
         "id": "588",
         "name": "Karrablast",
@@ -5291,7 +4703,6 @@
         "speed": 60,
         "sprite": "Shuffle588.png"
     },
-    
     {
         "id": "589",
         "name": "Escavalier",
@@ -5300,7 +4711,6 @@
         "speed": 20,
         "sprite": "Shuffle589.png"
     },
-    
     {
         "id": "590",
         "name": "Foongus",
@@ -5309,7 +4719,6 @@
         "speed": 15,
         "sprite": "Shuffle590.png"
     },
-    
     {
         "id": "591",
         "name": "Amoonguss",
@@ -5318,7 +4727,6 @@
         "speed": 30,
         "sprite": "Shuffle591.png"
     },
-    
     {
         "id": "592",
         "name": "Frillish",
@@ -5327,7 +4735,6 @@
         "speed": 40,
         "sprite": "Shuffle592.png"
     },
-    
     {
         "id": "593",
         "name": "Jellicent",
@@ -5336,7 +4743,6 @@
         "speed": 60,
         "sprite": "Shuffle593.png"
     },
-    
     {
         "id": "594",
         "name": "Alomomola",
@@ -5345,7 +4751,6 @@
         "speed": 65,
         "sprite": "Shuffle594.png"
     },
-    
     {
         "id": "595",
         "name": "Joltik",
@@ -5354,7 +4759,6 @@
         "speed": 65,
         "sprite": "Shuffle595.png"
     },
-    
     {
         "id": "596",
         "name": "Galvantula",
@@ -5363,7 +4767,6 @@
         "speed": 108,
         "sprite": "Shuffle596.png"
     },
-    
     {
         "id": "597",
         "name": "Ferroseed",
@@ -5372,7 +4775,6 @@
         "speed": 10,
         "sprite": "Shuffle597.png"
     },
-    
     {
         "id": "598",
         "name": "Ferrothorn",
@@ -5381,7 +4783,6 @@
         "speed": 20,
         "sprite": "Shuffle598.png"
     },
-    
     {
         "id": "599",
         "name": "Klink",
@@ -5390,7 +4791,6 @@
         "speed": 30,
         "sprite": "Shuffle599.png"
     },
-    
     {
         "id": "600",
         "name": "Klang",
@@ -5399,7 +4799,6 @@
         "speed": 50,
         "sprite": "Shuffle600.png"
     },
-    
     {
         "id": "601",
         "name": "Klinklang",
@@ -5408,7 +4807,6 @@
         "speed": 90,
         "sprite": "Shuffle601.png"
     },
-    
     {
         "id": "602",
         "name": "Tynamo",
@@ -5417,7 +4815,6 @@
         "speed": 60,
         "sprite": "Shuffle602.png"
     },
-    
     {
         "id": "603",
         "name": "Eelektrik",
@@ -5426,7 +4823,6 @@
         "speed": 40,
         "sprite": "Shuffle603.png"
     },
-    
     {
         "id": "604",
         "name": "Eelektross",
@@ -5435,7 +4831,6 @@
         "speed": 50,
         "sprite": "Shuffle604.png"
     },
-    
     {
         "id": "605",
         "name": "Elgyem",
@@ -5444,7 +4839,6 @@
         "speed": 30,
         "sprite": "Shuffle605.png"
     },
-    
     {
         "id": "606",
         "name": "Beheeyem",
@@ -5453,7 +4847,6 @@
         "speed": 40,
         "sprite": "Shuffle606.png"
     },
-    
     {
         "id": "607",
         "name": "Litwick",
@@ -5462,7 +4855,6 @@
         "speed": 20,
         "sprite": "Shuffle607.png"
     },
-    
     {
         "id": "608",
         "name": "Lampent",
@@ -5471,7 +4863,6 @@
         "speed": 55,
         "sprite": "Shuffle608.png"
     },
-    
     {
         "id": "609",
         "name": "Chandelure",
@@ -5480,7 +4871,6 @@
         "speed": 80,
         "sprite": "Shuffle609.png"
     },
-    
     {
         "id": "610",
         "name": "Axew",
@@ -5489,7 +4879,6 @@
         "speed": 57,
         "sprite": "Shuffle610.png"
     },
-    
     {
         "id": "611",
         "name": "Fraxure",
@@ -5498,7 +4887,6 @@
         "speed": 67,
         "sprite": "Shuffle611.png"
     },
-    
     {
         "id": "612",
         "name": "Haxorus",
@@ -5507,7 +4895,6 @@
         "speed": 97,
         "sprite": "Shuffle612.png"
     },
-    
     {
         "id": "613",
         "name": "Cubchoo",
@@ -5516,7 +4903,6 @@
         "speed": 40,
         "sprite": "Shuffle613.png"
     },
-    
     {
         "id": "614",
         "name": "Beartic",
@@ -5525,7 +4911,6 @@
         "speed": 50,
         "sprite": "Shuffle614.png"
     },
-    
     {
         "id": "615",
         "name": "Cryogonal",
@@ -5534,7 +4919,6 @@
         "speed": 105,
         "sprite": "Shuffle615.png"
     },
-    
     {
         "id": "616",
         "name": "Shelmet",
@@ -5543,7 +4927,6 @@
         "speed": 25,
         "sprite": "Shuffle616.png"
     },
-    
     {
         "id": "617",
         "name": "Accelgor",
@@ -5552,7 +4935,6 @@
         "speed": 145,
         "sprite": "Shuffle617.png"
     },
-    
     {
         "id": "618",
         "name": "Stunfisk",
@@ -5561,7 +4943,6 @@
         "speed": 32,
         "sprite": "Shuffle618.png"
     },
-    
     {
         "id": "619",
         "name": "Mienfoo",
@@ -5570,7 +4951,6 @@
         "speed": 65,
         "sprite": "Shuffle619.png"
     },
-    
     {
         "id": "620",
         "name": "Mienshao",
@@ -5579,7 +4959,6 @@
         "speed": 105,
         "sprite": "Shuffle620.png"
     },
-    
     {
         "id": "621",
         "name": "Druddigon",
@@ -5588,7 +4967,6 @@
         "speed": 48,
         "sprite": "Shuffle621.png"
     },
-    
     {
         "id": "622",
         "name": "Golett",
@@ -5597,7 +4975,6 @@
         "speed": 35,
         "sprite": "Shuffle622.png"
     },
-    
     {
         "id": "623",
         "name": "Golurk",
@@ -5606,7 +4983,6 @@
         "speed": 55,
         "sprite": "Shuffle623.png"
     },
-    
     {
         "id": "624",
         "name": "Pawniard",
@@ -5615,7 +4991,6 @@
         "speed": 60,
         "sprite": "Shuffle624.png"
     },
-    
     {
         "id": "625",
         "name": "Bisharp",
@@ -5624,7 +4999,6 @@
         "speed": 70,
         "sprite": "Shuffle625.png"
     },
-    
     {
         "id": "626",
         "name": "Bouffalant",
@@ -5633,7 +5007,6 @@
         "speed": 55,
         "sprite": "Shuffle626.png"
     },
-    
     {
         "id": "627",
         "name": "Rufflet",
@@ -5642,7 +5015,6 @@
         "speed": 60,
         "sprite": "Shuffle627.png"
     },
-    
     {
         "id": "628",
         "name": "Braviary",
@@ -5651,7 +5023,6 @@
         "speed": 80,
         "sprite": "Shuffle628.png"
     },
-    
     {
         "id": "629",
         "name": "Vullaby",
@@ -5660,7 +5031,6 @@
         "speed": 60,
         "sprite": "Shuffle629.png"
     },
-    
     {
         "id": "630",
         "name": "Mandibuzz",
@@ -5669,7 +5039,6 @@
         "speed": 80,
         "sprite": "Shuffle630.png"
     },
-    
     {
         "id": "631",
         "name": "Heatmor",
@@ -5678,7 +5047,6 @@
         "speed": 65,
         "sprite": "Shuffle631.png"
     },
-    
     {
         "id": "632",
         "name": "Durant",
@@ -5687,7 +5055,6 @@
         "speed": 109,
         "sprite": "Shuffle632.png"
     },
-    
     {
         "id": "633",
         "name": "Deino",
@@ -5696,7 +5063,6 @@
         "speed": 38,
         "sprite": "Shuffle633.png"
     },
-    
     {
         "id": "634",
         "name": "Zweilous",
@@ -5705,7 +5071,6 @@
         "speed": 58,
         "sprite": "Shuffle634.png"
     },
-    
     {
         "id": "635",
         "name": "Hydreigon",
@@ -5714,7 +5079,6 @@
         "speed": 98,
         "sprite": "Shuffle635.png"
     },
-    
     {
         "id": "636",
         "name": "Larvesta",
@@ -5723,7 +5087,6 @@
         "speed": 60,
         "sprite": "Shuffle636.png"
     },
-    
     {
         "id": "637",
         "name": "Volcarona",
@@ -5732,7 +5095,6 @@
         "speed": 100,
         "sprite": "Shuffle637.png"
     },
-    
     {
         "id": "638",
         "name": "Cobalion",
@@ -5741,7 +5103,6 @@
         "speed": 108,
         "sprite": "Shuffle638.png"
     },
-    
     {
         "id": "639",
         "name": "Terrakion",
@@ -5750,7 +5111,6 @@
         "speed": 108,
         "sprite": "Shuffle639.png"
     },
-    
     {
         "id": "640",
         "name": "Virizion",
@@ -5759,7 +5119,6 @@
         "speed": 108,
         "sprite": "Shuffle640.png"
     },
-    
     {
         "id": "641",
         "name": "Tornadus",
@@ -5768,7 +5127,6 @@
         "speed": 111,
         "sprite": "Shuffle641.png"
     },
-    
     {
         "id": "642",
         "name": "Thundurus",
@@ -5777,7 +5135,6 @@
         "speed": 111,
         "sprite": "Shuffle642.png"
     },
-    
     {
         "id": "643",
         "name": "Reshiram",
@@ -5786,7 +5143,6 @@
         "speed": 90,
         "sprite": "Shuffle643.png"
     },
-    
     {
         "id": "644",
         "name": "Zekrom",
@@ -5795,7 +5151,6 @@
         "speed": 90,
         "sprite": "Shuffle644.png"
     },
-    
     {
         "id": "645",
         "name": "Landorus",
@@ -5804,7 +5159,6 @@
         "speed": 101,
         "sprite": "Shuffle645.png"
     },
-    
     {
         "id": "646",
         "name": "Kyurem",
@@ -5813,7 +5167,6 @@
         "speed": 95,
         "sprite": "Shuffle646.png"
     },
-    
     {
         "id": "647",
         "name": "Keldeo",
@@ -5822,7 +5175,6 @@
         "speed": 108,
         "sprite": "Shuffle647.png"
     },
-    
     {
         "id": "648",
         "name": "Meloetta",
@@ -5831,7 +5183,6 @@
         "speed": 90,
         "sprite": "Shuffle648.png"
     },
-    
     {
         "id": "649",
         "name": "Genesect",
@@ -5840,7 +5191,6 @@
         "speed": 99,
         "sprite": "Shuffle649.png"
     },
-    
     {
         "id": "650",
         "name": "Chespin",
@@ -5849,7 +5199,6 @@
         "speed": 38,
         "sprite": "Shuffle650.png"
     },
-    
     {
         "id": "651",
         "name": "Quilladin",
@@ -5858,7 +5207,6 @@
         "speed": 57,
         "sprite": "Shuffle651.png"
     },
-    
     {
         "id": "652",
         "name": "Chesnaught",
@@ -5867,7 +5215,6 @@
         "speed": 64,
         "sprite": "Shuffle652.png"
     },
-    
     {
         "id": "653",
         "name": "Fennekin",
@@ -5876,7 +5223,6 @@
         "speed": 60,
         "sprite": "Shuffle653.png"
     },
-    
     {
         "id": "654",
         "name": "Braixen",
@@ -5885,7 +5231,6 @@
         "speed": 73,
         "sprite": "Shuffle654.png"
     },
-    
     {
         "id": "655",
         "name": "Delphox",
@@ -5894,7 +5239,6 @@
         "speed": 104,
         "sprite": "Shuffle655.png"
     },
-    
     {
         "id": "656",
         "name": "Froakie",
@@ -5903,7 +5247,6 @@
         "speed": 71,
         "sprite": "Shuffle656.png"
     },
-    
     {
         "id": "657",
         "name": "Frogadier",
@@ -5912,7 +5255,6 @@
         "speed": 97,
         "sprite": "Shuffle657.png"
     },
-    
     {
         "id": "658",
         "name": "Greninja",
@@ -5921,7 +5263,6 @@
         "speed": 122,
         "sprite": "Shuffle658.png"
     },
-    
     {
         "id": "659",
         "name": "Bunnelby",
@@ -5930,7 +5271,6 @@
         "speed": 57,
         "sprite": "Shuffle659.png"
     },
-    
     {
         "id": "660",
         "name": "Diggersby",
@@ -5939,7 +5279,6 @@
         "speed": 78,
         "sprite": "Shuffle660.png"
     },
-    
     {
         "id": "661",
         "name": "Fletchling",
@@ -5948,7 +5287,6 @@
         "speed": 62,
         "sprite": "Shuffle661.png"
     },
-    
     {
         "id": "662",
         "name": "Fletchinder",
@@ -5957,7 +5295,6 @@
         "speed": 84,
         "sprite": "Shuffle662.png"
     },
-    
     {
         "id": "663",
         "name": "Talonflame",
@@ -5966,7 +5303,6 @@
         "speed": 126,
         "sprite": "Shuffle663.png"
     },
-    
     {
         "id": "664",
         "name": "Scatterbug",
@@ -5975,7 +5311,6 @@
         "speed": 35,
         "sprite": "Shuffle664.png"
     },
-    
     {
         "id": "665",
         "name": "Spewpa",
@@ -5984,7 +5319,6 @@
         "speed": 29,
         "sprite": "Shuffle665.png"
     },
-    
     {
         "id": "666",
         "name": "Vivillon",
@@ -5993,7 +5327,6 @@
         "speed": 89,
         "sprite": "Shuffle666.png"
     },
-    
     {
         "id": "667",
         "name": "Litleo",
@@ -6002,7 +5335,6 @@
         "speed": 72,
         "sprite": "Shuffle667.png"
     },
-    
     {
         "id": "668",
         "name": "Pyroar",
@@ -6011,7 +5343,6 @@
         "speed": 106,
         "sprite": "Shuffle668.png"
     },
-    
     {
         "id": "669",
         "name": "Flabébé",
@@ -6020,7 +5351,6 @@
         "speed": 42,
         "sprite": "Shuffle669.png"
     },
-    
     {
         "id": "670",
         "name": "Floette",
@@ -6029,7 +5359,6 @@
         "speed": 52,
         "sprite": "Shuffle670.png"
     },
-    
     {
         "id": "671",
         "name": "Florges",
@@ -6038,7 +5367,6 @@
         "speed": 75,
         "sprite": "Shuffle671.png"
     },
-    
     {
         "id": "672",
         "name": "Skiddo",
@@ -6047,7 +5375,6 @@
         "speed": 52,
         "sprite": "Shuffle672.png"
     },
-    
     {
         "id": "673",
         "name": "Gogoat",
@@ -6056,7 +5383,6 @@
         "speed": 68,
         "sprite": "Shuffle673.png"
     },
-    
     {
         "id": "674",
         "name": "Pancham",
@@ -6065,7 +5391,6 @@
         "speed": 43,
         "sprite": "Shuffle674.png"
     },
-    
     {
         "id": "675",
         "name": "Pangoro",
@@ -6074,7 +5399,6 @@
         "speed": 58,
         "sprite": "Shuffle675.png"
     },
-    
     {
         "id": "676",
         "name": "Furfrou",
@@ -6083,7 +5407,6 @@
         "speed": 102,
         "sprite": "Shuffle676.png"
     },
-    
     {
         "id": "677",
         "name": "Espurr",
@@ -6092,7 +5415,6 @@
         "speed": 68,
         "sprite": "Shuffle677.png"
     },
-    
     {
         "id": "678",
         "name": "Meowstic",
@@ -6101,7 +5423,6 @@
         "speed": 104,
         "sprite": "Shuffle678.png"
     },
-    
     {
         "id": "679",
         "name": "Honedge",
@@ -6110,7 +5431,6 @@
         "speed": 28,
         "sprite": "Shuffle679.png"
     },
-    
     {
         "id": "680",
         "name": "Doublade",
@@ -6119,7 +5439,6 @@
         "speed": 35,
         "sprite": "Shuffle680.png"
     },
-    
     {
         "id": "681",
         "name": "Aegislash",
@@ -6128,7 +5447,6 @@
         "speed": 60,
         "sprite": "Shuffle681.png"
     },
-    
     {
         "id": "682",
         "name": "Spritzee",
@@ -6137,7 +5455,6 @@
         "speed": 23,
         "sprite": "Shuffle682.png"
     },
-    
     {
         "id": "683",
         "name": "Aromatisse",
@@ -6146,7 +5463,6 @@
         "speed": 29,
         "sprite": "Shuffle683.png"
     },
-    
     {
         "id": "684",
         "name": "Swirlix",
@@ -6155,7 +5471,6 @@
         "speed": 49,
         "sprite": "Shuffle684.png"
     },
-    
     {
         "id": "685",
         "name": "Slurpuff",
@@ -6164,7 +5479,6 @@
         "speed": 72,
         "sprite": "Shuffle685.png"
     },
-    
     {
         "id": "686",
         "name": "Inkay",
@@ -6173,7 +5487,6 @@
         "speed": 45,
         "sprite": "Shuffle686.png"
     },
-    
     {
         "id": "687",
         "name": "Malamar",
@@ -6182,7 +5495,6 @@
         "speed": 73,
         "sprite": "Shuffle687.png"
     },
-    
     {
         "id": "688",
         "name": "Binacle",
@@ -6191,7 +5503,6 @@
         "speed": 50,
         "sprite": "Shuffle688.png"
     },
-    
     {
         "id": "689",
         "name": "Barbaracle",
@@ -6200,7 +5511,6 @@
         "speed": 68,
         "sprite": "Shuffle689.png"
     },
-    
     {
         "id": "690",
         "name": "Skrelp",
@@ -6209,7 +5519,6 @@
         "speed": 30,
         "sprite": "Shuffle690.png"
     },
-    
     {
         "id": "691",
         "name": "Dragalge",
@@ -6218,7 +5527,6 @@
         "speed": 44,
         "sprite": "Shuffle691.png"
     },
-    
     {
         "id": "692",
         "name": "Clauncher",
@@ -6227,7 +5535,6 @@
         "speed": 44,
         "sprite": "Shuffle692.png"
     },
-    
     {
         "id": "693",
         "name": "Clawitzer",
@@ -6236,7 +5543,6 @@
         "speed": 59,
         "sprite": "Shuffle693.png"
     },
-    
     {
         "id": "694",
         "name": "Helioptile",
@@ -6245,7 +5551,6 @@
         "speed": 70,
         "sprite": "Shuffle694.png"
     },
-    
     {
         "id": "695",
         "name": "Heliolisk",
@@ -6254,7 +5559,6 @@
         "speed": 109,
         "sprite": "Shuffle695.png"
     },
-    
     {
         "id": "696",
         "name": "Tyrunt",
@@ -6263,7 +5567,6 @@
         "speed": 48,
         "sprite": "Shuffle696.png"
     },
-    
     {
         "id": "697",
         "name": "Tyrantrum",
@@ -6272,7 +5575,6 @@
         "speed": 71,
         "sprite": "Shuffle697.png"
     },
-    
     {
         "id": "698",
         "name": "Amaura",
@@ -6281,7 +5583,6 @@
         "speed": 46,
         "sprite": "Shuffle698.png"
     },
-    
     {
         "id": "699",
         "name": "Aurorus",
@@ -6290,7 +5591,6 @@
         "speed": 58,
         "sprite": "Shuffle699.png"
     },
-    
     {
         "id": "700",
         "name": "Sylveon",
@@ -6299,7 +5599,6 @@
         "speed": 60,
         "sprite": "Shuffle700.png"
     },
-    
     {
         "id": "701",
         "name": "Hawlucha",
@@ -6308,7 +5607,6 @@
         "speed": 118,
         "sprite": "Shuffle701.png"
     },
-    
     {
         "id": "702",
         "name": "Dedenne",
@@ -6317,7 +5615,6 @@
         "speed": 101,
         "sprite": "Shuffle702.png"
     },
-    
     {
         "id": "703",
         "name": "Carbink",
@@ -6326,7 +5623,6 @@
         "speed": 50,
         "sprite": "Shuffle703.png"
     },
-    
     {
         "id": "704",
         "name": "Goomy",
@@ -6335,7 +5631,6 @@
         "speed": 40,
         "sprite": "Shuffle704.png"
     },
-    
     {
         "id": "705",
         "name": "Sliggoo",
@@ -6344,7 +5639,6 @@
         "speed": 60,
         "sprite": "Shuffle705.png"
     },
-    
     {
         "id": "706",
         "name": "Goodra",
@@ -6353,7 +5647,6 @@
         "speed": 80,
         "sprite": "Shuffle706.png"
     },
-    
     {
         "id": "707",
         "name": "Klefki",
@@ -6362,7 +5655,6 @@
         "speed": 75,
         "sprite": "Shuffle707.png"
     },
-    
     {
         "id": "708",
         "name": "Phantump",
@@ -6371,7 +5663,6 @@
         "speed": 38,
         "sprite": "Shuffle708.png"
     },
-    
     {
         "id": "709",
         "name": "Trevenant",
@@ -6380,7 +5671,6 @@
         "speed": 56,
         "sprite": "Shuffle709.png"
     },
-    
     {
         "id": "710",
         "name": "Pumpkaboo",
@@ -6389,7 +5679,6 @@
         "speed": 51,
         "sprite": "Shuffle710.png"
     },
-    
     {
         "id": "711",
         "name": "Gourgeist",
@@ -6398,7 +5687,6 @@
         "speed": 84,
         "sprite": "Shuffle711.png"
     },
-    
     {
         "id": "712",
         "name": "Bergmite",
@@ -6407,7 +5695,6 @@
         "speed": 28,
         "sprite": "Shuffle712.png"
     },
-    
     {
         "id": "713",
         "name": "Avalugg",
@@ -6416,7 +5703,6 @@
         "speed": 28,
         "sprite": "Shuffle713.png"
     },
-    
     {
         "id": "714",
         "name": "Noibat",
@@ -6425,7 +5711,6 @@
         "speed": 55,
         "sprite": "Shuffle714.png"
     },
-    
     {
         "id": "715",
         "name": "Noivern",
@@ -6434,7 +5719,6 @@
         "speed": 123,
         "sprite": "Shuffle715.png"
     },
-    
     {
         "id": "716",
         "name": "Xerneas",
@@ -6443,7 +5727,6 @@
         "speed": 99,
         "sprite": "Shuffle716.png"
     },
-    
     {
         "id": "717",
         "name": "Yveltal",
@@ -6452,7 +5735,6 @@
         "speed": 99,
         "sprite": "Shuffle717.png"
     },
-    
     {
         "id": "718",
         "name": "Zygarde",
@@ -6461,7 +5743,6 @@
         "speed": 95,
         "sprite": "Shuffle718.png"
     },
-    
     {
         "id": "719",
         "name": "Diancie",
@@ -6470,7 +5751,6 @@
         "speed": 50,
         "sprite": "Shuffle719.png"
     },
-    
     {
         "id": "720",
         "name": "Hoopa",
@@ -6479,7 +5759,6 @@
         "speed": 70,
         "sprite": "Shuffle720.png"
     },
-    
     {
         "id": "721",
         "name": "Volcanion",
@@ -6488,7 +5767,6 @@
         "speed": 70,
         "sprite": "Shuffle721.png"
     },
-    
     {
         "id": "722",
         "name": "Rowlet",
@@ -6497,7 +5775,6 @@
         "speed": 42,
         "sprite": "Shuffle722.png"
     },
-    
     {
         "id": "723",
         "name": "Dartrix",
@@ -6506,7 +5783,6 @@
         "speed": 52,
         "sprite": "Shuffle723.png"
     },
-    
     {
         "id": "724",
         "name": "Decidueye",
@@ -6515,7 +5791,6 @@
         "speed": 70,
         "sprite": "Shuffle724.png"
     },
-    
     {
         "id": "725",
         "name": "Litten",
@@ -6524,7 +5799,6 @@
         "speed": 70,
         "sprite": "Shuffle725.png"
     },
-    
     {
         "id": "726",
         "name": "Torracat",
@@ -6533,7 +5807,6 @@
         "speed": 90,
         "sprite": "Shuffle726.png"
     },
-    
     {
         "id": "727",
         "name": "Incineroar",
@@ -6542,7 +5815,6 @@
         "speed": 60,
         "sprite": "Shuffle727.png"
     },
-    
     {
         "id": "728",
         "name": "Popplio",
@@ -6551,7 +5823,6 @@
         "speed": 40,
         "sprite": "Shuffle728.png"
     },
-    
     {
         "id": "729",
         "name": "Brionne",
@@ -6560,7 +5831,6 @@
         "speed": 50,
         "sprite": "Shuffle729.png"
     },
-    
     {
         "id": "730",
         "name": "Primarina",
@@ -6569,7 +5839,6 @@
         "speed": 60,
         "sprite": "Shuffle730.png"
     },
-    
     {
         "id": "731",
         "name": "Pikipek",
@@ -6578,7 +5847,6 @@
         "speed": 65,
         "sprite": "Shuffle731.png"
     },
-    
     {
         "id": "732",
         "name": "Trumbeak",
@@ -6587,7 +5855,6 @@
         "speed": 75,
         "sprite": "Shuffle732.png"
     },
-    
     {
         "id": "733",
         "name": "Toucannon",
@@ -6596,7 +5863,6 @@
         "speed": 60,
         "sprite": "Shuffle733.png"
     },
-    
     {
         "id": "734",
         "name": "Yungoos",
@@ -6605,7 +5871,6 @@
         "speed": 45,
         "sprite": "Shuffle734.png"
     },
-    
     {
         "id": "735",
         "name": "Gumshoos",
@@ -6614,7 +5879,6 @@
         "speed": 45,
         "sprite": "Shuffle735.png"
     },
-    
     {
         "id": "736",
         "name": "Grubbin",
@@ -6623,7 +5887,6 @@
         "speed": 46,
         "sprite": "Shuffle736.png"
     },
-    
     {
         "id": "737",
         "name": "Charjabug",
@@ -6632,7 +5895,6 @@
         "speed": 36,
         "sprite": "Shuffle737.png"
     },
-    
     {
         "id": "738",
         "name": "Vikavolt",
@@ -6641,7 +5903,6 @@
         "speed": 43,
         "sprite": "Shuffle738.png"
     },
-    
     {
         "id": "739",
         "name": "Crabrawler",
@@ -6650,7 +5911,6 @@
         "speed": 63,
         "sprite": "Shuffle739.png"
     },
-    
     {
         "id": "740",
         "name": "Crabominable",
@@ -6659,7 +5919,6 @@
         "speed": 43,
         "sprite": "Shuffle740.png"
     },
-    
     {
         "id": "741",
         "name": "Oricorio",
@@ -6668,7 +5927,6 @@
         "speed": 93,
         "sprite": "Shuffle741.png"
     },
-    
     {
         "id": "742",
         "name": "Cutiefly",
@@ -6677,7 +5935,6 @@
         "speed": 84,
         "sprite": "Shuffle742.png"
     },
-    
     {
         "id": "743",
         "name": "Ribombee",
@@ -6686,7 +5943,6 @@
         "speed": 124,
         "sprite": "Shuffle743.png"
     },
-    
     {
         "id": "744",
         "name": "Rockruff",
@@ -6695,7 +5951,6 @@
         "speed": 60,
         "sprite": "Shuffle744.png"
     },
-    
     {
         "id": "745",
         "name": "Lycanroc",
@@ -6704,7 +5959,6 @@
         "speed": 112,
         "sprite": "Shuffle745.png"
     },
-    
     {
         "id": "746",
         "name": "Wishiwashi",
@@ -6713,7 +5967,6 @@
         "speed": 40,
         "sprite": "Shuffle746.png"
     },
-    
     {
         "id": "747",
         "name": "Mareanie",
@@ -6722,7 +5975,6 @@
         "speed": 45,
         "sprite": "Shuffle747.png"
     },
-    
     {
         "id": "748",
         "name": "Toxapex",
@@ -6731,7 +5983,6 @@
         "speed": 35,
         "sprite": "Shuffle748.png"
     },
-    
     {
         "id": "749",
         "name": "Mudbray",
@@ -6740,7 +5991,6 @@
         "speed": 45,
         "sprite": "Shuffle749.png"
     },
-    
     {
         "id": "750",
         "name": "Mudsdale",
@@ -6749,7 +5999,6 @@
         "speed": 35,
         "sprite": "Shuffle750.png"
     },
-    
     {
         "id": "751",
         "name": "Dewpider",
@@ -6758,7 +6007,6 @@
         "speed": 27,
         "sprite": "Shuffle751.png"
     },
-    
     {
         "id": "752",
         "name": "Araquanid",
@@ -6767,7 +6015,6 @@
         "speed": 42,
         "sprite": "Shuffle752.png"
     },
-    
     {
         "id": "753",
         "name": "Fomantis",
@@ -6776,7 +6023,6 @@
         "speed": 35,
         "sprite": "Shuffle753.png"
     },
-    
     {
         "id": "754",
         "name": "Lurantis",
@@ -6785,7 +6031,6 @@
         "speed": 45,
         "sprite": "Shuffle754.png"
     },
-    
     {
         "id": "755",
         "name": "Morelull",
@@ -6794,7 +6039,6 @@
         "speed": 15,
         "sprite": "Shuffle755.png"
     },
-    
     {
         "id": "756",
         "name": "Shiinotic",
@@ -6803,7 +6047,6 @@
         "speed": 30,
         "sprite": "Shuffle756.png"
     },
-    
     {
         "id": "757",
         "name": "Salandit",
@@ -6812,7 +6055,6 @@
         "speed": 77,
         "sprite": "Shuffle757.png"
     },
-    
     {
         "id": "758",
         "name": "Salazzle",
@@ -6821,7 +6063,6 @@
         "speed": 117,
         "sprite": "Shuffle758.png"
     },
-    
     {
         "id": "759",
         "name": "Stufful",
@@ -6830,7 +6071,6 @@
         "speed": 50,
         "sprite": "Shuffle759.png"
     },
-    
     {
         "id": "760",
         "name": "Bewear",
@@ -6839,7 +6079,6 @@
         "speed": 60,
         "sprite": "Shuffle760.png"
     },
-    
     {
         "id": "761",
         "name": "Bounsweet",
@@ -6848,7 +6087,6 @@
         "speed": 32,
         "sprite": "Shuffle761.png"
     },
-    
     {
         "id": "762",
         "name": "Steenee",
@@ -6857,7 +6095,6 @@
         "speed": 62,
         "sprite": "Shuffle762.png"
     },
-    
     {
         "id": "763",
         "name": "Tsareena",
@@ -6866,7 +6103,6 @@
         "speed": 72,
         "sprite": "Shuffle763.png"
     },
-    
     {
         "id": "764",
         "name": "Comfey",
@@ -6875,7 +6111,6 @@
         "speed": 100,
         "sprite": "Shuffle764.png"
     },
-    
     {
         "id": "765",
         "name": "Oranguru",
@@ -6884,7 +6119,6 @@
         "speed": 60,
         "sprite": "Shuffle765.png"
     },
-    
     {
         "id": "766",
         "name": "Passimian",
@@ -6893,7 +6127,6 @@
         "speed": 80,
         "sprite": "Shuffle766.png"
     },
-    
     {
         "id": "767",
         "name": "Wimpod",
@@ -6902,7 +6135,6 @@
         "speed": 80,
         "sprite": "Shuffle767.png"
     },
-    
     {
         "id": "768",
         "name": "Golisopod",
@@ -6911,7 +6143,6 @@
         "speed": 40,
         "sprite": "Shuffle768.png"
     },
-    
     {
         "id": "769",
         "name": "Sandygast",
@@ -6920,7 +6151,6 @@
         "speed": 15,
         "sprite": "Shuffle769.png"
     },
-    
     {
         "id": "770",
         "name": "Palossand",
@@ -6929,7 +6159,6 @@
         "speed": 35,
         "sprite": "Shuffle770.png"
     },
-    
     {
         "id": "771",
         "name": "Pyukumuku",
@@ -6938,7 +6167,6 @@
         "speed": 5,
         "sprite": "Shuffle771.png"
     },
-    
     {
         "id": "772",
         "name": "Type: Null",
@@ -6947,7 +6175,6 @@
         "speed": 59,
         "sprite": "Shuffle772.png"
     },
-    
     {
         "id": "773",
         "name": "Silvally",
@@ -6956,7 +6183,6 @@
         "speed": 95,
         "sprite": "Shuffle773.png"
     },
-    
     {
         "id": "774",
         "name": "Minior",
@@ -6965,7 +6191,6 @@
         "speed": 60,
         "sprite": "Shuffle774.png"
     },
-    
     {
         "id": "775",
         "name": "Komala",
@@ -6974,7 +6199,6 @@
         "speed": 65,
         "sprite": "Shuffle775.png"
     },
-    
     {
         "id": "776",
         "name": "Turtonator",
@@ -6983,7 +6207,6 @@
         "speed": 36,
         "sprite": "Shuffle776.png"
     },
-    
     {
         "id": "777",
         "name": "Togedemaru",
@@ -6992,7 +6215,6 @@
         "speed": 96,
         "sprite": "Shuffle777.png"
     },
-    
     {
         "id": "778",
         "name": "Mimikyu",
@@ -7001,7 +6223,6 @@
         "speed": 96,
         "sprite": "Shuffle778.png"
     },
-    
     {
         "id": "779",
         "name": "Bruxish",
@@ -7010,7 +6231,6 @@
         "speed": 92,
         "sprite": "Shuffle779.png"
     },
-    
     {
         "id": "780",
         "name": "Drampa",
@@ -7019,7 +6239,6 @@
         "speed": 36,
         "sprite": "Shuffle780.png"
     },
-    
     {
         "id": "781",
         "name": "Dhelmise",
@@ -7028,7 +6247,6 @@
         "speed": 40,
         "sprite": "Shuffle781.png"
     },
-    
     {
         "id": "782",
         "name": "Jangmo-o",
@@ -7037,7 +6255,6 @@
         "speed": 45,
         "sprite": "Shuffle782.png"
     },
-    
     {
         "id": "783",
         "name": "Hakamo-o",
@@ -7046,7 +6263,6 @@
         "speed": 65,
         "sprite": "Shuffle783.png"
     },
-    
     {
         "id": "784",
         "name": "Kommo-o",
@@ -7055,7 +6271,6 @@
         "speed": 85,
         "sprite": "Shuffle784.png"
     },
-    
     {
         "id": "785",
         "name": "Tapu Koko",
@@ -7064,7 +6279,6 @@
         "speed": 130,
         "sprite": "Shuffle785.png"
     },
-    
     {
         "id": "786",
         "name": "Tapu Lele",
@@ -7073,7 +6287,6 @@
         "speed": 95,
         "sprite": "Shuffle786.png"
     },
-    
     {
         "id": "787",
         "name": "Tapu Bulu",
@@ -7082,7 +6295,6 @@
         "speed": 75,
         "sprite": "Shuffle787.png"
     },
-    
     {
         "id": "788",
         "name": "Tapu Fini",
@@ -7091,7 +6303,6 @@
         "speed": 85,
         "sprite": "Shuffle788.png"
     },
-    
     {
         "id": "789",
         "name": "Cosmog",
@@ -7100,7 +6311,6 @@
         "speed": 37,
         "sprite": "Shuffle789.png"
     },
-    
     {
         "id": "790",
         "name": "Cosmoem",
@@ -7109,7 +6319,6 @@
         "speed": 37,
         "sprite": "Shuffle790.png"
     },
-    
     {
         "id": "791",
         "name": "Solgaleo",
@@ -7118,7 +6327,6 @@
         "speed": 97,
         "sprite": "Shuffle791.png"
     },
-    
     {
         "id": "792",
         "name": "Lunala",
@@ -7127,7 +6335,6 @@
         "speed": 97,
         "sprite": "Shuffle792.png"
     },
-    
     {
         "id": "793",
         "name": "Nihilego",
@@ -7136,7 +6343,6 @@
         "speed": 103,
         "sprite": "Shuffle793.png"
     },
-    
     {
         "id": "794",
         "name": "Buzzwole",
@@ -7145,7 +6351,6 @@
         "speed": 79,
         "sprite": "Shuffle794.png"
     },
-    
     {
         "id": "795",
         "name": "Pheromosa",
@@ -7154,7 +6359,6 @@
         "speed": 151,
         "sprite": "Shuffle795.png"
     },
-    
     {
         "id": "796",
         "name": "Xurkitree",
@@ -7163,7 +6367,6 @@
         "speed": 83,
         "sprite": "Shuffle796.png"
     },
-    
     {
         "id": "797",
         "name": "Celesteela",
@@ -7172,7 +6375,6 @@
         "speed": 61,
         "sprite": "Shuffle797.png"
     },
-    
     {
         "id": "798",
         "name": "Kartana",
@@ -7181,7 +6383,6 @@
         "speed": 109,
         "sprite": "Shuffle798.png"
     },
-    
     {
         "id": "799",
         "name": "Guzzlord",
@@ -7190,7 +6391,6 @@
         "speed": 43,
         "sprite": "Shuffle799.png"
     },
-    
     {
         "id": "800",
         "name": "Necrozma",
@@ -7199,7 +6399,6 @@
         "speed": 79,
         "sprite": "Shuffle800.png"
     },
-    
     {
         "id": "801",
         "name": "Magearna",
@@ -7208,7 +6407,6 @@
         "speed": 65,
         "sprite": "Shuffle801.png"
     },
-    
     {
         "id": "802",
         "name": "Marshadow",
@@ -7217,5 +6415,4 @@
         "speed": 125,
         "sprite": "Shuffle802.png"
     }
-    
 ]
